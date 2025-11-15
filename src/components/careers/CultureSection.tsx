@@ -1,0 +1,98 @@
+import { motion } from "motion/react";
+import { Code, Coffee, Lightbulb, Users, Globe, Zap } from "lucide-react";
+
+const cultureValues = [
+  { icon: Code, label: "Ship Quality", color: "from-violet-500 to-purple-500" },
+  { icon: Coffee, label: "Work-Life Balance", color: "from-fuchsia-500 to-pink-500" },
+  { icon: Lightbulb, label: "Innovation First", color: "from-indigo-500 to-cyan-500" },
+  { icon: Users, label: "Team Spirit", color: "from-purple-500 to-fuchsia-500" },
+  { icon: Globe, label: "Remote Culture", color: "from-pink-500 to-orange-500" },
+  { icon: Zap, label: "Fast Execution", color: "from-orange-500 to-red-500" },
+];
+
+export function CultureSection() {
+  return (
+    <section className="py-24 relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-violet-950/10 to-transparent" />
+
+      <div className="container mx-auto px-6 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl lg:text-5xl mb-4">Our Culture</h2>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            The values that drive everything we do
+          </p>
+        </motion.div>
+
+        {/* Values Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
+          {cultureValues.map((value, index) => (
+            <motion.div
+              key={value.label}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ y: -10, scale: 1.05 }}
+              className="relative group"
+            >
+              <div className="relative p-6 bg-gradient-to-br from-gray-900/80 to-gray-950/80 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 backdrop-blur-sm text-center">
+                {/* Glow Effect */}
+                <motion.div
+                  className={`absolute -inset-1 bg-gradient-to-br ${value.color} rounded-2xl opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500`}
+                />
+
+                <div className="relative z-10">
+                  <motion.div
+                    className={`w-14 h-14 bg-gradient-to-br ${value.color} rounded-xl flex items-center justify-center mb-4 mx-auto`}
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <value.icon className="w-7 h-7 text-white" />
+                  </motion.div>
+                  <p className="text-sm">{value.label}</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Culture Statement */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto"
+        >
+          <div className="relative p-12 bg-gradient-to-br from-violet-950/20 to-fuchsia-950/20 rounded-3xl border border-violet-500/20 backdrop-blur-sm">
+            <div className="text-center space-y-6">
+              <motion.div
+                className="text-6xl mb-4"
+                animate={{ rotate: [0, 10, -10, 0] }}
+                transition={{ duration: 5, repeat: Infinity }}
+              >
+                🚀
+              </motion.div>
+              <h3 className="text-2xl lg:text-3xl">We're Building Something Special</h3>
+              <p className="text-lg text-gray-400 leading-relaxed">
+                At Quroix Labs, you're not just another employee—you're a builder, a problem-solver,
+                and an innovator. We give you autonomy, trust your expertise, and celebrate your wins.
+                Our team is small but mighty, distributed but connected, ambitious but realistic.
+              </p>
+              <div className="flex flex-wrap justify-center gap-8 pt-6 text-sm text-gray-500">
+                <span>🌍 Remote-first since day one</span>
+                <span>💡 100+ products shipped</span>
+                <span>🎯 $10M+ in client revenue generated</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
