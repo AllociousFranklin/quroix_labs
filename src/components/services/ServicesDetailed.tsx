@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Bot, Workflow, Code, Shield, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Bot, Workflow, Code, Shield, CheckCircle2, Zap, Target, Clock } from "lucide-react";
 
 const services = [
   {
@@ -11,6 +11,14 @@ const services = [
       "Natural language understanding and generation",
       "Multi-agent coordination and orchestration",
       "Continuous learning and performance optimization",
+      "Context-aware decision making and reasoning",
+      "Integration with existing business systems",
+      "Real-time adaptation to changing environments",
+    ],
+    metrics: [
+      { icon: Zap, label: "80% faster task execution" },
+      { icon: Target, label: "95% accuracy rate" },
+      { icon: Clock, label: "24/7 autonomous operation" },
     ],
     color: "from-indigo-500 to-purple-500",
   },
@@ -23,6 +31,14 @@ const services = [
       "Custom workflow design and implementation",
       "Integration with 100+ business tools",
       "Real-time monitoring and error handling",
+      "Smart triggers and conditional logic",
+      "Automated reporting and notifications",
+      "Scalable architecture for growing teams",
+    ],
+    metrics: [
+      { icon: Zap, label: "70% reduction in manual tasks" },
+      { icon: Target, label: "99.9% uptime guarantee" },
+      { icon: Clock, label: "Hours saved per week: 40+" },
     ],
     color: "from-cyan-500 to-blue-500",
   },
@@ -35,6 +51,14 @@ const services = [
       "Full-stack development with modern frameworks",
       "Cloud-native architecture and deployment",
       "API design and microservices implementation",
+      "Performance optimization and scaling strategies",
+      "Database design and data modeling",
+      "CI/CD pipeline setup and automation",
+    ],
+    metrics: [
+      { icon: Zap, label: "50ms average response time" },
+      { icon: Target, label: "99.99% platform reliability" },
+      { icon: Clock, label: "2-3x faster time to market" },
     ],
     color: "from-purple-500 to-pink-500",
   },
@@ -47,6 +71,14 @@ const services = [
       "Security audits and vulnerability assessments",
       "Zero-trust architecture implementation",
       "Compliance and regulatory alignment (SOC 2, GDPR)",
+      "Real-time threat detection and response",
+      "Penetration testing and security hardening",
+      "Employee security training and awareness",
+    ],
+    metrics: [
+      { icon: Zap, label: "Real-time threat detection" },
+      { icon: Target, label: "100% compliance coverage" },
+      { icon: Clock, label: "<5 min incident response" },
     ],
     color: "from-orange-500 to-red-500",
   },
@@ -75,7 +107,7 @@ export function ServicesDetailed() {
                   className={`absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br ${service.color} rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
                 />
 
-                <div className="relative z-10 grid lg:grid-cols-[auto_1fr_auto] gap-8 items-start">
+                <div className="relative z-10 grid lg:grid-cols-[auto_1fr] gap-8 items-start">
                   {/* Icon */}
                   <motion.div
                     className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center`}
@@ -93,40 +125,55 @@ export function ServicesDetailed() {
                     </p>
 
                     {/* Features */}
-                    <ul className="space-y-3">
-                      {service.features.map((feature, i) => (
-                        <motion.li
-                          key={i}
-                          initial={{ opacity: 0, x: -20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: 0.2 + i * 0.1 }}
-                          className="flex items-start gap-3"
-                        >
-                          <CheckCircle2
-                            className={`w-5 h-5 mt-1 flex-shrink-0 bg-gradient-to-br ${service.color} bg-clip-text text-transparent`}
-                            style={{
-                              filter: "drop-shadow(0 0 8px rgba(99, 102, 241, 0.5))",
-                            }}
-                          />
-                          <span className="text-gray-300">{feature}</span>
-                        </motion.li>
-                      ))}
-                    </ul>
-                  </div>
+                    <div>
+                      <h4 className="text-xl mb-4 text-gray-200">Key Capabilities</h4>
+                      <ul className="space-y-3">
+                        {service.features.map((feature, i) => (
+                          <motion.li
+                            key={i}
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 + i * 0.1 }}
+                            className="flex items-start gap-3"
+                          >
+                            <CheckCircle2
+                              className={`w-5 h-5 mt-1 flex-shrink-0 bg-gradient-to-br ${service.color} bg-clip-text text-transparent`}
+                              style={{
+                                filter: "drop-shadow(0 0 8px rgba(99, 102, 241, 0.5))",
+                              }}
+                            />
+                            <span className="text-gray-300">{feature}</span>
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </div>
 
-                  {/* CTA Button */}
-                  <motion.button
-                    whileHover={{ scale: 1.05, x: 5 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={`px-8 py-4 bg-gradient-to-r ${service.color} rounded-xl flex items-center gap-2 hover:shadow-2xl transition-shadow whitespace-nowrap`}
-                    style={{
-                      boxShadow: "0 0 30px rgba(99, 102, 241, 0.3)",
-                    }}
-                  >
-                    View Details
-                    <ArrowRight className="w-5 h-5" />
-                  </motion.button>
+                    {/* Metrics */}
+                    <div>
+                      <h4 className="text-xl mb-4 text-gray-200">Performance Metrics</h4>
+                      <div className="grid md:grid-cols-3 gap-4">
+                        {service.metrics.map((metric, i) => (
+                          <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 + i * 0.1 }}
+                            className={`p-4 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl border border-gray-700/50 hover:border-gray-600/50 transition-all`}
+                          >
+                            <metric.icon
+                              className={`w-6 h-6 mb-2 bg-gradient-to-br ${service.color} bg-clip-text text-transparent`}
+                              style={{
+                                filter: "drop-shadow(0 0 8px rgba(99, 102, 241, 0.5))",
+                              }}
+                            />
+                            <p className="text-sm text-gray-300">{metric.label}</p>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>

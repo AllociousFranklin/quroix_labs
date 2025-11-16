@@ -24,6 +24,7 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
     { name: "Products", page: "products" },
     { name: "Case Studies", page: "case-studies" },
     { name: "Research", page: "research" },
+    { name: "Partnership", page: "partnership" },
     { name: "Careers", page: "careers" },
   ];
 
@@ -43,10 +44,10 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
           : "bg-transparent py-6"
       }`}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
+      <div className="container mx-auto px-6 flex items-center justify-between gap-4">
         {/* Logo */}
         <motion.div
-          className="flex items-center gap-2 cursor-pointer"
+          className="flex items-center gap-2 cursor-pointer flex-shrink-0"
           whileHover={{ scale: 1.05 }}
           onClick={() => handleNavClick("home")}
         >
@@ -57,12 +58,12 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
         </motion.div>
 
         {/* Center Menu */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8 flex-1 justify-center">
           {navItems.map((item) => (
             <motion.button
               key={item.name}
               onClick={() => handleNavClick(item.page)}
-              className={`text-sm transition-colors relative group ${
+              className={`text-sm whitespace-nowrap transition-colors relative group ${
                 currentPage === item.page ? "text-white" : "text-gray-300 hover:text-white"
               }`}
               whileHover={{ y: -2 }}
@@ -78,12 +79,12 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
         </div>
 
         {/* Right Buttons */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 flex-shrink-0">
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => handleNavClick("request-demo")}
-            className="hidden sm:block px-6 py-2.5 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-lg text-sm hover:shadow-lg hover:shadow-indigo-500/50 transition-shadow"
+            className="hidden sm:block px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-lg text-sm hover:shadow-lg hover:shadow-indigo-500/50 transition-shadow whitespace-nowrap"
           >
             Request Demo
           </motion.button>
@@ -91,7 +92,7 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => handleNavClick("contact")}
-            className="px-6 py-2.5 border border-gray-700 rounded-lg text-sm hover:border-indigo-500 hover:shadow-lg hover:shadow-indigo-500/20 transition-all"
+            className="px-5 py-2.5 border border-gray-700 rounded-lg text-sm hover:border-indigo-500 hover:shadow-lg hover:shadow-indigo-500/20 transition-all whitespace-nowrap"
           >
             Contact
           </motion.button>

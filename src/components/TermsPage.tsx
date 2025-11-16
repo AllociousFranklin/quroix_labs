@@ -95,9 +95,9 @@ export function TermsPage() {
               <h2 className="text-2xl mb-4 mt-12">8. Contact</h2>
               <p className="text-gray-400">
                 For any questions regarding these terms, email:{" "}
-                <a href="mailto:hello@quroixlabs.com" className="text-indigo-400 hover:text-indigo-300 transition-colors">
-                  hello@quroixlabs.com
-                </a>
+                <span className="text-indigo-400">
+                  quroixlabs@gmail.com
+                </span>
               </p>
             </div>
           </div>

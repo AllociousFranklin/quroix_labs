@@ -1,44 +1,130 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Mail, Phone, MapPin, Send, CheckCircle2, ArrowRight } from "lucide-react";
+import { db } from "../lib/firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 export function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const validateEmail = (email: string) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
+  const validateForm = () => {
+    const newErrors = {
+      name: "",
+      email: "",
+      message: "",
+    };
+    let isValid = true;
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+      isValid = false;
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+      isValid = false;
+    } else if (!validateEmail(formData.email)) {
+      newErrors.email = "Please enter a valid email";
+      isValid = false;
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
+  const isFormValid = () => {
+    return (
+      formData.name.trim() !== "" &&
+      formData.email.trim() !== "" &&
+      validateEmail(formData.email) &&
+      formData.message.trim() !== ""
+    );
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: "", email: "", message: "" });
-    }, 5000);
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    setSubmitting(true);
+
+    try {
+      // Add document to Firestore
+      await addDoc(collection(db, "contact_submissions"), {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        submittedAt: serverTimestamp(),
+        type: "contact_form",
+      });
+
+      // Show success message
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: "", email: "", message: "" });
+        setErrors({ name: "", email: "", message: "" });
+      }, 5000);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("There was an error submitting your message. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
+    
+    // Clear error when user starts typing
+    if (errors[name as keyof typeof errors]) {
+      setErrors({
+        ...errors,
+        [name]: "",
+      });
+    }
   };
 
   const contactMethods = [
     {
       icon: Mail,
       title: "Email",
-      value: "contact@quroixlabs.com",
-      href: "mailto:contact@quroixlabs.com",
+      value: "quroixlabs@gmail.com",
+      href: "#contact-form",
       color: "from-indigo-500 to-purple-500",
     },
     {
       icon: Phone,
       title: "Phone / WhatsApp",
-      value: "+91 ——————",
-      href: "tel:+91",
+      value: "+91 6382696238",
+      href: "tel:+916382696238",
       color: "from-green-500 to-emerald-500",
     },
     {
@@ -174,6 +260,7 @@ export function ContactPage() {
                       className="w-full px-4 py-3 bg-gray-900/80 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors"
                       placeholder="Your name"
                     />
+                    {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                   </div>
 
                   {/* Email */}
@@ -188,6 +275,7 @@ export function ContactPage() {
                       className="w-full px-4 py-3 bg-gray-900/80 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors"
                       placeholder="your@email.com"
                     />
+                    {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                   </div>
 
                   {/* Message */}
@@ -202,17 +290,23 @@ export function ContactPage() {
                       className="w-full px-4 py-3 bg-gray-900/80 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors resize-none"
                       placeholder="Tell us how we can help..."
                     />
+                    {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
                   </div>
 
                   {/* Submit Button */}
                   <motion.button
                     type="submit"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full px-8 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-xl flex items-center justify-center gap-2 hover:shadow-2xl hover:shadow-indigo-500/50 transition-shadow"
+                    disabled={!isFormValid() || submitting}
+                    whileHover={{ scale: isFormValid() && !submitting ? 1.02 : 1 }}
+                    whileTap={{ scale: isFormValid() && !submitting ? 0.98 : 1 }}
+                    className={`w-full px-8 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-xl flex items-center justify-center gap-2 transition-all ${
+                      !isFormValid() || submitting 
+                        ? "opacity-50 cursor-not-allowed" 
+                        : "hover:shadow-2xl hover:shadow-indigo-500/50"
+                    }`}
                   >
                     <Send className="w-5 h-5" />
-                    Send Message
+                    {submitting ? "Sending..." : "Send Message"}
                   </motion.button>
                 </form>
               )}

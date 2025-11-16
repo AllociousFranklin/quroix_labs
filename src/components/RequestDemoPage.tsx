@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Sparkles, Upload, CheckCircle2, Calendar } from "lucide-react";
+import { db } from "../lib/firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 export function RequestDemoPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -12,19 +15,128 @@ export function RequestDemoPage() {
     budget: "",
     description: "",
   });
+  const [errors, setErrors] = useState({
+    fullName: "",
+    email: "",
+    company: "",
+    category: "",
+    budget: "",
+    description: "",
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const validateEmail = (email: string) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
+  const validateForm = () => {
+    const newErrors = {
+      fullName: "",
+      email: "",
+      company: "",
+      category: "",
+      budget: "",
+      description: "",
+    };
+    let isValid = true;
+
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = "Full name is required";
+      isValid = false;
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+      isValid = false;
+    } else if (!validateEmail(formData.email)) {
+      newErrors.email = "Please enter a valid email";
+      isValid = false;
+    }
+
+    if (!formData.company.trim()) {
+      newErrors.company = "Company name is required";
+      isValid = false;
+    }
+
+    if (!formData.category) {
+      newErrors.category = "Please select a category";
+      isValid = false;
+    }
+
+    if (!formData.budget) {
+      newErrors.budget = "Please select a budget range";
+      isValid = false;
+    }
+
+    if (!formData.description.trim()) {
+      newErrors.description = "Project description is required";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
+  const isFormValid = () => {
+    return (
+      formData.fullName.trim() !== "" &&
+      formData.email.trim() !== "" &&
+      validateEmail(formData.email) &&
+      formData.company.trim() !== "" &&
+      formData.category !== "" &&
+      formData.budget !== "" &&
+      formData.description.trim() !== ""
+    );
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    // Scroll to top to show success message
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    setSubmitting(true);
+
+    try {
+      // Add document to Firestore
+      await addDoc(collection(db, "demo_requests"), {
+        fullName: formData.fullName,
+        email: formData.email,
+        company: formData.company,
+        category: formData.category,
+        budget: formData.budget,
+        description: formData.description,
+        submittedAt: serverTimestamp(),
+        type: "demo_request",
+      });
+
+      // Show success message
+      setSubmitted(true);
+      // Scroll to top to show success message
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("There was an error submitting your request. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
+    
+    // Clear error when user starts typing
+    if (errors[name as keyof typeof errors]) {
+      setErrors({
+        ...errors,
+        [name]: "",
+      });
+    }
   };
 
   if (submitted) {
@@ -63,21 +175,11 @@ export function RequestDemoPage() {
                   Our team will reach out within 24–48 hours with your personalized demo.
                 </p>
 
-                {/* Secondary CTA */}
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-xl hover:shadow-lg hover:shadow-indigo-500/50 transition-shadow"
-                >
-                  <Calendar className="w-5 h-5" />
-                  Book a Discovery Call
-                </motion.button>
-
-                <p className="mt-6 text-sm text-gray-500">
+                <p className="text-sm text-gray-500">
                   Want to talk sooner? Email us at{" "}
-                  <a href="mailto:contact@quroixlabs.com" className="text-indigo-400 hover:text-indigo-300">
-                    contact@quroixlabs.com
-                  </a>
+                  <span className="text-indigo-400">
+                    quroixlabs@gmail.com
+                  </span>
                 </p>
               </div>
             </div>
@@ -152,6 +254,7 @@ export function RequestDemoPage() {
                   className="w-full px-4 py-3 bg-gray-900/80 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors"
                   placeholder="John Doe"
                 />
+                {errors.fullName && <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>}
               </div>
 
               {/* Email */}
@@ -168,6 +271,7 @@ export function RequestDemoPage() {
                   className="w-full px-4 py-3 bg-gray-900/80 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors"
                   placeholder="john@company.com"
                 />
+                {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
               </div>
 
               {/* Company */}
@@ -184,6 +288,7 @@ export function RequestDemoPage() {
                   className="w-full px-4 py-3 bg-gray-900/80 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors"
                   placeholder="Your Company"
                 />
+                {errors.company && <p className="text-red-500 text-sm mt-1">{errors.company}</p>}
               </div>
 
               {/* Project Category */}
@@ -205,6 +310,7 @@ export function RequestDemoPage() {
                   <option value="cybersecurity">Cybersecurity</option>
                   <option value="other">Other</option>
                 </select>
+                {errors.category && <p className="text-red-500 text-sm mt-1">{errors.category}</p>}
               </div>
 
               {/* Budget Range */}
@@ -225,6 +331,7 @@ export function RequestDemoPage() {
                   <option value="2l-5l">₹2L–₹5L</option>
                   <option value="5l-plus">₹5L+</option>
                 </select>
+                {errors.budget && <p className="text-red-500 text-sm mt-1">{errors.budget}</p>}
               </div>
 
               {/* Project Description */}
@@ -241,6 +348,7 @@ export function RequestDemoPage() {
                   className="w-full px-4 py-3 bg-gray-900/80 border border-gray-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition-colors resize-none"
                   placeholder="Tell us about your project, goals, and what you're looking to achieve..."
                 />
+                {errors.description && <p className="text-red-500 text-sm mt-1">{errors.description}</p>}
               </div>
 
               {/* File Upload */}
@@ -268,11 +376,16 @@ export function RequestDemoPage() {
               {/* Submit Button */}
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full px-8 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-xl text-lg hover:shadow-2xl hover:shadow-indigo-500/50 transition-shadow"
+                disabled={!isFormValid() || submitting}
+                whileHover={{ scale: isFormValid() && !submitting ? 1.02 : 1 }}
+                whileTap={{ scale: isFormValid() && !submitting ? 0.98 : 1 }}
+                className={`w-full px-8 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-xl text-lg transition-all ${
+                  !isFormValid() || submitting
+                    ? "opacity-50 cursor-not-allowed"
+                    : "hover:shadow-2xl hover:shadow-indigo-500/50"
+                }`}
               >
-                Book My Demo
+                {submitting ? "Submitting..." : "Book My Demo"}
               </motion.button>
 
               {/* Privacy Note */}

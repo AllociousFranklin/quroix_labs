@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { Zap, Mail, Phone } from "lucide-react";
 
 export function Footer() {
-  const quickLinksLeft = ["Services", "Products", "Case Studies"];
-  const quickLinksRight = ["Research", "Careers", "Contact"];
+  const quickLinksLeft = ["Services", "Products", "Case Studies", "Research"];
+  const quickLinksRight = ["Partnership", "Careers", "Contact"];
 
   return (
     <footer className="relative py-20 border-t border-gray-800">
@@ -43,6 +43,13 @@ export function Footer() {
                   <li key={link}>
                     <motion.a
                       href="#"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const event = new CustomEvent("navigate", { 
+                          detail: link.toLowerCase().replace(/ /g, "-") 
+                        });
+                        window.dispatchEvent(event);
+                      }}
                       className="text-gray-400 hover:text-white transition-colors inline-block"
                       whileHover={{ x: 5 }}
                     >
@@ -56,6 +63,13 @@ export function Footer() {
                   <li key={link}>
                     <motion.a
                       href="#"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const event = new CustomEvent("navigate", { 
+                          detail: link.toLowerCase().replace(/ /g, "-") 
+                        });
+                        window.dispatchEvent(event);
+                      }}
                       className="text-gray-400 hover:text-white transition-colors inline-block"
                       whileHover={{ x: 5 }}
                     >
@@ -76,19 +90,19 @@ export function Footer() {
           >
             <h3 className="text-sm tracking-wider uppercase text-gray-500 mb-6">Contact</h3>
             <div className="space-y-4">
-              <a
-                href="mailto:hello@quroixlabs.com"
-                className="text-gray-400 hover:text-white transition-colors flex items-center gap-3 group"
+              <button
+                onClick={() => window.dispatchEvent(new CustomEvent("navigate", { detail: "contact" }))}
+                className="text-gray-400 hover:text-white transition-colors flex items-center gap-3 group cursor-pointer"
               >
                 <Mail className="w-5 h-5 text-gray-600 group-hover:text-indigo-500 transition-colors" />
-                <span>hello@quroixlabs.com</span>
-              </a>
+                quroixlabs@gmail.com
+              </button>
               <a
-                href="tel:+91"
+                href="tel:+916382696238"
                 className="text-gray-400 hover:text-white transition-colors flex items-center gap-3 group"
               >
                 <Phone className="w-5 h-5 text-gray-600 group-hover:text-indigo-500 transition-colors" />
-                <span>+91 ——————</span>
+                <span>+91 6382696238</span>
               </a>
             </div>
           </motion.div>

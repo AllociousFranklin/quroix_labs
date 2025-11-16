@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
 import { MapPin, Clock, ArrowRight } from "lucide-react";
+import { db } from "../../lib/firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 const roles = [
   {
@@ -108,6 +110,10 @@ export function OpenRoles() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={() => {
+                      // Navigate to contact page
+                      window.dispatchEvent(new CustomEvent("navigate", { detail: "contact" }));
+                    }}
                     className={`px-8 py-4 bg-gradient-to-r ${role.color} rounded-xl flex items-center gap-2 hover:shadow-lg transition-shadow whitespace-nowrap`}
                   >
                     Apply Now

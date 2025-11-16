@@ -82,6 +82,9 @@ export function CareersCTA() {
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: "0 0 60px rgba(139, 92, 246, 0.6)" }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  window.dispatchEvent(new CustomEvent("navigate", { detail: "contact" }));
+                }}
                 className="inline-flex items-center gap-3 px-12 py-5 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-xl text-xl hover:shadow-2xl transition-shadow group"
               >
                 Contact Us
@@ -97,12 +100,9 @@ export function CareersCTA() {
               <div className="mt-8 pt-8 border-t border-gray-800">
                 <p className="text-gray-400">
                   Or email us directly at{" "}
-                  <a
-                    href="mailto:careers@quroixlabs.com"
-                    className="text-violet-400 hover:text-violet-300 transition-colors"
-                  >
-                    careers@quroixlabs.com
-                  </a>
+                  <span className="text-violet-400">
+                    quroixlabs@gmail.com
+                  </span>
                 </p>
               </div>
             </div>

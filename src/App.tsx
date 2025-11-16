@@ -6,6 +6,7 @@ import { ProductsPage } from "./components/ProductsPage";
 import { CaseStudiesPage } from "./components/CaseStudiesPage";
 import { ResearchPage } from "./components/ResearchPage";
 import { CareersPage } from "./components/CareersPage";
+import { PartnershipPage } from "./components/PartnershipPage";
 import { RequestDemoPage } from "./components/RequestDemoPage";
 import { ContactPage } from "./components/ContactPage";
 import { PrivacyPage } from "./components/PrivacyPage";
@@ -33,6 +34,7 @@ export default function App() {
       {currentPage === "products" && <ProductsPage />}
       {currentPage === "case-studies" && <CaseStudiesPage />}
       {currentPage === "research" && <ResearchPage />}
+      {currentPage === "partnership" && <PartnershipPage />}
       {currentPage === "careers" && <CareersPage />}
       {currentPage === "request-demo" && <RequestDemoPage />}
       {currentPage === "contact" && <ContactPage />}

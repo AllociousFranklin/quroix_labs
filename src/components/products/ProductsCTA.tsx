@@ -117,6 +117,11 @@ export function ProductsCTA() {
                   Interested in partnering on a product?{" "}
                   <motion.a
                     href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const event = new CustomEvent("navigate", { detail: "partnership" });
+                      window.dispatchEvent(event);
+                    }}
                     className="text-purple-400 hover:text-purple-300 transition-colors"
                     whileHover={{ x: 5 }}
                   >

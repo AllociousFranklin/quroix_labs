@@ -108,9 +108,9 @@ export function PrivacyPage() {
               </ul>
               <p className="text-gray-400">
                 Contact us at{" "}
-                <a href="mailto:hello@quroixlabs.com" className="text-indigo-400 hover:text-indigo-300 transition-colors">
-                  hello@quroixlabs.com
-                </a>{" "}
+                <span className="text-indigo-400">
+                  quroixlabs@gmail.com
+                </span>{" "}
                 to request changes.
               </p>
 
@@ -122,9 +122,9 @@ export function PrivacyPage() {
               <div className="mt-12 pt-8 border-t border-gray-800">
                 <p className="text-gray-400">
                   If you have questions, contact us at{" "}
-                  <a href="mailto:hello@quroixlabs.com" className="text-indigo-400 hover:text-indigo-300 transition-colors">
-                    hello@quroixlabs.com
-                  </a>
+                  <span className="text-indigo-400">
+                    quroixlabs@gmail.com
+                  </span>
                 </p>
               </div>
             </div>
