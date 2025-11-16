@@ -1,60 +1,62 @@
 import { motion } from "motion/react";
-import { MapPin, Clock, ArrowRight } from "lucide-react";
-import { db } from "../../lib/firebase";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { ArrowRight } from "lucide-react";
 
 const roles = [
   {
     id: 1,
-    title: "Senior AI Engineer",
-    type: "Full-time",
-    location: "Remote",
-    color: "from-violet-500 to-purple-500",
+    title: "Full-Stack Developer",
+    type: "Entry / Mid",
+    location: "Part-time or project-based • Remote / Flexible",
+    color: "from-indigo-500 to-purple-500",
     description:
-      "Lead the development of AI-powered systems and machine learning pipelines. Work with cutting-edge LLMs, agent architectures, and production ML infrastructure. You'll design intelligent systems that scale to millions of users and solve complex real-world problems.",
+      "Build web platforms, dashboards, and internal tools with the team.",
   },
   {
     id: 2,
-    title: "Full-Stack Engineer",
-    type: "Full-time",
-    location: "Remote",
-    color: "from-fuchsia-500 to-pink-500",
+    title: "UI/UX Designer",
+    type: "Intern / Junior",
+    location: "Flexible",
+    color: "from-cyan-500 to-blue-500",
     description:
-      "Build modern web applications using React, Next.js, and Node.js. Own features end-to-end from database design to pixel-perfect UIs. You'll work on real products used by thousands of users and have direct impact on business outcomes.",
+      "Create clean, modern designs for websites and digital products.",
   },
   {
     id: 3,
-    title: "DevOps Engineer",
-    type: "Full-time",
-    location: "Remote",
-    color: "from-indigo-500 to-cyan-500",
+    title: "Automation Engineer",
+    type: "Beginner-Friendly",
+    location: "Flexible",
+    color: "from-purple-500 to-pink-500",
     description:
-      "Design and maintain scalable cloud infrastructure on AWS/GCP. Build CI/CD pipelines, implement monitoring solutions, and ensure 99.9% uptime. You'll work with Kubernetes, Terraform, and modern DevOps tooling to keep systems running smoothly.",
+      "Help build no-code / low-code automations and workflows for clients.",
   },
   {
     id: 4,
-    title: "Product Designer",
-    type: "Full-time",
+    title: "Content/Technical Writer",
+    type: "Part-Time",
     location: "Remote",
-    color: "from-purple-500 to-fuchsia-500",
+    color: "from-orange-500 to-red-500",
     description:
-      "Create intuitive interfaces for complex AI systems. Conduct user research, design prototypes, and collaborate with engineers to build products users love. You'll shape the user experience of next-generation intelligent applications.",
+      "Help write documentation, guides, and website content.",
   },
   {
     id: 5,
-    title: "Technical Writer",
-    type: "Part-time",
-    location: "Remote",
-    color: "from-pink-500 to-orange-500",
+    title: "General Internship — Open Application",
+    type: "Students Welcome",
+    location: "Flexible",
+    color: "from-green-500 to-emerald-500",
     description:
-      "Write technical documentation, tutorials, and guides for developers. Create content that explains complex AI and engineering concepts in clear, accessible language. You'll help developers worldwide use our products and understand cutting-edge technology.",
+      "For students who want hands-on experience in engineering, design, product, or operations.",
   },
 ];
 
 export function OpenRoles() {
+  const handleApply = () => {
+    window.dispatchEvent(new CustomEvent("navigate", { detail: "apply" }));
+  };
+
   return (
     <section className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-violet-950/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-950/10 to-transparent" />
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
@@ -64,8 +66,8 @@ export function OpenRoles() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl mb-4">Open Roles</h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Find your next challenge
+          <p className="text-lg text-gray-400">
+            These roles match our actual real needs right now
           </p>
         </motion.div>
 
@@ -89,15 +91,16 @@ export function OpenRoles() {
                 <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
                   <div className="flex-1">
                     {/* Title & Badges */}
-                    <div className="flex flex-wrap items-center gap-3 mb-4">
-                      <h3 className="text-2xl">{role.title}</h3>
-                      <span className={`px-3 py-1 bg-gradient-to-r ${role.color} rounded-lg text-xs`}>
-                        {role.type}
-                      </span>
-                      <span className="flex items-center gap-1 text-sm text-gray-500">
-                        <MapPin className="w-4 h-4" />
-                        {role.location}
-                      </span>
+                    <div className="mb-4">
+                      <h3 className="text-2xl mb-2">{role.title}</h3>
+                      <div className="flex flex-wrap items-center gap-3">
+                        <span className={`px-3 py-1 bg-gradient-to-r ${role.color} rounded-lg text-xs`}>
+                          {role.type}
+                        </span>
+                        <span className="text-sm text-gray-500">
+                          {role.location}
+                        </span>
+                      </div>
                     </div>
 
                     {/* Description */}
@@ -110,10 +113,7 @@ export function OpenRoles() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    onClick={() => {
-                      // Navigate to contact page
-                      window.dispatchEvent(new CustomEvent("navigate", { detail: "contact" }));
-                    }}
+                    onClick={handleApply}
                     className={`px-8 py-4 bg-gradient-to-r ${role.color} rounded-xl flex items-center gap-2 hover:shadow-lg transition-shadow whitespace-nowrap`}
                   >
                     Apply Now
@@ -122,7 +122,7 @@ export function OpenRoles() {
                 </div>
 
                 {/* Side Accent */}
-                <div className={`absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b ${role.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+                <div className={`absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b ${role.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-l-2xl`} />
               </div>
             </motion.div>
           ))}

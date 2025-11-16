@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { ImageWithFallback } from "../figma/ImageWithFallback";
 
 export function ServicesHero() {
   return (
@@ -39,12 +40,27 @@ export function ServicesHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-xl text-gray-400 leading-relaxed max-w-3xl mx-auto"
+            className="text-xl text-gray-400 leading-relaxed max-w-3xl mx-auto mb-12"
           >
             Quroix Labs delivers intelligent, scalable solutions that transform how businesses operate.
             From AI-driven automation to enterprise-grade platforms, we engineer systems that create
             real-world impact and drive measurable results.
           </motion.p>
+
+          {/* Hero Image */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            className="relative rounded-2xl overflow-hidden group max-w-4xl mx-auto"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 to-cyan-600/30 z-10 group-hover:opacity-0 transition-opacity duration-500" />
+            <ImageWithFallback
+              src="https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NjMyNzAzNjB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+              alt="AI technology services"
+              className="w-full h-64 md:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+          </motion.div>
         </motion.div>
       </div>
     </section>

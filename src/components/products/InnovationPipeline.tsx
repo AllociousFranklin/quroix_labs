@@ -1,54 +1,58 @@
 import { motion } from "motion/react";
-import { Flame, Rocket, Beaker, Zap } from "lucide-react";
+import { Camera, Film, ShieldAlert, ArrowRight, Rocket } from "lucide-react";
 
-const pipelineItems = [
+const innovations = [
   {
+    id: 1,
+    title: "Pospal",
+    subtitle: "AI Pose Mentor for Perfect Photography",
+    description:
+      "A camera-integrated AI assistant that analyzes your frame in real-time and suggests the perfect pose based on body structure, lighting, camera angle, and a large database of professional model poses.",
+    icon: Camera,
+    color: "from-violet-500 to-purple-500",
     stage: "In Development",
-    icon: Flame,
-    color: "from-orange-500 to-red-500",
-    bgColor: "from-orange-950/50 to-red-950/50",
-    items: [
-      {
-        name: "AgentMesh",
-        description: "Multi-agent orchestration platform for complex AI workflows and autonomous task execution.",
-      },
-      {
-        name: "SmartDocs AI",
-        description: "Intelligent documentation system that auto-generates and maintains technical docs from code.",
-      },
+    features: [
+      "Real-time AI pose correction",
+      "Pose scoring & angle detection",
+      "Custom recommendations",
+      "Photographer assistant mode",
     ],
+    ctaText: "Join Waitlist",
   },
   {
-    stage: "Coming Soon",
-    icon: Rocket,
-    color: "from-indigo-500 to-purple-500",
-    bgColor: "from-indigo-950/50 to-purple-950/50",
-    items: [
-      {
-        name: "VoiceFlow",
-        description: "Natural voice interface builder for creating conversational AI experiences without code.",
-      },
-      {
-        name: "DataSense",
-        description: "Real-time data quality monitoring with automated cleansing and validation rules.",
-      },
+    id: 2,
+    title: "MCritic AI",
+    subtitle: "AI Film Critic & Script Success Predictor",
+    description:
+      "MCritic AI analyzes movie plots and scripts, providing insights on storyline strength, audience impact, pacing, and chances of commercial success across regions.",
+    icon: Film,
+    color: "from-pink-500 to-rose-500",
+    stage: "In Development",
+    features: [
+      "Script sentiment & pacing analysis",
+      "Region-wise success prediction",
+      "Character arc evaluation",
+      "AI storyline improvement suggestions",
     ],
+    ctaText: "Join Waitlist",
   },
   {
+    id: 3,
+    title: "CodeRed AI",
+    subtitle: "Autonomous AI Penetration Testing System",
+    description:
+      "A cybersecurity tool that automatically scans and stress-tests websites for vulnerabilities, producing a complete pentest report powered by AI-driven analysis.",
+    icon: ShieldAlert,
+    color: "from-red-500 to-orange-500",
     stage: "Prototype Stage",
-    icon: Beaker,
-    color: "from-cyan-500 to-blue-500",
-    bgColor: "from-cyan-950/50 to-blue-950/50",
-    items: [
-      {
-        name: "CodeGenius",
-        description: "AI pair programmer that understands your codebase and suggests optimizations in real-time.",
-      },
-      {
-        name: "SecureGuard AI",
-        description: "Autonomous security system that identifies vulnerabilities and patches them automatically.",
-      },
+    features: [
+      "Automated vulnerability scanning",
+      "AI-generated penetration reports",
+      "Exploit detection",
+      "Risk scoring",
+      "Developer remediation guidelines",
     ],
+    ctaText: "Join Beta",
   },
 ];
 
@@ -56,9 +60,7 @@ export function InnovationPipeline() {
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-950/10 to-transparent" />
-      <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-indigo-600/5 rounded-full blur-3xl" />
-      <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-cyan-600/5 rounded-full blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-950/10 to-transparent" />
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
@@ -67,104 +69,96 @@ export function InnovationPipeline() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl mb-4">Innovation Pipeline</h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            A glimpse into what we're building next
+          <h2 className="text-4xl lg:text-5xl mb-4">
+            INNOVATION PIPELINE
+          </h2>
+          <p className="text-xl text-gray-400">
+            The next wave of intelligence we're building.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {pipelineItems.map((stage, stageIndex) => (
+        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {innovations.map((innovation, index) => (
             <motion.div
-              key={stage.stage}
+              key={innovation.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: stageIndex * 0.2 }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ y: -10 }}
               className="relative group"
             >
-              <div className="relative h-full p-8 bg-gradient-to-br from-gray-900/80 to-gray-950/80 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 backdrop-blur-sm">
+              <div className="relative h-full p-8 bg-gradient-to-br from-gray-900/80 to-gray-950/80 rounded-3xl border border-gray-800 hover:border-gray-700 transition-all duration-300 backdrop-blur-sm">
                 {/* Glow Effect */}
                 <motion.div
-                  className={`absolute -inset-1 bg-gradient-to-br ${stage.color} rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500`}
+                  className={`absolute -inset-1 bg-gradient-to-br ${innovation.color} rounded-3xl opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500`}
                 />
 
-                <div className="relative z-10">
-                  {/* Header */}
-                  <div className="flex items-center gap-3 mb-6">
+                <div className="relative z-10 flex flex-col h-full">
+                  {/* Icon & Stage Badge */}
+                  <div className="mb-6">
                     <motion.div
-                      className={`w-12 h-12 bg-gradient-to-br ${stage.color} rounded-xl flex items-center justify-center`}
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
+                      className={`w-16 h-16 bg-gradient-to-br ${innovation.color} rounded-2xl flex items-center justify-center mb-4`}
                     >
-                      <stage.icon className="w-6 h-6 text-white" />
+                      <innovation.icon className="w-8 h-8 text-white" />
                     </motion.div>
-                    <h3 className="text-xl">{stage.stage}</h3>
+                    <span
+                      className={`inline-block px-4 py-1 bg-gradient-to-r ${innovation.color} rounded-lg text-sm`}
+                    >
+                      {innovation.stage}
+                    </span>
                   </div>
 
-                  {/* Items */}
-                  <div className="space-y-4">
-                    {stage.items.map((item, itemIndex) => (
-                      <motion.div
-                        key={item.name}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: stageIndex * 0.2 + itemIndex * 0.1 }}
-                        whileHover={{ x: 5 }}
-                        className={`p-4 bg-gradient-to-br ${stage.bgColor} rounded-xl border border-gray-800/50 cursor-pointer transition-all duration-300`}
-                      >
-                        <div className="flex items-start gap-2 mb-2">
-                          <Zap className={`w-4 h-4 mt-1 flex-shrink-0 bg-gradient-to-br ${stage.color} bg-clip-text text-transparent`} />
-                          <h4 className="text-lg">{item.name}</h4>
-                        </div>
-                        <p className="text-sm text-gray-400 leading-relaxed">
-                          {item.description}
-                        </p>
-                      </motion.div>
-                    ))}
+                  {/* Title */}
+                  <h3 className="text-2xl mb-2">{innovation.title}</h3>
+                  <p className="text-lg text-gray-400 mb-4">
+                    {innovation.subtitle}
+                  </p>
+
+                  {/* Description */}
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    {innovation.description}
+                  </p>
+
+                  {/* Features */}
+                  <div className="mb-6 flex-1">
+                    <h4 className="text-sm text-gray-400 mb-3">{innovation.stage}</h4>
+                    <ul className="space-y-2">
+                      {innovation.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-sm text-gray-400">
+                          <Rocket className="w-4 h-4 text-indigo-400 flex-shrink-0 mt-0.5" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
 
-                  {/* Stage Indicator */}
-                  <div className="mt-6 pt-6 border-t border-gray-800">
-                    <div className="flex items-center justify-between text-sm text-gray-500">
-                      <span>{stage.items.length} projects</span>
-                      <motion.div
-                        className={`px-3 py-1 bg-gradient-to-r ${stage.color} rounded-full text-xs`}
-                        animate={{
-                          opacity: [0.5, 1, 0.5],
-                        }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        Active
-                      </motion.div>
-                    </div>
-                  </div>
+                  {/* CTA */}
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => {
+                      window.dispatchEvent(
+                        new CustomEvent("navigate", { detail: "contact" })
+                      );
+                    }}
+                    className={`w-full px-6 py-3 bg-gradient-to-r ${innovation.color} rounded-xl flex items-center justify-center gap-2 hover:shadow-lg transition-shadow`}
+                  >
+                    {innovation.ctaText}
+                    <ArrowRight className="w-4 h-4" />
+                  </motion.button>
                 </div>
+
+                {/* Top Accent */}
+                <div
+                  className={`absolute left-0 right-0 top-0 h-1 bg-gradient-to-r ${innovation.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-3xl`}
+                />
               </div>
             </motion.div>
           ))}
         </div>
-
-        {/* Bottom Note */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6 }}
-          className="mt-12 text-center"
-        >
-          <p className="text-gray-500">
-            Want early access to our upcoming products?{" "}
-            <motion.a
-              href="#"
-              className="text-indigo-400 hover:text-indigo-300 transition-colors"
-              whileHover={{ x: 5 }}
-            >
-              Join the waitlist →
-            </motion.a>
-          </p>
-        </motion.div>
       </div>
     </section>
   );

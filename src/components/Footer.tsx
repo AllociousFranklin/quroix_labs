@@ -6,9 +6,21 @@ export function Footer() {
   const quickLinksRight = ["Partnership", "Careers", "Contact"];
 
   return (
-    <footer className="relative py-20 border-t border-gray-800">
-      {/* Background Gradient */}
+    <footer className="relative py-20 border-t border-gray-800 overflow-hidden">
+      {/* Background Gradient with animated glow */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-950/50" />
+      <motion.div 
+        className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-600/5 rounded-full blur-3xl"
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.05, 0.1, 0.05],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
@@ -17,12 +29,17 @@ export function Footer() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            className="group"
           >
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white" />
+              <div className="relative w-10 h-10 bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-lg flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <Zap className="w-6 h-6 text-white relative z-10 group-hover:rotate-12 transition-transform duration-300" />
+                <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl bg-gradient-to-br from-indigo-500 to-cyan-500" />
               </div>
-              <span className="text-xl tracking-tight">Quroix Labs</span>
+              <span className="text-xl tracking-tight group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300">
+                Quroix Labs
+              </span>
             </div>
             <p className="text-gray-400 leading-relaxed">
               Engineering intelligence for the real world.
@@ -50,10 +67,11 @@ export function Footer() {
                         });
                         window.dispatchEvent(event);
                       }}
-                      className="text-gray-400 hover:text-white transition-colors inline-block"
+                      className="relative text-gray-400 hover:text-white transition-colors inline-block group"
                       whileHover={{ x: 5 }}
                     >
-                      {link}
+                      <span className="relative z-10">{link}</span>
+                      <span className="absolute -inset-1 bg-gradient-to-r from-indigo-500/0 to-cyan-500/0 group-hover:from-indigo-500/10 group-hover:to-cyan-500/10 blur transition-all duration-300 rounded" />
                     </motion.a>
                   </li>
                 ))}
@@ -70,10 +88,11 @@ export function Footer() {
                         });
                         window.dispatchEvent(event);
                       }}
-                      className="text-gray-400 hover:text-white transition-colors inline-block"
+                      className="relative text-gray-400 hover:text-white transition-colors inline-block group"
                       whileHover={{ x: 5 }}
                     >
-                      {link}
+                      <span className="relative z-10">{link}</span>
+                      <span className="absolute -inset-1 bg-gradient-to-r from-indigo-500/0 to-cyan-500/0 group-hover:from-indigo-500/10 group-hover:to-cyan-500/10 blur transition-all duration-300 rounded" />
                     </motion.a>
                   </li>
                 ))}

@@ -1,30 +1,34 @@
 import { motion } from "motion/react";
-import { TrendingUp, Rocket, Heart } from "lucide-react";
+import { Code, Zap, Users, TrendingUp } from "lucide-react";
 
 const reasons = [
   {
+    icon: Code,
+    title: "Build Real Stuff, Not Theory",
+    description:
+      "Work on real projects used by real clients. You'll build websites, intelligent automations, dashboards, and early AI tools.",
+    color: "from-indigo-500 to-purple-500",
+  },
+  {
+    icon: Zap,
+    title: "Learn Faster Than Anywhere Else",
+    description:
+      "Work directly with the founders. No layers. No slow approvals. You'll gain experience across engineering, design, AI, and product.",
+    color: "from-cyan-500 to-blue-500",
+  },
+  {
+    icon: Users,
+    title: "Flexible & Friendly Culture",
+    description:
+      "We care about results, not hours. Work in a way that fits your schedule and strengths.",
+    color: "from-purple-500 to-pink-500",
+  },
+  {
     icon: TrendingUp,
-    title: "Continuous Growth",
+    title: "Grow With the Company",
     description:
-      "We invest in your development with learning budgets, conference access, and mentorship programs. Your growth is our priority.",
-    color: "from-violet-500 to-purple-500",
-    features: ["$5K annual learning budget", "Conference tickets", "Internal tech talks"],
-  },
-  {
-    icon: Rocket,
-    title: "Real-World Projects",
-    description:
-      "Work on production systems used by thousands. No toy projects—just meaningful work that impacts real businesses and users.",
-    color: "from-fuchsia-500 to-pink-500",
-    features: ["Production-ready code", "Client-facing work", "Technical ownership"],
-  },
-  {
-    icon: Heart,
-    title: "Flexible Culture",
-    description:
-      "Remote-first, async communication, and results-driven. Work when and where you're most productive. Life comes first.",
-    color: "from-purple-500 to-indigo-500",
-    features: ["100% remote", "Flexible hours", "Unlimited PTO"],
+      "If you join early, you grow as we grow. You'll be part of our core team.",
+    color: "from-green-500 to-emerald-500",
   },
 ];
 
@@ -39,23 +43,20 @@ export function WhyJoinUs() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl mb-4">Why Join Us</h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            More than just a job—build your career with purpose
-          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {reasons.map((reason, index) => (
             <motion.div
               key={reason.title}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
+              transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
               className="relative group"
             >
-              <div className="relative h-full p-8 bg-gradient-to-br from-gray-900/80 to-gray-950/80 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 backdrop-blur-sm">
+              <div className="relative h-full p-6 bg-gradient-to-br from-gray-900/80 to-gray-950/80 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 backdrop-blur-sm">
                 {/* Glow Effect */}
                 <motion.div
                   className={`absolute -inset-1 bg-gradient-to-br ${reason.color} rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500`}
@@ -64,39 +65,22 @@ export function WhyJoinUs() {
                 <div className="relative z-10">
                   {/* Icon */}
                   <motion.div
-                    className={`w-16 h-16 bg-gradient-to-br ${reason.color} rounded-2xl flex items-center justify-center mb-6`}
+                    className={`w-14 h-14 bg-gradient-to-br ${reason.color} rounded-xl flex items-center justify-center mb-5`}
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <reason.icon className="w-8 h-8 text-white" />
+                    <reason.icon className="w-7 h-7 text-white" />
                   </motion.div>
 
                   {/* Content */}
-                  <h3 className="text-2xl mb-4">{reason.title}</h3>
-                  <p className="text-gray-400 leading-relaxed mb-6">
+                  <h3 className="text-xl mb-3">{reason.title}</h3>
+                  <p className="text-gray-400 leading-relaxed">
                     {reason.description}
                   </p>
 
-                  {/* Features */}
-                  <ul className="space-y-2">
-                    {reason.features.map((feature, i) => (
-                      <motion.li
-                        key={i}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 + i * 0.1 }}
-                        className="flex items-center gap-2 text-sm text-gray-400"
-                      >
-                        <span className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${reason.color}`} />
-                        {feature}
-                      </motion.li>
-                    ))}
-                  </ul>
-
                   {/* Bottom Accent */}
                   <motion.div
-                    className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${reason.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                    className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${reason.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-2xl`}
                   />
                 </div>
               </div>

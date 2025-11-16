@@ -1,160 +1,183 @@
 import { motion } from "motion/react";
-import { Brain, Database, Sparkles, Terminal, ArrowRight } from "lucide-react";
+import {
+  Brain,
+  Activity,
+  FileText,
+  GraduationCap,
+  ArrowRight,
+  Shield,
+  Zap,
+  Database,
+  Users,
+  BarChart3,
+  CheckCircle2,
+} from "lucide-react";
 
 const products = [
   {
+    id: 1,
+    title: "CuratorBot",
+    subtitle: "AI-powered Medical RAG System with 10GB+ Knowledge Base",
+    description:
+      "CuratorBot is a domain-specialized medical intelligence system built with advanced RAG pipelines. It processes over 10GB of verified medical data, enabling precise, context-rich responses for clinicians, students, and healthcare researchers.",
     icon: Brain,
-    name: "Neural Insights",
-    tagline: "AI-powered analytics that predict business trends before they happen.",
-    description:
-      "Neural Insights transforms raw business data into actionable intelligence using advanced machine learning models. Our platform analyzes patterns across multiple data sources, identifies emerging trends, and provides predictive insights that help businesses stay ahead of the curve. With natural language querying and automated report generation, decision-makers get the information they need without waiting for data teams.",
     color: "from-indigo-500 to-purple-500",
-    features: ["Real-time predictive analytics", "Natural language insights", "Automated reporting"],
+    capabilities: [
+      "Deep medical inference through RAG",
+      "Evidence-backed answers",
+      "Instant reference retrieval",
+      "HIPAA-conscious data handling",
+      "Multi-document reasoning",
+    ],
   },
   {
-    icon: Database,
-    name: "DataForge",
-    tagline: "Automated data pipelines that transform raw data into actionable intelligence.",
+    id: 2,
+    title: "OptiFit",
+    subtitle: "AI Fitness Intelligence for Athletes, Trainers & Coaches",
     description:
-      "DataForge is an intelligent ETL platform that automatically discovers, cleanses, and transforms data from any source. Built for modern data teams, it eliminates manual pipeline maintenance with self-healing workflows, automatic schema detection, and smart error recovery. DataForge learns from your data patterns and continuously optimizes performance, reducing pipeline development time from weeks to hours.",
+      "OptiFit combines computer vision and performance analytics to evaluate athlete workouts in real time. It tracks your form, posture, stability, and movement patterns — then provides personalized coaching insights instantly. It's also becoming a talent discovery platform, helping coaches scout emerging athletes.",
+    icon: Activity,
     color: "from-cyan-500 to-blue-500",
-    features: ["Self-healing pipelines", "Auto schema detection", "Smart data transformation"],
+    capabilities: [
+      "AI workout analysis (CV-based)",
+      "Form correction & performance scoring",
+      "Athlete–Coach collaboration",
+      "Progress tracking & insights",
+      "Community + scouting ecosystem",
+    ],
   },
   {
-    icon: Sparkles,
-    name: "AutoFlow Studio",
-    tagline: "Visual workflow builder for creating intelligent automation without code.",
+    id: 3,
+    title: "MediReport AI",
+    subtitle: "AI Medical Report Analyzer & Personal Health Dashboard",
     description:
-      "AutoFlow Studio empowers teams to build complex automation workflows through an intuitive drag-and-drop interface. Connect APIs, databases, AI models, and business tools with pre-built integrations and custom logic blocks. The platform includes AI-assisted workflow suggestions, automatic error handling, and real-time monitoring. From simple task automation to sophisticated multi-step processes, AutoFlow makes it accessible to everyone.",
+      "MediReport AI extracts key insights from medical reports and prescriptions in seconds. Users get summaries, risk flags, medication reminders, and a clean timeline of their health data.",
+    icon: FileText,
     color: "from-purple-500 to-pink-500",
-    features: ["No-code automation", "AI-powered suggestions", "200+ integrations"],
+    capabilities: [
+      "OCR + LLM report analysis",
+      "Prescription understanding",
+      "Risk detection & flagging",
+      "Medication reminders",
+      "Secure personal dashboard",
+    ],
   },
   {
-    icon: Terminal,
-    name: "DevOps AI",
-    tagline: "Intelligent deployment and monitoring system with self-healing capabilities.",
+    id: 4,
+    title: "MSEC Portal",
+    subtitle: "Secure ERP Ecosystem for Colleges",
     description:
-      "DevOps AI revolutionizes infrastructure management with autonomous monitoring, intelligent alerting, and self-healing capabilities. The platform uses machine learning to detect anomalies, predict potential failures, and automatically remediate common issues before they impact users. With smart rollback mechanisms, predictive scaling, and security monitoring, DevOps AI keeps your systems running smoothly 24/7 while reducing operational overhead.",
+      "A robust student management platform with admin dashboards, analytics, and strict security. Designed for institutions needing a modern, scalable, AI-enabled ERP.",
+    icon: GraduationCap,
     color: "from-orange-500 to-red-500",
-    features: ["Self-healing infrastructure", "Predictive scaling", "Smart anomaly detection"],
+    capabilities: [
+      "Admin & faculty dashboards",
+      "Secure student database",
+      "Timetables + attendance",
+      "Role-based access control",
+      "AI-enabled report generation",
+    ],
   },
 ];
 
 export function ProductsDetailed() {
   return (
     <section className="py-24 relative">
-      <div className="container mx-auto px-6">
-        <div className="space-y-20">
+      <div className="absolute inset-0 bg-gradient-to-b from-indigo-950/10 to-transparent" />
+
+      <div className="container mx-auto px-6 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl lg:text-5xl mb-4">
+            OUR CORE PRODUCTS
+          </h2>
+          <p className="text-xl text-gray-400">Live & Proven</p>
+        </motion.div>
+
+        <div className="max-w-6xl mx-auto space-y-12">
           {products.map((product, index) => (
             <motion.div
-              key={product.name}
-              initial={{ opacity: 0, y: 60 }}
+              key={product.id}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               className="relative group"
             >
-              <div className="relative bg-gradient-to-br from-gray-900/80 to-gray-950/80 rounded-3xl border border-gray-800 hover:border-gray-700 transition-all duration-500 backdrop-blur-sm overflow-hidden">
-                {/* Animated Background */}
+              <div className="relative p-8 lg:p-12 bg-gradient-to-br from-gray-900/80 to-gray-950/80 rounded-3xl border border-gray-800 hover:border-gray-700 transition-all duration-300 backdrop-blur-sm">
+                {/* Glow Effect */}
                 <motion.div
-                  className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
-                />
-                <div
-                  className={`absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br ${product.color} rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-700`}
+                  className={`absolute -inset-1 bg-gradient-to-br ${product.color} rounded-3xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500`}
                 />
 
-                <div className="grid lg:grid-cols-[400px_1fr] gap-0">
-                  {/* Thumbnail Area */}
-                  <div className="relative h-80 lg:h-auto bg-gradient-to-br from-gray-800/50 to-gray-900/50 flex items-center justify-center overflow-hidden">
-                    {/* Animated Background Pattern */}
+                <div className="relative z-10">
+                  {/* Header */}
+                  <div className="flex items-start gap-6 mb-6">
                     <motion.div
-                      className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-20`}
-                      animate={{
-                        scale: [1, 1.2, 1],
-                        rotate: [0, 10, 0],
-                      }}
-                      transition={{ duration: 8, repeat: Infinity }}
-                    />
-
-                    {/* Grid Pattern */}
-                    <div
-                      className="absolute inset-0 opacity-10"
-                      style={{
-                        backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                                        linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-                        backgroundSize: "30px 30px",
-                      }}
-                    />
-
-                    {/* Floating Icon */}
-                    <motion.div
-                      className="relative z-10"
-                      animate={{
-                        y: [0, -20, 0],
-                      }}
-                      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                      className={`w-16 h-16 bg-gradient-to-br ${product.color} rounded-2xl flex items-center justify-center flex-shrink-0`}
                     >
-                      <motion.div
-                        className={`w-32 h-32 bg-gradient-to-br ${product.color} rounded-3xl flex items-center justify-center`}
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        style={{
-                          boxShadow: `0 20px 60px rgba(99, 102, 241, 0.4)`,
-                        }}
-                      >
-                        <product.icon className="w-16 h-16 text-white" />
-                      </motion.div>
+                      <product.icon className="w-8 h-8 text-white" />
                     </motion.div>
 
-                    {/* Accent Border */}
-                    <div
-                      className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${product.color}`}
-                    />
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between gap-4 mb-2">
+                        <h3 className="text-3xl">{product.title}</h3>
+                        <motion.button
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          onClick={() => {
+                            window.dispatchEvent(
+                              new CustomEvent("navigate", { detail: "contact" })
+                            );
+                          }}
+                          className={`px-6 py-3 bg-gradient-to-r ${product.color} rounded-xl flex items-center gap-2 hover:shadow-lg transition-shadow whitespace-nowrap`}
+                        >
+                          Explore Product
+                          <ArrowRight className="w-4 h-4" />
+                        </motion.button>
+                      </div>
+                      <p className="text-lg text-gray-400 mb-4">
+                        {product.subtitle}
+                      </p>
+                    </div>
                   </div>
 
-                  {/* Content */}
-                  <div className="relative z-10 p-12 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-3xl lg:text-4xl mb-3">{product.name}</h3>
-                      <p className={`text-lg mb-6 bg-gradient-to-r ${product.color} bg-clip-text text-transparent`}>
-                        {product.tagline}
-                      </p>
-                      <p className="text-gray-400 leading-relaxed mb-6">
-                        {product.description}
-                      </p>
+                  {/* Description */}
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    {product.description}
+                  </p>
 
-                      {/* Key Features */}
-                      <div className="flex flex-wrap gap-2 mb-8">
-                        {product.features.map((feature, i) => (
-                          <motion.span
-                            key={i}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.3 + i * 0.1 }}
-                            className={`px-4 py-2 bg-gradient-to-r ${product.color} bg-opacity-10 rounded-full text-sm border border-gray-700`}
-                          >
-                            {feature}
-                          </motion.span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* CTA Button */}
-                    <div>
-                      <motion.button
-                        whileHover={{ scale: 1.02, x: 5 }}
-                        whileTap={{ scale: 0.98 }}
-                        className={`px-8 py-4 bg-gradient-to-r ${product.color} rounded-xl flex items-center gap-2 hover:shadow-2xl transition-shadow`}
-                        style={{
-                          boxShadow: "0 0 30px rgba(99, 102, 241, 0.3)",
-                        }}
-                      >
-                        Explore Product
-                        <ArrowRight className="w-5 h-5" />
-                      </motion.button>
+                  {/* Capabilities */}
+                  <div>
+                    <h4 className="text-lg mb-4 text-gray-200">Capabilities</h4>
+                    <div className="grid md:grid-cols-2 gap-3">
+                      {product.capabilities.map((capability, idx) => (
+                        <motion.div
+                          key={idx}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: idx * 0.05 }}
+                          className="flex items-start gap-3"
+                        >
+                          <CheckCircle2 className={`w-5 h-5 text-indigo-400 flex-shrink-0 mt-0.5`} />
+                          <span className="text-gray-400">{capability}</span>
+                        </motion.div>
+                      ))}
                     </div>
                   </div>
                 </div>
+
+                {/* Side Accent */}
+                <div
+                  className={`absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b ${product.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-l-3xl`}
+                />
               </div>
             </motion.div>
           ))}

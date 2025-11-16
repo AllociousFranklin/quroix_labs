@@ -30,8 +30,37 @@ const services = [
 
 export function ServicesOverview() {
   return (
-    <section className="py-24 relative">
+    <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-950/10 to-transparent" />
+      
+      {/* Animated background orbs */}
+      <motion.div 
+        className="absolute top-1/3 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl"
+        animate={{
+          scale: [1, 1.2, 1],
+          x: [0, 50, 0],
+          opacity: [0.1, 0.15, 0.1],
+        }}
+        transition={{
+          duration: 12,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+      <motion.div 
+        className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl"
+        animate={{
+          scale: [1, 1.3, 1],
+          x: [0, -50, 0],
+          opacity: [0.1, 0.2, 0.1],
+        }}
+        transition={{
+          duration: 15,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 2
+        }}
+      />
       
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
@@ -54,9 +83,14 @@ export function ServicesOverview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
+              whileHover={{ y: -8 }}
               className="group relative"
             >
-              <div className="relative h-full p-8 bg-gradient-to-br from-gray-900/80 to-gray-950/80 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 backdrop-blur-sm overflow-hidden">
+              {/* Animated glow border */}
+              <div className={`absolute -inset-[1px] bg-gradient-to-br ${service.color} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm`} />
+              <div className={`absolute -inset-[2px] bg-gradient-to-br ${service.color} rounded-2xl opacity-0 group-hover:opacity-50 transition-opacity duration-500 blur-xl`} />
+              
+              <div className="relative h-full p-8 bg-gradient-to-br from-gray-900/90 to-gray-950/90 rounded-2xl border border-gray-800 group-hover:border-transparent transition-all duration-300 backdrop-blur-sm overflow-hidden">
                 {/* Animated Gradient Background */}
                 <motion.div
                   className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
@@ -67,13 +101,19 @@ export function ServicesOverview() {
 
                 <div className="relative z-10 flex flex-col h-full">
                   <motion.div
-                    className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center mb-6`}
+                    className={`relative w-12 h-12 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center mb-6 overflow-hidden`}
                     whileHover={{ scale: 1.1, rotate: 5 }}
                   >
-                    <service.icon className="w-6 h-6 text-white" />
+                    <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg`} />
+                    <service.icon className="w-6 h-6 text-white relative z-10" />
                   </motion.div>
 
-                  <h3 className="text-xl mb-3">{service.title}</h3>
+                  <h3 className="text-xl mb-3 group-hover:text-transparent group-hover:bg-gradient-to-br group-hover:bg-clip-text" style={{
+                    backgroundImage: service.color.includes('from-indigo') ? 'linear-gradient(to bottom right, rgb(99, 102, 241), rgb(168, 85, 247))' :
+                                     service.color.includes('from-cyan') ? 'linear-gradient(to bottom right, rgb(6, 182, 212), rgb(59, 130, 246))' :
+                                     service.color.includes('from-purple') ? 'linear-gradient(to bottom right, rgb(168, 85, 247), rgb(236, 72, 153))' :
+                                     'linear-gradient(to bottom right, rgb(249, 115, 22), rgb(239, 68, 68))'
+                  }}>{service.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
                     {service.description}
                   </p>

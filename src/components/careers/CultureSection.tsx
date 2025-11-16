@@ -1,20 +1,63 @@
 import { motion } from "motion/react";
-import { Code, Coffee, Lightbulb, Users, Globe, Zap } from "lucide-react";
+import {
+  Zap,
+  MessageSquare,
+  TrendingUp,
+  CheckCircle2,
+  TestTube,
+  Minimize2,
+  Clock,
+  Users,
+} from "lucide-react";
 
 const cultureValues = [
-  { icon: Code, label: "Ship Quality", color: "from-violet-500 to-purple-500" },
-  { icon: Coffee, label: "Work-Life Balance", color: "from-fuchsia-500 to-pink-500" },
-  { icon: Lightbulb, label: "Innovation First", color: "from-indigo-500 to-cyan-500" },
-  { icon: Users, label: "Team Spirit", color: "from-purple-500 to-fuchsia-500" },
-  { icon: Globe, label: "Remote Culture", color: "from-pink-500 to-orange-500" },
-  { icon: Zap, label: "Fast Execution", color: "from-orange-500 to-red-500" },
+  {
+    icon: Zap,
+    label: "Fast learning",
+    color: "from-indigo-500 to-purple-500",
+  },
+  {
+    icon: MessageSquare,
+    label: "Clear communication",
+    color: "from-cyan-500 to-blue-500",
+  },
+  {
+    icon: TrendingUp,
+    label: "Helping each other grow",
+    color: "from-purple-500 to-pink-500",
+  },
+  {
+    icon: CheckCircle2,
+    label: "Ownership over tasks",
+    color: "from-green-500 to-emerald-500",
+  },
+  {
+    icon: TestTube,
+    label: "Experimenting and iterating",
+    color: "from-orange-500 to-red-500",
+  },
+  {
+    icon: Minimize2,
+    label: "Keeping things simple",
+    color: "from-blue-500 to-indigo-500",
+  },
+  {
+    icon: Clock,
+    label: "Respect people and their time",
+    color: "from-pink-500 to-purple-500",
+  },
+  {
+    icon: Users,
+    label: "Building together",
+    color: "from-violet-500 to-fuchsia-500",
+  },
 ];
 
 export function CultureSection() {
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-violet-950/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-indigo-950/10 to-transparent" />
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
@@ -23,21 +66,20 @@ export function CultureSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl mb-4">Our Culture</h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            The values that drive everything we do
-          </p>
+          <h2 className="text-4xl lg:text-5xl mb-4">
+            Our Culture
+          </h2>
         </motion.div>
 
         {/* Values Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16">
           {cultureValues.map((value, index) => (
             <motion.div
               key={value.label}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.05 }}
               whileHover={{ y: -10, scale: 1.05 }}
               className="relative group"
             >
@@ -49,49 +91,20 @@ export function CultureSection() {
 
                 <div className="relative z-10">
                   <motion.div
-                    className={`w-14 h-14 bg-gradient-to-br ${value.color} rounded-xl flex items-center justify-center mb-4 mx-auto`}
+                    className={`w-12 h-12 bg-gradient-to-br ${value.color} rounded-xl flex items-center justify-center mb-4 mx-auto`}
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <value.icon className="w-7 h-7 text-white" />
+                    <value.icon className="w-6 h-6 text-white" />
                   </motion.div>
-                  <p className="text-sm">{value.label}</p>
+                  <p className="text-sm text-gray-300">
+                    {value.label}
+                  </p>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
-
-        {/* Culture Statement */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-4xl mx-auto"
-        >
-          <div className="relative p-12 bg-gradient-to-br from-violet-950/20 to-fuchsia-950/20 rounded-3xl border border-violet-500/20 backdrop-blur-sm">
-            <div className="text-center space-y-6">
-              <motion.div
-                className="text-6xl mb-4"
-                animate={{ rotate: [0, 10, -10, 0] }}
-                transition={{ duration: 5, repeat: Infinity }}
-              >
-                🚀
-              </motion.div>
-              <h3 className="text-2xl lg:text-3xl">We're Building Something Special</h3>
-              <p className="text-lg text-gray-400 leading-relaxed">
-                At Quroix Labs, you're not just another employee—you're a builder, a problem-solver,
-                and an innovator. We give you autonomy, trust your expertise, and celebrate your wins.
-                Our team is small but mighty, distributed but connected, ambitious but realistic.
-              </p>
-              <div className="flex flex-wrap justify-center gap-8 pt-6 text-sm text-gray-500">
-                <span>🌍 Remote-first since day one</span>
-                <span>💡 100+ products shipped</span>
-                <span>🎯 $10M+ in client revenue generated</span>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

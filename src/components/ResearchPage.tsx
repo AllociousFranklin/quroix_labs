@@ -120,6 +120,11 @@ export function ResearchPage() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  window.dispatchEvent(
+                    new CustomEvent("navigate", { detail: "contact" })
+                  );
+                }}
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-xl hover:shadow-2xl transition-all"
                 style={{
                   boxShadow: "0 0 40px rgba(99, 102, 241, 0.4)",

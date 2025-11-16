@@ -79,18 +79,21 @@ export function CTAStrip() {
               </p>
 
               <motion.button
-                whileHover={{ scale: 1.05, boxShadow: "0 0 60px rgba(99, 102, 241, 0.6)" }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => {
                   const event = new CustomEvent("navigate", { detail: "request-demo" });
                   window.dispatchEvent(event);
                 }}
-                className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-xl text-lg hover:shadow-2xl transition-shadow group"
+                className="relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-xl text-lg group overflow-hidden"
               >
-                Request a Demo
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-2xl bg-gradient-to-r from-indigo-500 to-cyan-500" />
+                <span className="relative z-10">Request a Demo</span>
                 <motion.span
                   animate={{ x: [0, 5, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
+                  className="relative z-10"
                 >
                   <ArrowRight className="w-5 h-5" />
                 </motion.span>
@@ -98,7 +101,9 @@ export function CTAStrip() {
 
               <div className="mt-8 flex items-center justify-center gap-6 text-sm text-gray-500">
                 <span className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                  <span className="relative w-2 h-2 bg-green-500 rounded-full">
+                    <span className="absolute inset-0 bg-green-500 rounded-full animate-ping" />
+                  </span>
                   No credit card required
                 </span>
                 <span>•</span>

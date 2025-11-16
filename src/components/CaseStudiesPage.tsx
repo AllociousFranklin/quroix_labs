@@ -118,6 +118,11 @@ export function CaseStudiesPage() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  window.dispatchEvent(
+                    new CustomEvent("navigate", { detail: "contact" })
+                  );
+                }}
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-xl hover:shadow-2xl transition-all"
                 style={{
                   boxShadow: "0 0 40px rgba(6, 182, 212, 0.4)",

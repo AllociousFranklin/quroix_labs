@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Sparkles, Upload, CheckCircle2, Calendar } from "lucide-react";
-import { db } from "../lib/firebase";
+import { Sparkles, Upload, CheckCircle2, X } from "lucide-react";
+import { db, storage } from "../lib/firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 export function RequestDemoPage() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
+  const [uploading, setUploading] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -99,6 +102,19 @@ export function RequestDemoPage() {
     setSubmitting(true);
 
     try {
+      let fileURL = "";
+      
+      // Upload file if one was selected
+      if (uploadedFile) {
+        setUploading(true);
+        const timestamp = Date.now();
+        const fileName = `${timestamp}_${uploadedFile.name}`;
+        const storageRef = ref(storage, `demo_requests/${fileName}`);
+        await uploadBytes(storageRef, uploadedFile);
+        fileURL = await getDownloadURL(storageRef);
+        setUploading(false);
+      }
+
       // Add document to Firestore
       await addDoc(collection(db, "demo_requests"), {
         fullName: formData.fullName,
@@ -107,6 +123,8 @@ export function RequestDemoPage() {
         category: formData.category,
         budget: formData.budget,
         description: formData.description,
+        fileURL: fileURL || null,
+        fileName: uploadedFile?.name || null,
         submittedAt: serverTimestamp(),
         type: "demo_request",
       });
@@ -120,6 +138,7 @@ export function RequestDemoPage() {
       alert("There was an error submitting your request. Please try again.");
     } finally {
       setSubmitting(false);
+      setUploading(false);
     }
   };
 
@@ -136,6 +155,31 @@ export function RequestDemoPage() {
         ...errors,
         [name]: "",
       });
+    }
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setUploadedFile(file);
+    }
+  };
+
+  const handleFileUpload = async () => {
+    if (!uploadedFile) return;
+
+    setUploading(true);
+
+    try {
+      const storageRef = ref(storage, `demo_requests/${uploadedFile.name}`);
+      await uploadBytes(storageRef, uploadedFile);
+      const downloadURL = await getDownloadURL(storageRef);
+      console.log("File uploaded successfully:", downloadURL);
+    } catch (error) {
+      console.error("Error uploading file:", error);
+      alert("There was an error uploading your file. Please try again.");
+    } finally {
+      setUploading(false);
     }
   };
 
@@ -326,10 +370,11 @@ export function RequestDemoPage() {
                   className="w-full px-4 py-3 bg-gray-900/80 border border-gray-800 rounded-xl text-white focus:outline-none focus:border-indigo-500 transition-colors"
                 >
                   <option value="">Select budget range</option>
-                  <option value="under-50k">Under ₹50,000</option>
-                  <option value="50k-2l">₹50k–₹2L</option>
-                  <option value="2l-5l">₹2L–₹5L</option>
-                  <option value="5l-plus">₹5L+</option>
+                  <option value="under-5k">Under ₹5,000 — Small fixes, micro-sites, single pages, tiny automations</option>
+                  <option value="5k-20k">₹5,000 – ₹20,000 — Basic websites, small automations, simple dashboards</option>
+                  <option value="20k-50k">₹20,000 – ₹50,000 — Full websites, AI agents, platforms, workflow systems</option>
+                  <option value="50k-1l">₹50,000 – ₹1,00,000 — Advanced custom systems, multi-module platforms</option>
+                  <option value="1l-plus">₹1,00,000+ — High-end intelligent platforms, long-term engineering</option>
                 </select>
                 {errors.budget && <p className="text-red-500 text-sm mt-1">{errors.budget}</p>}
               </div>
@@ -362,6 +407,7 @@ export function RequestDemoPage() {
                     accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
                     className="hidden"
                     id="file-upload"
+                    onChange={handleFileChange}
                   />
                   <label
                     htmlFor="file-upload"
@@ -371,21 +417,36 @@ export function RequestDemoPage() {
                     <span>Upload PDF, briefs, or screenshots</span>
                   </label>
                 </div>
+                {uploadedFile && (
+                  <div className="mt-2 flex items-center gap-2">
+                    <span className="text-gray-400">{uploadedFile.name}</span>
+                    <button
+                      type="button"
+                      className="text-red-500 hover:text-red-600"
+                      onClick={() => setUploadedFile(null)}
+                    >
+                      <X className="w-4 h-4" />
+                    </button>
+                  </div>
+                )}
+                {uploading && (
+                  <p className="text-sm text-gray-500 mt-2">Uploading...</p>
+                )}
               </div>
 
               {/* Submit Button */}
               <motion.button
                 type="submit"
-                disabled={!isFormValid() || submitting}
-                whileHover={{ scale: isFormValid() && !submitting ? 1.02 : 1 }}
-                whileTap={{ scale: isFormValid() && !submitting ? 0.98 : 1 }}
+                disabled={!isFormValid() || submitting || uploading}
+                whileHover={{ scale: isFormValid() && !submitting && !uploading ? 1.02 : 1 }}
+                whileTap={{ scale: isFormValid() && !submitting && !uploading ? 0.98 : 1 }}
                 className={`w-full px-8 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-xl text-lg transition-all ${
-                  !isFormValid() || submitting
+                  !isFormValid() || submitting || uploading
                     ? "opacity-50 cursor-not-allowed"
                     : "hover:shadow-2xl hover:shadow-indigo-500/50"
                 }`}
               >
-                {submitting ? "Submitting..." : "Book My Demo"}
+                {uploading ? "Uploading file..." : submitting ? "Submitting..." : "Book My Demo"}
               </motion.button>
 
               {/* Privacy Note */}
