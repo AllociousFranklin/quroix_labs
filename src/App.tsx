@@ -63,6 +63,8 @@ export default function App() {
       window.removeEventListener("navigate", handleNavigate as EventListener);
   }, []);
 
+  
+
   /* Handle browser back / forward buttons */
   useEffect(() => {
     const onPopState = () => {
@@ -73,6 +75,17 @@ export default function App() {
     window.addEventListener("popstate", onPopState);
     return () => window.removeEventListener("popstate", onPopState);
   }, []);
+
+  /* Track page views for Google Analytics (SPA) */
+useEffect(() => {
+  if (typeof window !== "undefined" && typeof (window as any).gtag === "function") {
+    (window as any).gtag("event", "page_view", {
+      page_path: window.location.pathname,
+      page_title: document.title
+    });
+  }
+}, [currentPage]);
+
 
   /* SEO configuration */
   const getSEOConfig = () => {
