@@ -40,10 +40,10 @@ export function WhyChoose() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl mb-4">
+          <h2 className="text-4xl lg:text-5xl mb-4 font-heading tracking-tight">
             Why Choose Quroix Labs
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
             Built for excellence, designed for impact
           </p>
         </motion.div>
@@ -93,7 +93,7 @@ export function WhyChoose() {
                     <strength.icon className="w-10 h-10 text-white" />
                   </motion.div>
 
-                  <h3 className="text-2xl mb-4">
+                  <h3 className="text-2xl mb-4 font-heading tracking-tight">
                     {strength.title}
                   </h3>
                   <p className="text-gray-400 leading-relaxed mb-4">

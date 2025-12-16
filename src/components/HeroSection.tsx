@@ -1,6 +1,5 @@
-import { useState } from "react";
 import { motion } from "motion/react";
-import { Play, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { IdeaTransformation } from "./IdeaTransformation";
 
 export function HeroSection() {
@@ -8,6 +7,7 @@ export function HeroSection() {
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Gradient with animation */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-950/20 via-transparent to-cyan-950/20" />
+
       <motion.div
         className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl"
         animate={{
@@ -20,6 +20,7 @@ export function HeroSection() {
           ease: "easeInOut",
         }}
       />
+
       <motion.div
         className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl"
         animate={{
@@ -55,9 +56,7 @@ export function HeroSection() {
                 </span>
                 <motion.span
                   className="absolute -inset-1 bg-gradient-to-r from-indigo-400/20 to-cyan-400/20 blur-xl -z-10"
-                  animate={{
-                    opacity: [0.3, 0.6, 0.3],
-                  }}
+                  animate={{ opacity: [0.3, 0.6, 0.3] }}
                   transition={{
                     duration: 3,
                     repeat: Infinity,
@@ -74,10 +73,11 @@ export function HeroSection() {
             transition={{ delay: 0.4 }}
             className="text-xl text-gray-400 leading-relaxed"
           >
-            We build AI-driven systems, intelligent platforms, and automated workflows
-            for startups and enterprises.
+            We build AI-driven systems, intelligent platforms, and automated
+            workflows for startups and enterprises.
           </motion.p>
 
+          {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -88,7 +88,9 @@ export function HeroSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
-                const event = new CustomEvent("navigate", { detail: "request-demo" });
+                const event = new CustomEvent("navigate", {
+                  detail: "request-demo",
+                });
                 window.dispatchEvent(event);
               }}
               className="relative px-8 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-lg text-lg flex items-center gap-2 overflow-hidden group"
@@ -98,19 +100,26 @@ export function HeroSection() {
               <Sparkles className="w-5 h-5 relative z-10 group-hover:rotate-12 transition-transform duration-300" />
               <span className="relative z-10">Request Demo</span>
             </motion.button>
+
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                const event = new CustomEvent("navigate", {
+                  detail: "services",
+                });
+                window.dispatchEvent(event);
+              }}
               className="relative px-8 py-4 border border-gray-700 rounded-lg text-lg flex items-center gap-2 overflow-hidden group"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-cyan-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute inset-0 border border-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl bg-indigo-500/20" />
-              <Play className="w-5 h-5 relative z-10 group-hover:scale-110 transition-transform duration-300" />
-              <span className="relative z-10">Watch Overview</span>
+              <span className="relative z-10">Explore Solutions</span>
             </motion.button>
           </motion.div>
 
+          {/* Trust Indicators */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

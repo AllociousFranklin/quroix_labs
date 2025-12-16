@@ -21,11 +21,7 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
 
   // Prevent scroll when mobile menu is open
   useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : "unset";
     return () => {
       document.body.style.overflow = "unset";
     };
@@ -60,20 +56,19 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
         }`}
       >
         <div className="container mx-auto px-6 flex items-center justify-between gap-4">
+          
           {/* Logo */}
           <motion.div
             className="flex items-center gap-2 cursor-pointer flex-shrink-0 group"
             whileHover={{ scale: 1.05 }}
             onClick={() => handleNavClick("home")}
           >
-            <div className="relative w-8 h-8 bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-lg flex items-center justify-center overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <Zap className="w-5 h-5 text-white relative z-10 group-hover:rotate-12 transition-transform duration-300" />
-              <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl bg-gradient-to-br from-indigo-500 to-cyan-500" />
-            </div>
-            <span className="text-xl tracking-tight group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300">
-              Quroix Labs
-            </span>
+            <img
+              src="/assets/Quroix_white_Logo.svg"
+              alt="Quroix Labs Logo"
+              className="h-8 w-auto object-contain"
+              draggable={false}
+            />
           </motion.div>
 
           {/* Desktop Center Menu */}
@@ -83,19 +78,25 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
                 key={item.name}
                 onClick={() => handleNavClick(item.page)}
                 className={`text-sm whitespace-nowrap transition-all duration-300 relative group ${
-                  currentPage === item.page ? "text-white" : "text-gray-300 hover:text-white"
+                  currentPage === item.page
+                    ? "text-white"
+                    : "text-gray-300 hover:text-white"
                 }`}
                 whileHover={{ y: -2 }}
               >
                 {item.name}
                 <span
                   className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 transition-all duration-300 ${
-                    currentPage === item.page ? "w-full" : "w-0 group-hover:w-full"
+                    currentPage === item.page
+                      ? "w-full"
+                      : "w-0 group-hover:w-full"
                   }`}
                 />
                 <span
                   className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 blur-sm transition-all duration-300 ${
-                    currentPage === item.page ? "w-full opacity-75" : "w-0 group-hover:w-full group-hover:opacity-75"
+                    currentPage === item.page
+                      ? "w-full opacity-75"
+                      : "w-0 group-hover:w-full group-hover:opacity-75"
                   }`}
                 />
               </motion.button>
@@ -114,6 +115,7 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl bg-gradient-to-r from-indigo-500 to-cyan-500" />
               <span className="relative z-10">Request Demo</span>
             </motion.button>
+
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -147,7 +149,6 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
       <AnimatePresence>
         {mobileMenuOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -157,7 +158,6 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
               onClick={() => setMobileMenuOpen(false)}
             />
 
-            {/* Mobile Menu */}
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
@@ -221,6 +221,7 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
                   <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <span className="relative z-10">Request Demo</span>
                 </motion.button>
+
                 <motion.button
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}

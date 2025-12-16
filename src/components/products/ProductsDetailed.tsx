@@ -5,11 +5,6 @@ import {
   FileText,
   GraduationCap,
   ArrowRight,
-  Shield,
-  Zap,
-  Database,
-  Users,
-  BarChart3,
   CheckCircle2,
 } from "lucide-react";
 
@@ -29,8 +24,9 @@ const products = [
       "HIPAA-conscious data handling",
       "Multi-document reasoning",
     ],
+    link: "https://curatorai-two.vercel.app/", // 🔥 YOUR LINK 1
   },
-  {
+  {  
     id: 2,
     title: "OptiFit",
     subtitle: "AI Fitness Intelligence for Athletes, Trainers & Coaches",
@@ -45,6 +41,7 @@ const products = [
       "Progress tracking & insights",
       "Community + scouting ecosystem",
     ],
+    link: "https://studio-nu-neon.vercel.app/  ", // 🔥 YOUR LINK 2
   },
   {
     id: 3,
@@ -61,6 +58,7 @@ const products = [
       "Medication reminders",
       "Secure personal dashboard",
     ],
+    link: "https://medi-report-ai-hacktrix.vercel.app/", // 🔥 YOUR LINK 3
   },
   {
     id: 4,
@@ -77,6 +75,7 @@ const products = [
       "Role-based access control",
       "AI-enabled report generation",
     ],
+    link: "https://cmiss.vercel.app/", // 🔥 YOUR LINK 4
   },
 ];
 
@@ -92,9 +91,7 @@ export function ProductsDetailed() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl mb-4">
-            OUR CORE PRODUCTS
-          </h2>
+          <h2 className="text-4xl lg:text-5xl mb-4">OUR CORE PRODUCTS</h2>
           <p className="text-xl text-gray-400">Live & Proven</p>
         </motion.div>
 
@@ -109,12 +106,14 @@ export function ProductsDetailed() {
               className="relative group"
             >
               <div className="relative p-8 lg:p-12 bg-gradient-to-br from-gray-900/80 to-gray-950/80 rounded-3xl border border-gray-800 hover:border-gray-700 transition-all duration-300 backdrop-blur-sm">
-                {/* Glow Effect */}
+                
+                {/* Glow */}
                 <motion.div
                   className={`absolute -inset-1 bg-gradient-to-br ${product.color} rounded-3xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500`}
                 />
 
                 <div className="relative z-10">
+                  
                   {/* Header */}
                   <div className="flex items-start gap-6 mb-6">
                     <motion.div
@@ -128,20 +127,19 @@ export function ProductsDetailed() {
                     <div className="flex-1">
                       <div className="flex items-start justify-between gap-4 mb-2">
                         <h3 className="text-3xl">{product.title}</h3>
+
+                        {/* BUTTON UPDATED */}
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          onClick={() => {
-                            window.dispatchEvent(
-                              new CustomEvent("navigate", { detail: "contact" })
-                            );
-                          }}
+                          onClick={() => window.open(product.link, "_blank")}
                           className={`px-6 py-3 bg-gradient-to-r ${product.color} rounded-xl flex items-center gap-2 hover:shadow-lg transition-shadow whitespace-nowrap`}
                         >
                           Explore Product
                           <ArrowRight className="w-4 h-4" />
                         </motion.button>
                       </div>
+
                       <p className="text-lg text-gray-400 mb-4">
                         {product.subtitle}
                       </p>
@@ -166,7 +164,7 @@ export function ProductsDetailed() {
                           transition={{ delay: idx * 0.05 }}
                           className="flex items-start gap-3"
                         >
-                          <CheckCircle2 className={`w-5 h-5 text-indigo-400 flex-shrink-0 mt-0.5`} />
+                          <CheckCircle2 className="w-5 h-5 text-indigo-400 flex-shrink-0 mt-0.5" />
                           <span className="text-gray-400">{capability}</span>
                         </motion.div>
                       ))}

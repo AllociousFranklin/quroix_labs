@@ -25,26 +25,19 @@ export function Footer() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           {/* Left - Logo & Tagline */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="group"
-          >
-            <div className="flex items-center gap-2 mb-6">
-              <div className="relative w-10 h-10 bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-lg flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <Zap className="w-6 h-6 text-white relative z-10 group-hover:rotate-12 transition-transform duration-300" />
-                <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl bg-gradient-to-br from-indigo-500 to-cyan-500" />
-              </div>
-              <span className="text-xl tracking-tight group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300">
-                Quroix Labs
-              </span>
-            </div>
-            <p className="text-gray-400 leading-relaxed">
-              Engineering intelligence for the real world.
-            </p>
-          </motion.div>
+          <div className="mb-6 space-y-3">
+  <motion.img
+    src="/assets/Quroix_white_Logo.svg"
+    alt="Quroix Labs"
+    className="h-7 w-auto opacity-85 hover:opacity-100 transition-opacity"
+    whileHover={{ scale: 1.02 }}
+    draggable={false}
+  />
+  <p className="text-gray-400 leading-relaxed max-w-sm">
+    Engineering intelligence for the real world.
+  </p>
+</div>
+
 
           {/* Center - Quick Links (2 columns) */}
           <motion.div
