@@ -20,17 +20,41 @@ import { ContactPage } from "./components/ContactPage";
 import { PrivacyPage } from "./components/PrivacyPage";
 import { TermsPage } from "./components/TermsPage";
 
-/* SEO (NEW SYSTEM) */
+/* SEO */
 import { SEO } from "./seo/SEO";
 import { pageSEO } from "./seo/pageSeo";
 
-export default function App() {
-  const [currentPage, setCurrentPage] = useState("home");
+/* URL ↔ Page mapping */
+const ROUTES: Record<string, string> = {
+  "/": "home",
+  "/services": "services",
+  "/products": "products",
+  "/case-studies": "case-studies",
+  "/research": "research",
+  "/careers": "careers",
+  "/apply": "apply",
+  "/partnership": "partnership",
+  "/request-demo": "request-demo",
+  "/contact": "contact",
+  "/privacy": "privacy",
+  "/terms": "terms"
+};
 
-  /* Listen for custom navigation events */
+export default function App() {
+  /* Initialize page from URL */
+  const [currentPage, setCurrentPage] = useState(() => {
+    return ROUTES[window.location.pathname] || "home";
+  });
+
+  /* Handle in-app navigation events */
   useEffect(() => {
     const handleNavigate = (e: CustomEvent) => {
-      setCurrentPage(e.detail);
+      const page = e.detail;
+      const path =
+        Object.keys(ROUTES).find(key => ROUTES[key] === page) || "/";
+
+      window.history.pushState({}, "", path);
+      setCurrentPage(page);
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
@@ -39,7 +63,18 @@ export default function App() {
       window.removeEventListener("navigate", handleNavigate as EventListener);
   }, []);
 
-  /* SEO configuration based on current page */
+  /* Handle browser back / forward buttons */
+  useEffect(() => {
+    const onPopState = () => {
+      const page = ROUTES[window.location.pathname] || "home";
+      setCurrentPage(page);
+    };
+
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
+
+  /* SEO configuration */
   const getSEOConfig = () => {
     switch (currentPage) {
       case "home":
@@ -127,7 +162,7 @@ export default function App() {
 
   return (
     <div className="bg-[#0a0a0a] text-white overflow-x-hidden">
-      {/* SEO updates dynamically on page change */}
+      {/* Dynamic SEO */}
       <SEO {...getSEOConfig()} />
 
       <ScrollProgress />
