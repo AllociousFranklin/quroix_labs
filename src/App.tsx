@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
+
+/* Layout & UI */
 import { Navigation } from "./components/Navigation";
+import { Footer } from "./components/Footer";
+import { ScrollProgress } from "./components/ScrollProgress";
+
+/* Pages */
 import { HomePage } from "./components/HomePage";
 import { ServicesPage } from "./components/ServicesPage";
 import { ProductsPage } from "./components/ProductsPage";
@@ -12,85 +19,120 @@ import { RequestDemoPage } from "./components/RequestDemoPage";
 import { ContactPage } from "./components/ContactPage";
 import { PrivacyPage } from "./components/PrivacyPage";
 import { TermsPage } from "./components/TermsPage";
-import { Footer } from "./components/Footer";
-import { SEO, pageSEO } from "./components/SEO";
-import { ScrollProgress } from "./components/ScrollProgress";
-import { motion, AnimatePresence } from "motion/react";
+
+/* SEO (NEW SYSTEM) */
+import { SEO } from "./seo/SEO";
+import { pageSEO } from "./seo/pageSeo";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("home");
 
-  // Listen for navigation events from components
+  /* Listen for custom navigation events */
   useEffect(() => {
     const handleNavigate = (e: CustomEvent) => {
       setCurrentPage(e.detail);
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
+
     window.addEventListener("navigate", handleNavigate as EventListener);
-    return () => window.removeEventListener("navigate", handleNavigate as EventListener);
+    return () =>
+      window.removeEventListener("navigate", handleNavigate as EventListener);
   }, []);
 
-  // Get SEO config for current page
+  /* SEO configuration based on current page */
   const getSEOConfig = () => {
     switch (currentPage) {
       case "home":
-        return pageSEO.home;
+        return { ...pageSEO.home, type: "home" };
+
       case "services":
-        return pageSEO.services;
+        return {
+          ...pageSEO.services,
+          type: "service",
+          serviceName: "AI Development Services"
+        };
+
       case "products":
-        return pageSEO.products;
+        return { ...pageSEO.products, type: "home" };
+
       case "case-studies":
-        return pageSEO.caseStudies;
+        return { ...pageSEO.caseStudies, type: "home" };
+
       case "research":
-        return pageSEO.research;
+        return { ...pageSEO.research, type: "home" };
+
       case "careers":
-        return pageSEO.careers;
+        return { ...pageSEO.careers, type: "home" };
+
       case "apply":
         return {
           title: "Apply Now | Quroix Labs",
-          description: "Apply for open positions at Quroix Labs. Join our team and build intelligent systems, automation tools, and digital products.",
-          keywords: "quroix labs careers, job application, apply now, join team, career opportunities"
+          description:
+            "Apply for open positions at Quroix Labs. Join our team and build intelligent AI systems.",
+          canonical: "https://quroixlabs.com/apply",
+          type: "home"
         };
+
       case "partnership":
-        return pageSEO.partnership;
+        return { ...pageSEO.partnership, type: "home" };
+
       case "request-demo":
-        return pageSEO.requestDemo;
+        return { ...pageSEO.requestDemo, type: "home" };
+
       case "contact":
-        return pageSEO.contact;
+        return { ...pageSEO.contact, type: "home" };
+
       case "privacy":
-        return pageSEO.privacy;
+        return { ...pageSEO.privacy, type: "home" };
+
       case "terms":
-        return pageSEO.terms;
+        return { ...pageSEO.terms, type: "home" };
+
       default:
-        return pageSEO.home;
+        return { ...pageSEO.home, type: "home" };
     }
   };
 
-  // Render current page with smooth transitions
+  /* Render current page */
   const renderPage = () => {
     switch (currentPage) {
-      case "home": return <HomePage />;
-      case "services": return <ServicesPage />;
-      case "products": return <ProductsPage />;
-      case "case-studies": return <CaseStudiesPage />;
-      case "research": return <ResearchPage />;
-      case "partnership": return <PartnershipPage />;
-      case "careers": return <CareersPage />;
-      case "apply": return <ApplyPage />;
-      case "request-demo": return <RequestDemoPage />;
-      case "contact": return <ContactPage />;
-      case "privacy": return <PrivacyPage />;
-      case "terms": return <TermsPage />;
-      default: return <HomePage />;
+      case "home":
+        return <HomePage />;
+      case "services":
+        return <ServicesPage />;
+      case "products":
+        return <ProductsPage />;
+      case "case-studies":
+        return <CaseStudiesPage />;
+      case "research":
+        return <ResearchPage />;
+      case "partnership":
+        return <PartnershipPage />;
+      case "careers":
+        return <CareersPage />;
+      case "apply":
+        return <ApplyPage />;
+      case "request-demo":
+        return <RequestDemoPage />;
+      case "contact":
+        return <ContactPage />;
+      case "privacy":
+        return <PrivacyPage />;
+      case "terms":
+        return <TermsPage />;
+      default:
+        return <HomePage />;
     }
   };
 
   return (
     <div className="bg-[#0a0a0a] text-white overflow-x-hidden">
+      {/* SEO updates dynamically on page change */}
       <SEO {...getSEOConfig()} />
+
       <ScrollProgress />
       <Navigation currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      
+
       <AnimatePresence mode="wait">
         <motion.div
           key={currentPage}
@@ -102,7 +144,7 @@ export default function App() {
           {renderPage()}
         </motion.div>
       </AnimatePresence>
-      
+
       <Footer />
     </div>
   );
