@@ -1,5 +1,12 @@
 import { motion } from "motion/react";
-import { Zap, Mail, Phone } from "lucide-react";
+import { Mail, Phone, Linkedin } from "lucide-react";
+
+// Custom X (Twitter) Icon
+const XIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 
 export function Footer() {
   const quickLinksLeft = ["Services", "Products", "Case Studies", "Research"];
@@ -25,21 +32,53 @@ export function Footer() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           {/* Left - Logo & Tagline */}
-          <div className="mb-6 space-y-3">
-  <motion.img
-    src="/assets/Quroix_white_Logo.svg"
-    alt="Quroix Labs"
-    className="h-7 w-auto opacity-85 hover:opacity-100 transition-opacity"
-    whileHover={{ scale: 1.02 }}
-    draggable={false}
-  />
-  <p className="text-gray-400 leading-relaxed max-w-sm">
-    Engineering intelligence for the real world.
-  </p>
-</div>
+          <div className="mb-6 space-y-5">
+            <div className="space-y-3">
+              <motion.img
+                src="/assets/Quroix_white_Logo.svg"
+                alt="Quroix Labs"
+                className="h-7 w-auto opacity-85 hover:opacity-100 transition-opacity"
+                whileHover={{ scale: 1.02 }}
+                draggable={false}
+              />
+              <p className="text-gray-400 leading-relaxed max-w-sm">
+                Engineering intelligence for the real world.
+              </p>
+            </div>
+            
+            {/* Added Social Icons - Perfectly aligned under tagline for SEO */}
+            <div className="flex items-center gap-5 pt-2">
+              <motion.a 
+                href="https://linkedin.com/company/quroixlabs" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-white transition-colors"
+                whileHover={{ y: -2 }}
+              >
+                <Linkedin className="w-5 h-5" />
+              </motion.a>
+              <motion.a 
+                href="https://x.com/quroixlabs" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-white transition-colors"
+                whileHover={{ y: -2 }}
+              >
+                <XIcon />
+              </motion.a>
+              <motion.a 
+                href="https://clutch.co/profile/quroixlabs" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-xs uppercase tracking-widest font-bold transition-colors"
+                whileHover={{ y: -2 }}
+              >
+                Clutch
+              </motion.a>
+            </div>
+          </div>
 
-
-          {/* Center - Quick Links (2 columns) */}
+          {/* Center - Quick Links (2 columns) - UNCHANGED */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -93,7 +132,7 @@ export function Footer() {
             </div>
           </motion.div>
 
-          {/* Right - Contact */}
+          {/* Right - Contact - UNCHANGED */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -120,7 +159,7 @@ export function Footer() {
           </motion.div>
         </div>
 
-        {/* Bottom Bar */}
+        {/* Bottom Bar - UNCHANGED */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
