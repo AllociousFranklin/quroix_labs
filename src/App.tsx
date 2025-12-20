@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 /* Layout & UI */
@@ -10,17 +10,19 @@ import { SmoothScroll } from "./components/SmoothScroll";
 
 /* Pages */
 import { HomePage } from "./components/HomePage";
-import { ServicesPage } from "./components/ServicesPage";
-import { ProductsPage } from "./components/ProductsPage";
-import { CaseStudiesPage } from "./components/CaseStudiesPage";
-import { ResearchPage } from "./components/ResearchPage";
-import { CareersPage } from "./components/CareersPage";
-import { ApplyPage } from "./components/ApplyPage";
-import { PartnershipPage } from "./components/PartnershipPage";
-import { RequestDemoPage } from "./components/RequestDemoPage";
-import { ContactPage } from "./components/ContactPage";
-import { PrivacyPage } from "./components/PrivacyPage";
-import { TermsPage } from "./components/TermsPage";
+
+// Lazy load heavy pages
+const ServicesPage = lazy(() => import("./components/ServicesPage").then(m => ({ default: m.ServicesPage })));
+const ProductsPage = lazy(() => import("./components/ProductsPage").then(m => ({ default: m.ProductsPage })));
+const CaseStudiesPage = lazy(() => import("./components/CaseStudiesPage").then(m => ({ default: m.CaseStudiesPage })));
+const ResearchPage = lazy(() => import("./components/ResearchPage").then(m => ({ default: m.ResearchPage })));
+const CareersPage = lazy(() => import("./components/CareersPage").then(m => ({ default: m.CareersPage })));
+const ApplyPage = lazy(() => import("./components/ApplyPage").then(m => ({ default: m.ApplyPage })));
+const PartnershipPage = lazy(() => import("./components/PartnershipPage").then(m => ({ default: m.PartnershipPage })));
+const RequestDemoPage = lazy(() => import("./components/RequestDemoPage").then(m => ({ default: m.RequestDemoPage })));
+const ContactPage = lazy(() => import("./components/ContactPage").then(m => ({ default: m.ContactPage })));
+const PrivacyPage = lazy(() => import("./components/PrivacyPage").then(m => ({ default: m.PrivacyPage })));
+const TermsPage = lazy(() => import("./components/TermsPage").then(m => ({ default: m.TermsPage })));
 
 /* SEO */
 import { SEO } from "./seo/SEO";
@@ -193,7 +195,9 @@ export default function App() {
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
-          {renderPage()}
+          <Suspense fallback={<div className="min-h-screen bg-black/90" />}>
+            {renderPage()}
+          </Suspense>
         </motion.div>
       </AnimatePresence>
 

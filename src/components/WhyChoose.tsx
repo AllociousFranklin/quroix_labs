@@ -60,6 +60,11 @@ export function WhyChoose() {
             src="/assets/why_choose_us.webp"
             alt="Quroix Labs team collaboration"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            // @ts-ignore - fetchpriority is a valid attribute
+            fetchpriority="high"
+            loading="eager"
+            width={800}
+            height={600}
           />
         </motion.div>
 
