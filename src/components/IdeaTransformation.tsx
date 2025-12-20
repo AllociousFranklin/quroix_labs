@@ -58,11 +58,13 @@ export function IdeaTransformation() {
     let ballLabel = "idea";
 
     // Energy beams from corners with labels
+    // Dynamic padding based on width
+    const padding = width < 480 ? 25 : 50;
     const corners = [
-      { x: 50, y: 50, angle: Math.atan2(centerY - 50, centerX - 50), label: "⚡ Clarity" },
-      { x: width - 50, y: 50, angle: Math.atan2(centerY - 50, centerX - (width - 50)), label: "⚡ Structure" },
-      { x: 50, y: height - 50, angle: Math.atan2(centerY - (height - 50), centerX - 50), label: "⚡ Power" },
-      { x: width - 50, y: height - 50, angle: Math.atan2(centerY - (height - 50), centerX - (width - 50)), label: "⚡ Execution" },
+      { x: padding, y: padding, angle: Math.atan2(centerY - padding, centerX - padding), label: "⚡ Clarity" },
+      { x: width - padding, y: padding, angle: Math.atan2(centerY - padding, centerX - (width - padding)), label: "⚡ Structure" },
+      { x: padding, y: height - padding, angle: Math.atan2(centerY - (height - padding), centerX - padding), label: "⚡ Power" },
+      { x: width - padding, y: height - padding, angle: Math.atan2(centerY - (height - padding), centerX - (width - padding)), label: "⚡ Execution" },
     ];
 
     let beamProgress = 0;
@@ -82,13 +84,13 @@ export function IdeaTransformation() {
       ctx.font = `${size}px Inter, system-ui, sans-serif`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-      
+
       // Glow effect
       ctx.shadowBlur = 15;
       ctx.shadowColor = color;
       ctx.fillStyle = color.replace('rgb', 'rgba').replace(')', `, ${alpha})`);
       ctx.fillText(text, x, y);
-      
+
       ctx.shadowBlur = 0;
     };
 
@@ -242,7 +244,7 @@ export function IdeaTransformation() {
       // === PHASE 5: Launch Ready - Lift & Pulse ===
       if (elapsed >= PHASE_5_START && elapsed < PHASE_6_START) {
         const phase5Elapsed = elapsed - PHASE_5_START;
-        
+
         // Gentle lift
         liftOffset = Math.min(phase5Elapsed * 2, 4);
 
@@ -295,7 +297,8 @@ export function IdeaTransformation() {
         // Draw "Success" label at destination
         if (successProgress > 0.3) {
           const successAlpha = Math.min((successProgress - 0.3) / 0.3, 1);
-          drawGlowText("Success", width - 100, centerY - liftOffset, "rgb(6, 182, 212)", 18, successAlpha);
+          const successXPos = width < 480 ? width - 60 : width - 100;
+          drawGlowText("Success", successXPos, centerY - liftOffset, "rgb(6, 182, 212)", 18, successAlpha);
         }
       }
 

@@ -40,8 +40,12 @@ export function ValueProposition() {
       />
 
       <div className="container mx-auto px-6 relative z-10">
-        <h2 className="sr-only">Our Approach</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl mb-4 font-heading tracking-tight">
+            Our Approach
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
