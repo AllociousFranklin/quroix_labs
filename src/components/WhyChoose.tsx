@@ -57,7 +57,7 @@ export function WhyChoose() {
         >
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-cyan-600/20 z-10 group-hover:opacity-0 transition-opacity duration-500" />
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1677078610152-8a627d8ced8d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNoJTIwd29ya3NwYWNlJTIwdGVhbSUyMGNvbGxhYm9yYXRpb258ZW58MXx8fHwxNzYzMjkyMDc1fDA&ixlib=rb-4.1.0&q=80&w=1080"
+            src="/assets/why_choose_us.jpg"
             alt="Quroix Labs team collaboration"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
           />
@@ -93,7 +93,7 @@ export function WhyChoose() {
                     <strength.icon className="w-10 h-10 text-white" />
                   </motion.div>
 
-                  <h3 className="text-2xl mb-4 font-heading tracking-tight">
+                  <h3 className="text-2xl font-medium text-white mb-4 tracking-tight">
                     {strength.title}
                   </h3>
                   <p className="text-gray-400 leading-relaxed mb-4">

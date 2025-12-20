@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "motion/react";
 import { Navigation } from "./components/Navigation";
 import { Footer } from "./components/Footer";
 import { ScrollProgress } from "./components/ScrollProgress";
+import { CommandPalette } from "./components/CommandPalette";
+import { SmoothScroll } from "./components/SmoothScroll";
 
 /* Pages */
 import { HomePage } from "./components/HomePage";
@@ -63,7 +65,7 @@ export default function App() {
       window.removeEventListener("navigate", handleNavigate as EventListener);
   }, []);
 
-  
+
 
   /* Handle browser back / forward buttons */
   useEffect(() => {
@@ -77,14 +79,14 @@ export default function App() {
   }, []);
 
   /* Track page views for Google Analytics (SPA) */
-useEffect(() => {
-  if (typeof window !== "undefined" && typeof (window as any).gtag === "function") {
-    (window as any).gtag("event", "page_view", {
-      page_path: window.location.pathname,
-      page_title: document.title
-    });
-  }
-}, [currentPage]);
+  useEffect(() => {
+    if (typeof window !== "undefined" && typeof (window as any).gtag === "function") {
+      (window as any).gtag("event", "page_view", {
+        page_path: window.location.pathname,
+        page_title: document.title
+      });
+    }
+  }, [currentPage]);
 
 
   /* SEO configuration */
@@ -178,6 +180,8 @@ useEffect(() => {
       {/* Dynamic SEO */}
       <SEO {...getSEOConfig()} />
 
+      <SmoothScroll />
+      <CommandPalette />
       <ScrollProgress />
       <Navigation currentPage={currentPage} setCurrentPage={setCurrentPage} />
 

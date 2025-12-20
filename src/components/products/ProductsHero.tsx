@@ -63,7 +63,7 @@ export function ProductsHero() {
             <div className="relative rounded-2xl overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/30 to-purple-600/30 z-10 group-hover:opacity-0 transition-opacity duration-500" />
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkfGVufDF8fHx8MTc2MzI2MTEyOHww&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/assets/dashboard.webp"
                 alt="Product analytics dashboard"
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
               />
@@ -71,7 +71,7 @@ export function ProductsHero() {
             <div className="relative rounded-2xl overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/30 to-blue-600/30 z-10 group-hover:opacity-0 transition-opacity duration-500" />
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1717501219604-cc1902b5d845?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmclMjBuZXR3b3JrfGVufDF8fHx8MTc2MzI5MjEyNXww&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/assets/Aii.png"
                 alt="Machine learning network"
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
               />

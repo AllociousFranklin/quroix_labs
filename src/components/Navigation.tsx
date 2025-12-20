@@ -49,14 +49,13 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
             ? "bg-black/60 backdrop-blur-lg py-4 shadow-lg shadow-indigo-500/10"
             : "bg-transparent py-6"
-        }`}
+          }`}
       >
         <div className="container mx-auto px-6 flex items-center justify-between gap-4">
-          
+
           {/* Logo */}
           <motion.div
             className="flex items-center gap-2 cursor-pointer flex-shrink-0 group"
@@ -77,27 +76,24 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
               <motion.button
                 key={item.name}
                 onClick={() => handleNavClick(item.page)}
-                className={`text-sm whitespace-nowrap transition-all duration-300 relative group ${
-                  currentPage === item.page
+                className={`text-sm whitespace-nowrap transition-all duration-300 relative group ${currentPage === item.page
                     ? "text-white"
                     : "text-gray-300 hover:text-white"
-                }`}
+                  }`}
                 whileHover={{ y: -2 }}
               >
                 {item.name}
                 <span
-                  className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 transition-all duration-300 ${
-                    currentPage === item.page
+                  className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 transition-all duration-300 ${currentPage === item.page
                       ? "w-full"
                       : "w-0 group-hover:w-full"
-                  }`}
+                    }`}
                 />
                 <span
-                  className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 blur-sm transition-all duration-300 ${
-                    currentPage === item.page
+                  className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 blur-sm transition-all duration-300 ${currentPage === item.page
                       ? "w-full opacity-75"
                       : "w-0 group-hover:w-full group-hover:opacity-75"
-                  }`}
+                    }`}
                 />
               </motion.button>
             ))}
@@ -134,6 +130,7 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
             whileTap={{ scale: 0.95 }}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-lg border border-gray-700 hover:border-indigo-500 transition-colors group"
+            aria-label="Toggle mobile menu"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-cyan-600/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg" />
             {mobileMenuOpen ? (
@@ -192,11 +189,10 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 }}
                     onClick={() => handleNavClick(item.page)}
-                    className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-300 relative group ${
-                      currentPage === item.page
+                    className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-300 relative group ${currentPage === item.page
                         ? "bg-gradient-to-r from-indigo-600/20 to-cyan-600/20 text-white"
                         : "text-gray-300 hover:text-white hover:bg-gray-800/50"
-                    }`}
+                      }`}
                   >
                     <span className="relative z-10">{item.name}</span>
                     {currentPage === item.page && (

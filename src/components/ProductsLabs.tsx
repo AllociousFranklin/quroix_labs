@@ -36,9 +36,9 @@ export function ProductsLabs() {
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-950/10 to-transparent" />
-      
+
       {/* Animated background orb */}
-      <motion.div 
+      <motion.div
         className="absolute top-1/3 right-1/4 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.3, 1],
@@ -51,7 +51,7 @@ export function ProductsLabs() {
           ease: "easeInOut"
         }}
       />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -79,7 +79,7 @@ export function ProductsLabs() {
               {/* Multi-layer glow border */}
               <div className={`absolute -inset-[1px] bg-gradient-to-br ${product.color} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm`} />
               <div className={`absolute -inset-[2px] bg-gradient-to-br ${product.color} rounded-2xl opacity-0 group-hover:opacity-50 transition-opacity duration-500 blur-xl`} />
-              
+
               <div className="relative h-full bg-gradient-to-br from-gray-900/90 to-gray-950/90 rounded-2xl border border-gray-800 group-hover:border-transparent transition-all duration-300 backdrop-blur-sm overflow-hidden">
                 {/* Header with icon */}
                 <div className="relative p-6 pb-4 border-b border-gray-800/50">
@@ -92,14 +92,9 @@ export function ProductsLabs() {
                       <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg`} />
                       <product.icon className="w-7 h-7 text-white relative z-10" />
                     </motion.div>
-                    
+
                     <div className="flex-1">
-                      <h3 className="text-2xl mb-1 group-hover:text-transparent group-hover:bg-gradient-to-br group-hover:bg-clip-text transition-all duration-300" style={{
-                        backgroundImage: product.color.includes('from-indigo') ? 'linear-gradient(to bottom right, rgb(99, 102, 241), rgb(168, 85, 247))' :
-                                         product.color.includes('from-cyan') ? 'linear-gradient(to bottom right, rgb(6, 182, 212), rgb(59, 130, 246))' :
-                                         product.color.includes('from-purple') ? 'linear-gradient(to bottom right, rgb(168, 85, 247), rgb(236, 72, 153))' :
-                                         'linear-gradient(to bottom right, rgb(249, 115, 22), rgb(239, 68, 68))'
-                      }}>
+                      <h3 className="text-2xl font-medium text-white mb-1">
                         {product.name}
                       </h3>
                       <p className="text-sm text-gray-500">{product.subtitle}</p>

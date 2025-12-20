@@ -69,7 +69,7 @@ export function CTAStrip() {
 
               <h2 className="text-4xl lg:text-5xl mb-6 leading-tight">
                 Start your project today — get a{" "}
-                <span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="text-white font-medium">
                   tailored demo in 48 hours
                 </span>
               </h2>

@@ -85,7 +85,7 @@ export function CareersHero() {
             <div className="absolute -inset-4 bg-gradient-to-r from-indigo-600/20 to-cyan-600/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500" />
             <div className="relative rounded-2xl overflow-hidden border border-gray-800 group-hover:border-indigo-500/50 transition-colors duration-500">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1704440263700-e63c995b5dba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGFydHVwJTIwb2ZmaWNlJTIwd29ya3NwYWNlfGVufDF8fHx8MTc2MzI2ODAzOXww&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/assets/carrers.png"
                 alt="Quroix Labs office workspace"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />

@@ -56,7 +56,7 @@ export function ServicesHero() {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 to-cyan-600/30 z-10 group-hover:opacity-0 transition-opacity duration-500" />
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NjMyNzAzNjB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+              src="/assets/Services.png"
               alt="AI technology services"
               className="w-full h-64 md:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
             />

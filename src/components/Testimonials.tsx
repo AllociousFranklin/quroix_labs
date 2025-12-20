@@ -38,9 +38,9 @@ export function Testimonials() {
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-indigo-950/10 via-transparent to-cyan-950/10" />
-      
+
       {/* Animated background orbs */}
-      <motion.div 
+      <motion.div
         className="absolute top-1/4 left-1/3 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.3, 1],
@@ -52,7 +52,7 @@ export function Testimonials() {
           ease: "easeInOut"
         }}
       />
-      <motion.div 
+      <motion.div
         className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
@@ -92,7 +92,7 @@ export function Testimonials() {
             {/* Animated glow border */}
             <div className="absolute -inset-[1px] bg-gradient-to-br from-indigo-500 via-purple-500 to-cyan-500 rounded-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-500 blur-sm" />
             <div className="absolute -inset-[2px] bg-gradient-to-br from-indigo-500 via-purple-500 to-cyan-500 rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 blur-xl" />
-            
+
             <div className="relative bg-gradient-to-br from-gray-900/95 to-gray-950/95 rounded-2xl border border-gray-800 group-hover:border-transparent transition-all duration-300 backdrop-blur-sm p-8 lg:p-12">
               <motion.div
                 className="absolute -inset-1 bg-gradient-to-br from-indigo-600/10 to-cyan-600/10 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"
@@ -116,7 +116,7 @@ export function Testimonials() {
           className="mb-12"
         >
           <h3 className="text-2xl text-center mb-8 text-gray-400">We prioritize:</h3>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {priorities.map((priority, index) => (
               <motion.div
@@ -130,7 +130,7 @@ export function Testimonials() {
               >
                 {/* Subtle glow on hover */}
                 <div className={`absolute -inset-[1px] bg-gradient-to-br ${priority.color} rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm`} />
-                
+
                 <div className="relative bg-gradient-to-br from-gray-900/80 to-gray-950/80 rounded-xl border border-gray-800 group-hover:border-transparent transition-all duration-300 backdrop-blur-sm p-6">
                   <div className="flex items-start gap-4">
                     <motion.div
@@ -140,7 +140,7 @@ export function Testimonials() {
                       <div className={`absolute inset-0 bg-gradient-to-br ${priority.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md`} />
                       <priority.icon className="w-5 h-5 text-white relative z-10" />
                     </motion.div>
-                    
+
                     <p className="text-gray-300 leading-relaxed flex-1">{priority.title}</p>
                   </div>
                 </div>
@@ -163,7 +163,7 @@ export function Testimonials() {
             />
             <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed relative">
               We don't just work <span className="text-white italic">for</span> our clients —<br />
-              we work <span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">with them</span>, shaping ideas into meaningful digital products.
+              we work <span className="text-white italic">with them</span>, shaping ideas into meaningful digital products.
             </p>
           </div>
         </motion.div>

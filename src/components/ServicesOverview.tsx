@@ -32,9 +32,9 @@ export function ServicesOverview() {
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-950/10 to-transparent" />
-      
+
       {/* Animated background orbs */}
-      <motion.div 
+      <motion.div
         className="absolute top-1/3 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
@@ -47,7 +47,7 @@ export function ServicesOverview() {
           ease: "easeInOut"
         }}
       />
-      <motion.div 
+      <motion.div
         className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.3, 1],
@@ -61,7 +61,7 @@ export function ServicesOverview() {
           delay: 2
         }}
       />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -69,7 +69,7 @@ export function ServicesOverview() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl mb-4">Core Services</h2>
+          <h2 className="text-4xl lg:text-5xl mb-4">Our Core Services</h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             End-to-end solutions designed to transform your business
           </p>
@@ -89,7 +89,7 @@ export function ServicesOverview() {
               {/* Animated glow border */}
               <div className={`absolute -inset-[1px] bg-gradient-to-br ${service.color} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm`} />
               <div className={`absolute -inset-[2px] bg-gradient-to-br ${service.color} rounded-2xl opacity-0 group-hover:opacity-50 transition-opacity duration-500 blur-xl`} />
-              
+
               <div className="relative h-full p-8 bg-gradient-to-br from-gray-900/90 to-gray-950/90 rounded-2xl border border-gray-800 group-hover:border-transparent transition-all duration-300 backdrop-blur-sm overflow-hidden">
                 {/* Animated Gradient Background */}
                 <motion.div
@@ -108,12 +108,9 @@ export function ServicesOverview() {
                     <service.icon className="w-6 h-6 text-white relative z-10" />
                   </motion.div>
 
-                  <h3 className="text-xl mb-3 group-hover:text-transparent group-hover:bg-gradient-to-br group-hover:bg-clip-text" style={{
-                    backgroundImage: service.color.includes('from-indigo') ? 'linear-gradient(to bottom right, rgb(99, 102, 241), rgb(168, 85, 247))' :
-                                     service.color.includes('from-cyan') ? 'linear-gradient(to bottom right, rgb(6, 182, 212), rgb(59, 130, 246))' :
-                                     service.color.includes('from-purple') ? 'linear-gradient(to bottom right, rgb(168, 85, 247), rgb(236, 72, 153))' :
-                                     'linear-gradient(to bottom right, rgb(249, 115, 22), rgb(239, 68, 68))'
-                  }}>{service.title}</h3>
+                  <h3 className="text-xl font-medium text-white mb-3">
+                    {service.title}
+                  </h3>
                   <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
                     {service.description}
                   </p>

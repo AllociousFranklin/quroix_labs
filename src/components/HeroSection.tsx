@@ -1,15 +1,22 @@
 import { motion } from "motion/react";
 import { Sparkles } from "lucide-react";
 import { IdeaTransformation } from "./IdeaTransformation";
+import { InteractiveHero3D } from "./InteractiveHero3D";
 
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Gradient with animation */}
+      {/* Background Gradient with animation */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-950/20 via-transparent to-cyan-950/20" />
 
+      {/* 3D Particle Field */}
+      <div className="absolute inset-0 z-10">
+        <InteractiveHero3D />
+      </div>
+
       <motion.div
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl"
+        className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl z-10"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.1, 0.15, 0.1],
@@ -22,7 +29,7 @@ export function HeroSection() {
       />
 
       <motion.div
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl"
+        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl z-10"
         animate={{
           scale: [1, 1.3, 1],
           opacity: [0.1, 0.2, 0.1],
@@ -35,7 +42,7 @@ export function HeroSection() {
         }}
       />
 
-      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-20">
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -51,18 +58,9 @@ export function HeroSection() {
             <h1 className="text-5xl lg:text-7xl tracking-tight leading-tight">
               Intelligence Engineered for{" "}
               <span className="relative inline-block">
-                <span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="text-white font-medium">
                   Real-World Impact
                 </span>
-                <motion.span
-                  className="absolute -inset-1 bg-gradient-to-r from-indigo-400/20 to-cyan-400/20 blur-xl -z-10"
-                  animate={{ opacity: [0.3, 0.6, 0.3] }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                />
               </span>
             </h1>
           </motion.div>

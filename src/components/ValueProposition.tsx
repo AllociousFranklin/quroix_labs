@@ -40,6 +40,7 @@ export function ValueProposition() {
       />
 
       <div className="container mx-auto px-6 relative z-10">
+        <h2 className="sr-only">Our Approach</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <motion.div
@@ -81,16 +82,7 @@ export function ValueProposition() {
                     <feature.icon className="w-7 h-7 text-white relative z-10" />
                   </motion.div>
 
-                  <h3
-                    className="text-2xl mb-3 group-hover:text-transparent group-hover:bg-gradient-to-br group-hover:bg-clip-text transition-all duration-300"
-                    style={{
-                      backgroundImage: feature.color.includes("from-indigo")
-                        ? "linear-gradient(to bottom right, rgb(99, 102, 241), rgb(168, 85, 247))"
-                        : feature.color.includes("from-cyan")
-                        ? "linear-gradient(to bottom right, rgb(6, 182, 212), rgb(59, 130, 246))"
-                        : "linear-gradient(to bottom right, rgb(168, 85, 247), rgb(236, 72, 153))",
-                    }}
-                  >
+                  <h3 className="text-2xl font-medium text-white mb-3">
                     {feature.title}
                   </h3>
                   <p className="text-gray-400 leading-relaxed">{feature.description}</p>
