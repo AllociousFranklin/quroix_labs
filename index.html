@@ -62,12 +62,22 @@
     }
     </script>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PKD0WX02BV"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag("js", new Date());
-    gtag("config", "G-PKD0WX02BV", { send_page_view: false });
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-PKD0WX02BV";
+        document.head.appendChild(script);
+
+        script.onload = () => {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', 'G-PKD0WX02BV', { send_page_view: false });
+        };
+      }, 3500); // Delays tracking by 3.5 seconds
+    });
   </script>
 </head>
 
