@@ -39,6 +39,8 @@ export function Footer() {
                 alt="Quroix Labs"
                 className="h-7 w-auto opacity-85 hover:opacity-100 transition-opacity"
                 whileHover={{ scale: 1.02 }}
+                width="120"
+                height="32"
                 draggable={false}
               />
               <p className="text-gray-400 leading-relaxed max-w-sm">
