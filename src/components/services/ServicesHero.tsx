@@ -56,7 +56,7 @@ export function ServicesHero() {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 to-cyan-600/30 z-10 group-hover:opacity-0 transition-opacity duration-500" />
             <ImageWithFallback
-              src="/assets/Services.png"
+              src="/assets/Services.webp"
               alt="AI technology services"
               className="w-full h-64 md:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
             />

@@ -71,7 +71,7 @@ export function ProductsHero() {
             <div className="relative rounded-2xl overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/30 to-blue-600/30 z-10 group-hover:opacity-0 transition-opacity duration-500" />
               <ImageWithFallback
-                src="/assets/Aii.png"
+                src="/assets/Aii.webp"
                 alt="Machine learning network"
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
               />

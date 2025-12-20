@@ -57,7 +57,7 @@ export function WhyChoose() {
         >
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-cyan-600/20 z-10 group-hover:opacity-0 transition-opacity duration-500" />
           <ImageWithFallback
-            src="/assets/why_choose_us.jpg"
+            src="/assets/why_choose_us.webp"
             alt="Quroix Labs team collaboration"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
           />
