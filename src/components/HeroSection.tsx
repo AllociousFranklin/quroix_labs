@@ -1,18 +1,22 @@
 import { motion } from "motion/react";
 import { Sparkles } from "lucide-react";
 import { IdeaTransformation } from "./IdeaTransformation";
-import { InteractiveHero3D } from "./InteractiveHero3D";
+import { Suspense, lazy } from 'react';
+
+// Lazy load the heavy 3D component
+const InteractiveHero3D = lazy(() => import('./InteractiveHero3D').then(module => ({ default: module.InteractiveHero3D })));
 
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Gradient with animation */}
-      {/* Background Gradient with animation */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-950/20 via-transparent to-cyan-950/20" />
 
       {/* 3D Particle Field */}
       <div className="absolute inset-0 z-10">
-        <InteractiveHero3D />
+        <Suspense fallback={<div className="absolute inset-0 bg-black/0" />}>
+          <InteractiveHero3D />
+        </Suspense>
       </div>
 
       <motion.div

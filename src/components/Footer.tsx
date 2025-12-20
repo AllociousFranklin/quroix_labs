@@ -16,7 +16,7 @@ export function Footer() {
     <footer className="relative py-20 border-t border-gray-800 overflow-hidden">
       {/* Background Gradient with animated glow */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-950/50" />
-      <motion.div 
+      <motion.div
         className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-600/5 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
@@ -45,30 +45,32 @@ export function Footer() {
                 Engineering intelligence for the real world.
               </p>
             </div>
-            
+
             {/* Added Social Icons - Perfectly aligned under tagline for SEO */}
             <div className="flex items-center gap-5 pt-2">
-              <motion.a 
-                href="https://linkedin.com/company/quroixlabs" 
-                target="_blank" 
+              <motion.a
+                href="https://linkedin.com/company/quroixlabs"
+                target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn Profile"
                 className="text-gray-500 hover:text-white transition-colors"
                 whileHover={{ y: -2 }}
               >
                 <Linkedin className="w-5 h-5" />
               </motion.a>
-              <motion.a 
-                href="https://x.com/quroixlabs" 
-                target="_blank" 
+              <motion.a
+                href="https://x.com/quroixlabs"
+                target="_blank"
                 rel="noopener noreferrer"
+                aria-label="X (Twitter) Profile"
                 className="text-gray-500 hover:text-white transition-colors"
                 whileHover={{ y: -2 }}
               >
                 <XIcon />
               </motion.a>
-              <motion.a 
-                href="https://clutch.co/profile/quroixlabs" 
-                target="_blank" 
+              <motion.a
+                href="https://clutch.co/profile/quroixlabs"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-xs uppercase tracking-widest font-bold transition-colors"
                 whileHover={{ y: -2 }}
@@ -94,8 +96,8 @@ export function Footer() {
                       href="#"
                       onClick={(e) => {
                         e.preventDefault();
-                        const event = new CustomEvent("navigate", { 
-                          detail: link.toLowerCase().replace(/ /g, "-") 
+                        const event = new CustomEvent("navigate", {
+                          detail: link.toLowerCase().replace(/ /g, "-")
                         });
                         window.dispatchEvent(event);
                       }}
@@ -115,8 +117,8 @@ export function Footer() {
                       href="#"
                       onClick={(e) => {
                         e.preventDefault();
-                        const event = new CustomEvent("navigate", { 
-                          detail: link.toLowerCase().replace(/ /g, "-") 
+                        const event = new CustomEvent("navigate", {
+                          detail: link.toLowerCase().replace(/ /g, "-")
                         });
                         window.dispatchEvent(event);
                       }}
