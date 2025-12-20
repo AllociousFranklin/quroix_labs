@@ -36,11 +36,13 @@ export function ServicesOverview() {
       {/* Animated background orbs */}
       <motion.div
         className="absolute top-1/3 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl"
-        animate={{
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{
           scale: [1, 1.2, 1],
           x: [0, 50, 0],
           opacity: [0.1, 0.15, 0.1],
         }}
+        viewport={{ once: true, amount: 0.1 }}
         transition={{
           duration: 12,
           repeat: Infinity,
@@ -49,11 +51,13 @@ export function ServicesOverview() {
       />
       <motion.div
         className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl"
-        animate={{
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{
           scale: [1, 1.3, 1],
           x: [0, -50, 0],
           opacity: [0.1, 0.2, 0.1],
         }}
+        viewport={{ once: true, amount: 0.1 }}
         transition={{
           duration: 15,
           repeat: Infinity,

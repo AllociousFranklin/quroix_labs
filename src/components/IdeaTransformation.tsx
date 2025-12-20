@@ -12,9 +12,13 @@ export function IdeaTransformation() {
     if (!ctx) return;
 
     const setCanvasSize = () => {
-      canvas.width = canvas.offsetWidth * window.devicePixelRatio;
-      canvas.height = canvas.offsetHeight * window.devicePixelRatio;
-      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+      // Prevent forced reflow by batching the read/write in rAF
+      requestAnimationFrame(() => {
+        if (!canvas || !ctx) return;
+        canvas.width = canvas.offsetWidth * window.devicePixelRatio;
+        canvas.height = canvas.offsetHeight * window.devicePixelRatio;
+        ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+      });
     };
 
     setCanvasSize();
