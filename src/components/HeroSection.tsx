@@ -59,7 +59,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <h1 fetchpriority="high" className="text-5xl lg:text-7xl tracking-tight leading-tight">
+            <h1 fetchpriority="high" className="hero-h1 text-5xl lg:text-7xl tracking-tight leading-tight">
               Intelligence Engineered for{" "}
               <span className="relative inline-block">
                 <span className="text-white font-medium">
