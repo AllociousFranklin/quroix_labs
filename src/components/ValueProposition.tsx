@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
-import { Zap, Layers, Users } from "lucide-react";
+import Zap from "lucide-react/dist/esm/icons/zap";
+import Layers from "lucide-react/dist/esm/icons/layers";
+import Users from "lucide-react/dist/esm/icons/users";
 
 const features = [
   {

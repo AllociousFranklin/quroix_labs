@@ -1,5 +1,9 @@
 import { motion } from "motion/react";
-import { Bot, Workflow, Code, Shield, ArrowRight } from "lucide-react";
+import Bot from "lucide-react/dist/esm/icons/bot";
+import Workflow from "lucide-react/dist/esm/icons/workflow";
+import Code from "lucide-react/dist/esm/icons/code";
+import Shield from "lucide-react/dist/esm/icons/shield";
+import ArrowRight from "lucide-react/dist/esm/icons/arrow-right";
 
 const services = [
   {

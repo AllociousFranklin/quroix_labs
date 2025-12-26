@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Sparkles } from "lucide-react";
+import Sparkles from "lucide-react/dist/esm/icons/sparkles";
 import { IdeaTransformation } from "./IdeaTransformation";
 import { Suspense, lazy } from 'react';
 

@@ -52,14 +52,28 @@ export function InteractiveHero3D() {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        setMounted(true);
+        const timer = setTimeout(() => {
+            setMounted(true);
+        }, 2500);
+        return () => clearTimeout(timer);
     }, []);
 
     if (!mounted) return null;
 
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
     return (
         <div className="absolute inset-0 z-0 h-full w-full" role="img" aria-label="Interactive 3D particle field representing a neural network">
-            <Canvas camera={{ position: [0, 0, 5], fov: 60 }} gl={{ alpha: true, antialias: true }}>
+            <Canvas
+                camera={{ position: [0, 0, 5], fov: 60 }}
+                gl={{
+                    alpha: true,
+                    antialias: !isMobile,
+                    powerPreference: "high-performance",
+                    preserveDrawingBuffer: false
+                }}
+                dpr={isMobile ? 1 : [1, 2]}
+            >
                 <ParticleField />
             </Canvas>
         </div>

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Zap, Menu, X } from "lucide-react";
+import Zap from "lucide-react/dist/esm/icons/zap";
+import Menu from "lucide-react/dist/esm/icons/menu";
+import X from "lucide-react/dist/esm/icons/x";
 
 interface NavigationProps {
   currentPage: string;

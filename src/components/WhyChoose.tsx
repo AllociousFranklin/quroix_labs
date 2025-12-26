@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
-import { Award, Cpu, DollarSign } from "lucide-react";
+import Award from "lucide-react/dist/esm/icons/award";
+import Cpu from "lucide-react/dist/esm/icons/cpu";
+import DollarSign from "lucide-react/dist/esm/icons/dollar-sign";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 const strengths = [
