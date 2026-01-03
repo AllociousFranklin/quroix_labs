@@ -64,7 +64,7 @@ export function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -102,7 +102,7 @@ export function ContactPage() {
       ...formData,
       [name]: value,
     });
-    
+
     // Clear error when user starts typing
     if (errors[name as keyof typeof errors]) {
       setErrors({
@@ -299,11 +299,10 @@ export function ContactPage() {
                     disabled={!isFormValid() || submitting}
                     whileHover={{ scale: isFormValid() && !submitting ? 1.02 : 1 }}
                     whileTap={{ scale: isFormValid() && !submitting ? 0.98 : 1 }}
-                    className={`w-full px-8 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-xl flex items-center justify-center gap-2 transition-all ${
-                      !isFormValid() || submitting 
-                        ? "opacity-50 cursor-not-allowed" 
+                    className={`w-full px-8 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-xl flex items-center justify-center gap-2 transition-all ${!isFormValid() || submitting
+                        ? "opacity-50 cursor-not-allowed"
                         : "hover:shadow-2xl hover:shadow-indigo-500/50"
-                    }`}
+                      }`}
                   >
                     <Send className="w-5 h-5" />
                     {submitting ? "Sending..." : "Send Message"}

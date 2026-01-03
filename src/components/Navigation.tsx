@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import Zap from "lucide-react/dist/esm/icons/zap";
-import Menu from "lucide-react/dist/esm/icons/menu";
-import X from "lucide-react/dist/esm/icons/x";
+import { Zap, Menu, X } from "lucide-react";
 
 interface NavigationProps {
   currentPage: string;
@@ -15,7 +13,7 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -52,7 +50,7 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? "bg-black/60 backdrop-blur-lg py-4 shadow-lg shadow-indigo-500/10"
+          ? "bg-[#030213]/90 backdrop-blur-md py-4 border-b border-white/5 shadow-2xl shadow-black/40"
           : "bg-transparent py-6"
           }`}
       >
@@ -61,71 +59,62 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
           {/* Logo */}
           <motion.div
             className="flex items-center gap-2 cursor-pointer flex-shrink-0 group"
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.02 }}
             onClick={() => handleNavClick("home")}
           >
             <img
               src="/assets/Quroix_white_Logo.svg"
               alt="Quroix Labs Logo"
-              className="h-8 w-auto object-contain"
-              width="120"
-              height="32"
+              className="h-7 w-auto object-contain"
+              width="105"
+              height="28"
               draggable={false}
             />
           </motion.div>
 
           {/* Desktop Center Menu */}
-          <div className="hidden lg:flex items-center gap-6 xl:gap-8 flex-1 justify-center">
+          <div className="hidden lg:flex items-center gap-8 flex-1 justify-center">
             {navItems.map((item) => (
               <motion.button
                 key={item.name}
                 onClick={() => handleNavClick(item.page)}
-                className={`text-sm whitespace-nowrap transition-all duration-300 relative group ${currentPage === item.page
+                className={`text-[13px] font-medium tracking-wide whitespace-nowrap transition-colors duration-200 ${currentPage === item.page
                   ? "text-white"
-                  : "text-gray-300 hover:text-white"
+                  : "text-slate-400 hover:text-slate-200"
                   }`}
-                whileHover={{ y: -2 }}
+                whileHover={{ y: -1 }}
               >
                 {item.name}
-                <span
-                  className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 transition-all duration-300 ${currentPage === item.page
-                    ? "w-full"
-                    : "w-0 group-hover:w-full"
-                    }`}
-                />
-                <span
-                  className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 blur-sm transition-all duration-300 ${currentPage === item.page
-                    ? "w-full opacity-75"
-                    : "w-0 group-hover:w-full group-hover:opacity-75"
-                    }`}
-                />
+                {currentPage === item.page && (
+                  <motion.div
+                    layoutId="activeNav"
+                    className="h-px bg-gradient-to-r from-indigo-500 to-cyan-500 w-full mt-1"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
               </motion.button>
             ))}
           </div>
 
           {/* Desktop Right Buttons */}
-          <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
+          <div className="hidden lg:flex items-center gap-4 flex-shrink-0">
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               onClick={() => handleNavClick("request-demo")}
-              className="relative px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-lg text-sm transition-all whitespace-nowrap overflow-hidden group"
+              className="relative px-5 py-2 bg-gradient-to-r from-indigo-600 to-cyan-600 text-white rounded-[0.6rem] text-xs font-bold tracking-wide transition-all shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 overflow-hidden group"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl bg-gradient-to-r from-indigo-500 to-cyan-500" />
+              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               <span className="relative z-10">Request Demo</span>
             </motion.button>
 
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               onClick={() => handleNavClick("contact")}
-              className="relative px-5 py-2.5 border border-gray-700 rounded-lg text-sm transition-all whitespace-nowrap group overflow-hidden"
+              className="relative px-5 py-2 border border-slate-700 hover:border-slate-500 text-white rounded-[0.6rem] text-xs font-bold tracking-wide transition-all bg-white/5 hover:bg-white/10"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-cyan-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute inset-0 border border-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md bg-indigo-500/20" />
-              <span className="relative z-10">Contact</span>
+              Contact
             </motion.button>
           </div>
 
@@ -133,14 +122,13 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-lg border border-gray-700 hover:border-indigo-500 transition-colors group"
+            className="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-lg border border-slate-800 bg-slate-900/50 text-slate-300"
             aria-label="Toggle mobile menu"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-cyan-600/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg" />
             {mobileMenuOpen ? (
-              <X className="w-5 h-5 text-white relative z-10" />
+              <X className="w-5 h-5" />
             ) : (
-              <Menu className="w-5 h-5 text-white relative z-10" />
+              <Menu className="w-5 h-5" />
             )}
           </motion.button>
         </div>

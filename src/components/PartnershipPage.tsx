@@ -90,12 +90,12 @@ export function PartnershipPage() {
                   }}
                   transition={{ duration: 4, repeat: Infinity }}
                 />
-                
+
                 <div className="relative z-10 text-xl text-gray-300 leading-relaxed space-y-6">
                   <p>Some founders come with <span className="text-white">funding</span> but no technical team.</p>
                   <p>Some come with a <span className="text-white">strong idea</span> but no execution support.</p>
                   <p>Some come alone — looking for a <span className="text-white">co-builder</span> who understands technology, product, and growth.</p>
-                  
+
                   <div className="pt-8 space-y-6 border-t border-gray-800">
                     <p className="text-gray-200">At Quroix Labs, we become more than engineers.</p>
                     <p className="text-2xl lg:text-3xl text-white">
@@ -140,7 +140,7 @@ export function PartnershipPage() {
       {/* What Partnership Means */}
       <section className="py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-950/50 to-transparent" />
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -186,12 +186,12 @@ export function PartnershipPage() {
                 className="group relative"
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-3xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-500" />
-                
+
                 <div className="relative h-full p-10 bg-gradient-to-br from-gray-900/90 to-gray-950/90 rounded-3xl border border-gray-800/50 hover:border-gray-700/50 transition-all duration-500 backdrop-blur-xl overflow-hidden">
                   <motion.div
                     className={`absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br ${item.color} rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-700`}
                   />
-                  
+
                   <motion.div
                     className={`relative w-20 h-20 bg-gradient-to-br ${item.color} rounded-2xl flex items-center justify-center mb-8 shadow-2xl`}
                     whileHover={{ scale: 1.1, rotate: 5 }}
@@ -214,7 +214,7 @@ export function PartnershipPage() {
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.1),transparent_70%)]" />
         </div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -223,7 +223,7 @@ export function PartnershipPage() {
             className="max-w-5xl mx-auto"
           >
             <h2 className="text-5xl lg:text-6xl text-center mb-16">Who This Is For</h2>
-            
+
             <div className="relative p-12 lg:p-16 bg-gradient-to-br from-gray-900/80 to-gray-950/80 rounded-3xl border border-gray-800/50 backdrop-blur-xl overflow-hidden">
               <motion.div
                 className="absolute inset-0 bg-gradient-to-br from-indigo-600/5 to-cyan-600/5"
@@ -232,10 +232,10 @@ export function PartnershipPage() {
                 }}
                 transition={{ duration: 5, repeat: Infinity }}
               />
-              
+
               <div className="relative z-10">
                 <p className="text-2xl text-gray-300 mb-10">This partnership is ideal for:</p>
-                
+
                 <ul className="space-y-6">
                   {[
                     "Founders with a strong idea but no technical co-founder",
@@ -269,7 +269,7 @@ export function PartnershipPage() {
       {/* How Partnership Works */}
       <section className="py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-950/10 to-transparent" />
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -320,12 +320,12 @@ export function PartnershipPage() {
                 className="group relative"
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-500" />
-                
+
                 <div className="relative p-8 lg:p-10 bg-gradient-to-br from-gray-900/90 to-gray-950/90 rounded-2xl border border-gray-800/50 hover:border-gray-700/50 transition-all duration-500 backdrop-blur-xl overflow-hidden">
                   <motion.div
                     className={`absolute -top-20 -right-20 w-60 h-60 bg-gradient-to-r ${step.color} rounded-full blur-3xl opacity-0 group-hover:opacity-10 transition-opacity duration-700`}
                   />
-                  
+
                   <div className="relative z-10 flex flex-col lg:flex-row items-start gap-6 lg:gap-8">
                     <motion.div
                       className={`w-20 h-20 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center flex-shrink-0 shadow-2xl`}
@@ -334,7 +334,7 @@ export function PartnershipPage() {
                     >
                       <step.icon className="w-10 h-10 text-white" />
                     </motion.div>
-                    
+
                     <div className="flex-1">
                       <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-4 mb-4">
                         <span className={`inline-block text-sm px-4 py-1.5 bg-gradient-to-r ${step.color} rounded-full shadow-lg`}>
@@ -358,7 +358,7 @@ export function PartnershipPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(168,85,247,0.1),transparent_60%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(6,182,212,0.1),transparent_60%)]" />
         </div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -408,12 +408,12 @@ export function PartnershipPage() {
                 className="group relative"
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-500" />
-                
+
                 <div className="relative h-full p-8 bg-gradient-to-br from-gray-900/90 to-gray-950/90 rounded-2xl border border-gray-800/50 hover:border-gray-700/50 transition-all duration-500 backdrop-blur-xl overflow-hidden">
                   <motion.div
                     className={`absolute -bottom-10 -right-10 w-32 h-32 bg-gradient-to-br ${item.color} rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-700`}
                   />
-                  
+
                   <motion.div
                     className={`w-14 h-14 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center mb-6 shadow-xl`}
                     whileHover={{ scale: 1.1, rotate: 5 }}
@@ -434,7 +434,7 @@ export function PartnershipPage() {
       {/* Partnership Models */}
       <section className="py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-950/10 to-transparent" />
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -480,17 +480,16 @@ export function PartnershipPage() {
                 {model.highlight && (
                   <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-3xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
                 )}
-                
-                <div className={`relative h-full p-10 bg-gradient-to-br from-gray-900/90 to-gray-950/90 rounded-3xl border ${
-                  model.highlight ? 'border-indigo-500/50' : 'border-gray-800/50'
-                } hover:border-gray-700/50 transition-all duration-500 backdrop-blur-xl overflow-hidden`}>
+
+                <div className={`relative h-full p-10 bg-gradient-to-br from-gray-900/90 to-gray-950/90 rounded-3xl border ${model.highlight ? 'border-indigo-500/50' : 'border-gray-800/50'
+                  } hover:border-gray-700/50 transition-all duration-500 backdrop-blur-xl overflow-hidden`}>
                   <motion.div
                     className={`absolute inset-0 bg-gradient-to-br ${model.color} opacity-0 group-hover:opacity-5 transition-opacity duration-700`}
                   />
                   <div
                     className={`absolute -top-20 -right-20 w-48 h-48 bg-gradient-to-br ${model.color} rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-700`}
                   />
-                  
+
                   <div className="relative z-10">
                     <div className="text-6xl mb-6">{model.icon}</div>
                     <h3 className="text-2xl lg:text-3xl mb-6 text-white">{model.title}</h3>
@@ -508,7 +507,7 @@ export function PartnershipPage() {
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.15),transparent_70%)]" />
         </div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -524,10 +523,10 @@ export function PartnershipPage() {
                 }}
                 transition={{ duration: 5, repeat: Infinity }}
               />
-              
+
               <div className="absolute -top-40 -left-40 w-80 h-80 bg-indigo-500/20 rounded-full blur-3xl" />
               <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl" />
-              
+
               <div className="relative z-10">
                 <motion.div
                   animate={{
@@ -558,7 +557,7 @@ export function PartnershipPage() {
       {/* What We Look For */}
       <section className="py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-950/10 to-transparent" />
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -567,7 +566,7 @@ export function PartnershipPage() {
             className="max-w-6xl mx-auto"
           >
             <h2 className="text-5xl lg:text-6xl text-center mb-20">What We Look For</h2>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 { label: "Clarity of idea", icon: Lightbulb, color: "from-indigo-500 to-purple-500" },
@@ -590,7 +589,7 @@ export function PartnershipPage() {
                       className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl`}
                     />
                     <div className={`absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br ${item.color} rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
-                    
+
                     <motion.div
                       className={`relative w-16 h-16 mx-auto mb-6 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center shadow-xl`}
                       whileHover={{ scale: 1.1, rotate: 5 }}
@@ -677,6 +676,6 @@ export function PartnershipPage() {
           </motion.div>
         </div>
       </section>
-    </motion.div>
+    </motion.div >
   );
 }

@@ -1,7 +1,5 @@
 import { motion } from "motion/react";
-import Mail from "lucide-react/dist/esm/icons/mail";
-import Phone from "lucide-react/dist/esm/icons/phone";
-import Linkedin from "lucide-react/dist/esm/icons/linkedin";
+import { Mail, Phone, Linkedin } from "lucide-react";
 
 // Custom X (Twitter) Icon
 const XIcon = () => (
@@ -91,7 +89,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <h3 className="text-sm tracking-wider uppercase text-gray-500 mb-6">Quick Links</h3>
+            <h3 className="text-[11px] tracking-[0.2em] font-bold uppercase text-gray-500 mb-6">Quick Links</h3>
             <div className="grid grid-cols-2 gap-x-8 gap-y-3">
               <ul className="space-y-3">
                 {quickLinksLeft.map((link) => (
@@ -105,7 +103,7 @@ export function Footer() {
                         });
                         window.dispatchEvent(event);
                       }}
-                      className="relative text-gray-400 hover:text-white transition-colors inline-block group"
+                      className="relative text-gray-400 hover:text-white transition-colors inline-block group tracking-wide text-sm"
                       whileHover={{ x: 5 }}
                     >
                       <span className="relative z-10">{link}</span>
@@ -126,7 +124,7 @@ export function Footer() {
                         });
                         window.dispatchEvent(event);
                       }}
-                      className="relative text-gray-400 hover:text-white transition-colors inline-block group"
+                      className="relative text-gray-400 hover:text-white transition-colors inline-block group tracking-wide text-sm"
                       whileHover={{ x: 5 }}
                     >
                       <span className="relative z-10">{link}</span>
@@ -145,7 +143,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <h3 className="text-sm tracking-wider uppercase text-gray-500 mb-6">Contact</h3>
+            <h3 className="text-[11px] tracking-[0.2em] font-bold uppercase text-gray-500 mb-6">Contact</h3>
             <div className="space-y-4">
               <button
                 onClick={() => window.dispatchEvent(new CustomEvent("navigate", { detail: "contact" }))}

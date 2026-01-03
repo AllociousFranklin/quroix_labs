@@ -94,7 +94,7 @@ export function RequestDemoPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -103,7 +103,7 @@ export function RequestDemoPage() {
 
     try {
       let fileURL = "";
-      
+
       // Upload file if one was selected
       if (uploadedFile) {
         setUploading(true);
@@ -148,7 +148,7 @@ export function RequestDemoPage() {
       ...formData,
       [name]: value,
     });
-    
+
     // Clear error when user starts typing
     if (errors[name as keyof typeof errors]) {
       setErrors({
@@ -440,11 +440,10 @@ export function RequestDemoPage() {
                 disabled={!isFormValid() || submitting || uploading}
                 whileHover={{ scale: isFormValid() && !submitting && !uploading ? 1.02 : 1 }}
                 whileTap={{ scale: isFormValid() && !submitting && !uploading ? 0.98 : 1 }}
-                className={`w-full px-8 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-xl text-lg transition-all ${
-                  !isFormValid() || submitting || uploading
+                className={`w-full px-8 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-xl text-lg transition-all ${!isFormValid() || submitting || uploading
                     ? "opacity-50 cursor-not-allowed"
                     : "hover:shadow-2xl hover:shadow-indigo-500/50"
-                }`}
+                  }`}
               >
                 {uploading ? "Uploading file..." : submitting ? "Submitting..." : "Book My Demo"}
               </motion.button>

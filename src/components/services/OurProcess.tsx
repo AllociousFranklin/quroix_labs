@@ -52,9 +52,9 @@ export function OurProcess() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl lg:text-5xl mb-4">Our Process</h2>
+          <h2 className="text-4xl lg:text-5xl mb-4">How We Engineer Success</h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            A proven methodology that delivers results every time
+            A transparent look at our development lifecycle
           </p>
         </motion.div>
 
@@ -71,9 +71,8 @@ export function OurProcess() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
-                className={`relative flex flex-col lg:flex-row items-center gap-8 ${
-                  index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                }`}
+                className={`relative flex flex-col lg:flex-row items-center gap-8 ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                  }`}
               >
                 {/* Content Card */}
                 <div className="flex-1 w-full">

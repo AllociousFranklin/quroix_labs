@@ -48,19 +48,19 @@ export function TermsPage() {
 
               <h2 className="text-2xl mb-4 mt-12">1. Use of Website</h2>
               <p className="text-gray-400">
-                You may browse our website, view content, and submit forms for business purposes. 
+                You may browse our website, view content, and submit forms for business purposes.
                 You agree not to misuse or attempt to disrupt the website.
               </p>
 
               <h2 className="text-2xl mb-4 mt-12">2. Intellectual Property</h2>
               <p className="text-gray-400 mb-4">
-                All content, text, branding, images, and designs on this site belong to Quroix Labs. 
+                All content, text, branding, images, and designs on this site belong to Quroix Labs.
                 You may not copy, modify, or distribute any material without permission.
               </p>
 
               <h2 className="text-2xl mb-4 mt-12">3. Client Engagement</h2>
               <p className="text-gray-400 mb-4">
-                Submitting a project request or contacting us does not create a formal business relationship. 
+                Submitting a project request or contacting us does not create a formal business relationship.
                 A contract or written agreement is required for any paid engagement.
               </p>
 
@@ -71,7 +71,7 @@ export function TermsPage() {
 
               <h2 className="text-2xl mb-4 mt-12">5. External Links</h2>
               <p className="text-gray-400">
-                Our website may contain links to third-party sites. We are not responsible for their 
+                Our website may contain links to third-party sites. We are not responsible for their
                 content or practices.
               </p>
 
@@ -88,7 +88,7 @@ export function TermsPage() {
 
               <h2 className="text-2xl mb-4 mt-12">7. Changes to Terms</h2>
               <p className="text-gray-400">
-                We may modify these terms at any time. Continued use of the website indicates 
+                We may modify these terms at any time. Continued use of the website indicates
                 acceptance of updated terms.
               </p>
 

@@ -43,8 +43,8 @@ export function PrivacyPage() {
           <div className="relative p-12 bg-gradient-to-br from-gray-900/50 to-gray-950/50 rounded-3xl border border-gray-800 backdrop-blur-sm">
             <div className="prose prose-invert prose-lg max-w-none">
               <p className="text-gray-300 leading-relaxed mb-8">
-                At Quroix Labs, we respect your privacy and are committed to protecting your personal 
-                information. This Privacy Policy explains how we collect, use, and safeguard your data 
+                At Quroix Labs, we respect your privacy and are committed to protecting your personal
+                information. This Privacy Policy explains how we collect, use, and safeguard your data
                 when you interact with our website, services, or contact forms.
               </p>
 
@@ -78,13 +78,13 @@ export function PrivacyPage() {
 
               <h2 className="text-2xl mb-4 mt-12">3. Data Storage & Security</h2>
               <p className="text-gray-400">
-                Your data is stored securely using industry-standard encryption and access control. 
+                Your data is stored securely using industry-standard encryption and access control.
                 Only authorized Quroix Labs personnel may access submitted information.
               </p>
 
               <h2 className="text-2xl mb-4 mt-12">4. Cookies & Analytics</h2>
               <p className="text-gray-400">
-                Our website may use cookies or analytics tools to improve performance. You can turn 
+                Our website may use cookies or analytics tools to improve performance. You can turn
                 off cookies in your browser settings.
               </p>
 

@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Quroix Labs — AI Automation & Intelligent Systems</title>
-    <meta name="description" content="Engineering intelligence for the real world. Quroix Labs builds AI-driven systems, autonomous agents, and automated workflows for startups." />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://quroixlabs.com/" />
-    <meta property="og:title" content="Quroix Labs — Engineering Intelligence" />
-    <meta property="og:description" content="Intelligent platforms and automated workflows for the modern enterprise." />
-    <meta property="og:image" content="https://quroixlabs.com/assets/og-image.png" />
-    <meta property="og:site_name" content="Quroix Labs" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@quroixlabs" />
-    <meta name="twitter:title" content="Quroix Labs — AI Automation" />
+  <style>
+    .hero-h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 3rem;
+      line-height: 1;
+      letter-spacing: -0.025em;
+      font-weight: 500;
+      color: white;
+    }
 
-    <link rel="icon" type="image/png" href="/assets/Q.png" />
+    @media (min-width: 1024px) {
+      .hero-h1 {
+        font-size: 4.5rem;
+      }
+    }
+  </style>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="preconnect" href="https://firebaseinstallations.googleapis.com">
 
-    <script type="application/ld+json">
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "@id": "https://quroixlabs.com/#organization",
       "name": "Quroix Labs",
       "url": "https://quroixlabs.com",
-      "logo": "https://quroixlabs.com/assets/Q.png",
+      "logo": "https://quroixlabs.com/assets/Q.png.48x48.png",
       "sameAs": [
         "https://www.linkedin.com/company/quroixlabs",
         "https://x.com/quroixlabs",
         "https://www.youtube.com/@quroixlabs",
         "https://www.instagram.com/quroixlabs",
-        "https://medium.com/@quroixlabs",
-        "https://clutch.co/profile/quroixlabs",
-        "https://www.crunchbase.com/organization/quroixlabs",
-        "https://github.com/quroixlabs"
+        "https://github.com/quroixlabs",
+        "https://medium.com/@quroixlabs"
       ],
       "contactPoint": {
         "@type": "ContactPoint",
@@ -48,31 +53,45 @@
         "contactType": "customer service"
       }
     }
-    </script>
+  </script>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PKD0WX02BV"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-PKD0WX02BV", { send_page_view: false });
-    </script>
-    <script type="module" crossorigin src="/assets/index-DJNjqGRx.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-ChVka3bb.css">
-  </head>
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-PKD0WX02BV";
+        document.head.appendChild(script);
 
-  <body>
-    <div id="root">
-      <section style="display:none;">
-        <h1>Quroix Labs: Engineering Intelligence & AI Automation</h1>
-        <p>Quroix Labs specializes in autonomous AI agents, intelligent systems, and scalable digital platforms using our proprietary FlowPilot engine.</p>
+        script.onload = () => {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', 'G-PKD0WX02BV');
+        };
+      }, 3500); // 3.5s delay is the key to your high performance score
+    });
+  </script>
+  <script type="module" crossorigin src="/assets/index-CB9RoqdQ.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BqjD_RDv.css">
+</head>
+
+<body>
+  <div id="root">
+    <section style="display:none;" aria-hidden="true">
+      <h1>Quroix Labs: Engineering Intelligence & AI Automation</h1>
+      <p>Quroix Labs specializes in autonomous AI agents, intelligent systems, and scalable digital platforms using our
+        proprietary FlowPilot engine.</p>
+      <nav>
         <ul>
           <li>AI Automation Agency</li>
           <li>Autonomous AI Agents</li>
           <li>AgentCore Framework</li>
           <li>Intelligent Workflows</li>
         </ul>
-      </section>
-    </div>
-  </body>
+      </nav>
+    </section>
+  </div>
+</body>
+
 </html>
