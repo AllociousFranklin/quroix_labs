@@ -37,9 +37,10 @@ export function WhyChoose() {
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl mb-4 font-heading tracking-tight">
@@ -52,9 +53,10 @@ export function WhyChoose() {
 
         {/* Image Banner */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.95, filter: "blur(20px)" }}
+          whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           viewport={{ once: true }}
+          transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
           className="mb-16 rounded-2xl overflow-hidden relative h-64 md:h-80 group"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-cyan-600/20 z-10 group-hover:opacity-0 transition-opacity duration-500" />
@@ -74,11 +76,15 @@ export function WhyChoose() {
           {strengths.map((strength, index) => (
             <motion.div
               key={strength.title}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
-              whileHover={{ scale: 1.05 }}
+              transition={{
+                duration: 1.5,
+                delay: index * 0.25,
+                ease: [0.16, 1, 0.3, 1]
+              }}
+              whileHover={{ scale: 1.02, y: -5 }}
               className="relative group"
             >
               <div className="relative p-10 bg-gradient-to-br from-gray-900/60 to-gray-950/60 rounded-3xl border border-gray-800 hover:border-indigo-500/50 transition-all duration-300 backdrop-blur-sm text-center">

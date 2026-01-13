@@ -72,9 +72,10 @@ export function ServicesOverview() {
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl mb-4">Our Core Services</h2>
@@ -87,11 +88,15 @@ export function ServicesOverview() {
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 80, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -8 }}
+              transition={{
+                duration: 1.5,
+                delay: index * 0.2,
+                ease: [0.16, 1, 0.3, 1]
+              }}
+              whileHover={{ y: -12 }}
               className="group relative"
             >
               {/* Animated glow border */}
@@ -129,7 +134,7 @@ export function ServicesOverview() {
                       window.dispatchEvent(event);
                     }}
                     className="flex items-center gap-2 text-sm text-indigo-400 group-hover:text-indigo-300 transition-colors"
-                    whileHover={{ x: 5 }}
+                    whileHover={{ x: 8 }}
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4" />

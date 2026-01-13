@@ -6,9 +6,10 @@ export function FeaturedArticle() {
     <section className="py-12 relative">
       <div className="container mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
+          transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
           className="relative group"
         >
           <div className="relative bg-gradient-to-br from-gray-900/80 to-gray-950/80 rounded-3xl border border-gray-800 hover:border-gray-700 transition-all duration-500 backdrop-blur-sm overflow-hidden">
@@ -28,7 +29,7 @@ export function FeaturedArticle() {
                     scale: [1, 1.1, 1],
                     rotate: [0, 5, 0],
                   }}
-                  transition={{ duration: 10, repeat: Infinity }}
+                  transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
                 />
 
                 {/* Grid Pattern */}
@@ -44,6 +45,9 @@ export function FeaturedArticle() {
                 {/* Featured Badge */}
                 <motion.div
                   className="absolute top-6 left-6 px-4 py-2 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-lg text-sm"
+                  initial={{ opacity: 0, x: -20, filter: "blur(5px)" }}
+                  whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                  transition={{ delay: 0.5, duration: 0.8 }}
                   whileHover={{ scale: 1.05 }}
                 >
                   Featured
@@ -52,10 +56,16 @@ export function FeaturedArticle() {
                 {/* Central Icon */}
                 <motion.div
                   className="relative z-10 text-6xl"
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 3, repeat: Infinity }}
+                  initial={{ scale: 0, rotate: -45 }}
+                  whileInView={{ scale: 1, rotate: 0 }}
+                  transition={{ delay: 0.3, duration: 0.8, type: "spring" }}
                 >
-                  🚀
+                  <motion.div
+                    animate={{ y: [0, -12, 0], rotate: [0, 5, -5, 0] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  >
+                    🚀
+                  </motion.div>
                 </motion.div>
 
                 {/* Accent Border */}
@@ -66,23 +76,41 @@ export function FeaturedArticle() {
               <div className="relative z-10 p-12 flex flex-col justify-between">
                 <div>
                   <motion.span
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
                     className="inline-block px-3 py-1 bg-indigo-950/50 rounded-full text-sm text-indigo-400 border border-indigo-500/30 mb-4"
                   >
                     Artificial Intelligence
                   </motion.span>
 
-                  <h2 className="text-3xl lg:text-4xl mb-4">
+                  <motion.h2
+                    initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                    whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    transition={{ delay: 0.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                    className="text-3xl lg:text-4xl mb-4"
+                  >
                     The Future of Agentic AI: Beyond Simple Automation
-                  </h2>
+                  </motion.h2>
 
-                  <p className="text-lg text-gray-400 leading-relaxed mb-6">
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6, duration: 1 }}
+                    className="text-lg text-gray-400 leading-relaxed mb-6"
+                  >
                     We are moving from "chatbots" to autonomous agents capable of planning, coding, and decision-making.
                     At Quroix Labs, we explore how "Agentic AI" is redefining software engineering, allowing us to build
                     complex systems with unprecedented speed and precision.
-                  </p>
+                  </motion.p>
 
                   {/* Meta Information */}
-                  <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 mb-8">
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.8 }}
+                    className="flex flex-wrap items-center gap-6 text-sm text-gray-500 mb-8"
+                  >
                     <span className="flex items-center gap-2">
                       <User className="w-4 h-4" />
                       Quroix Intelligence Team
@@ -95,12 +123,15 @@ export function FeaturedArticle() {
                       <Clock className="w-4 h-4" />
                       8 min read
                     </span>
-                  </div>
+                  </motion.div>
                 </div>
 
                 {/* CTA Button */}
                 <div>
                   <motion.button
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.0, duration: 0.8 }}
                     whileHover={{ scale: 1.02, x: 5 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={() =>

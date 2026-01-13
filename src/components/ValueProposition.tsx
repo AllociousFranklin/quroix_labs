@@ -43,18 +43,29 @@ export function ValueProposition() {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl mb-4 font-heading tracking-tight">
-            Our Approach
-          </h2>
+          <motion.div
+            initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <h2 className="text-4xl lg:text-5xl mb-4 font-heading tracking-tight">
+              Our Approach
+            </h2>
+          </motion.div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 80, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
+              transition={{
+                duration: 1.5,
+                delay: index * 0.3,
+                ease: [0.16, 1, 0.3, 1]
+              }}
               whileHover={{ y: -10 }}
               className="relative group"
             >

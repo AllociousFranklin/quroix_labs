@@ -243,15 +243,15 @@ export function RequestDemoPage() {
       <div className="container mx-auto px-6 relative z-10">
         {/* Hero Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
+            initial={{ opacity: 0, scale: 0.9, filter: "blur(5px)" }}
+            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+            transition={{ delay: 0.4, duration: 0.8 }}
             className="inline-flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-indigo-950/50 to-cyan-950/50 rounded-full border border-indigo-500/30 mb-8"
           >
             <Sparkles className="w-4 h-4 text-indigo-400" />
@@ -260,23 +260,33 @@ export function RequestDemoPage() {
             </span>
           </motion.div>
 
-          <h1 className="text-5xl lg:text-6xl mb-6 leading-tight">
+          <motion.h1
+            initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ delay: 0.6, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            className="text-5xl lg:text-6xl mb-6 leading-tight"
+          >
             Request a{" "}
             <span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
               Tailored Demo
             </span>
-          </h1>
+          </motion.h1>
 
-          <p className="text-xl text-gray-400 leading-relaxed">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 1 }}
+            className="text-xl text-gray-400 leading-relaxed"
+          >
             Tell us about your idea and we'll prepare a personalized walkthrough within 48 hours.
-          </p>
+          </motion.p>
         </motion.div>
 
         {/* Form Section */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-2xl mx-auto"
         >
           <div className="relative p-10 bg-gradient-to-br from-gray-900/80 to-gray-950/80 rounded-3xl border border-gray-800 backdrop-blur-sm">
@@ -441,8 +451,8 @@ export function RequestDemoPage() {
                 whileHover={{ scale: isFormValid() && !submitting && !uploading ? 1.02 : 1 }}
                 whileTap={{ scale: isFormValid() && !submitting && !uploading ? 0.98 : 1 }}
                 className={`w-full px-8 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-xl text-lg transition-all ${!isFormValid() || submitting || uploading
-                    ? "opacity-50 cursor-not-allowed"
-                    : "hover:shadow-2xl hover:shadow-indigo-500/50"
+                  ? "opacity-50 cursor-not-allowed"
+                  : "hover:shadow-2xl hover:shadow-indigo-500/50"
                   }`}
               >
                 {uploading ? "Uploading file..." : submitting ? "Submitting..." : "Book My Demo"}

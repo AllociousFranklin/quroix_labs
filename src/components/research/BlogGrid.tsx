@@ -30,9 +30,10 @@ export function BlogGrid() {
       <div className="container mx-auto px-6">
         {/* Category Filters */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="mb-16"
         >
           <div className="flex flex-wrap justify-center gap-3">
@@ -57,18 +58,22 @@ export function BlogGrid() {
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedCategory}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
+            initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            exit={{ opacity: 0, y: -20, filter: "blur(10px)" }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredArticles.map((article, index) => (
               <motion.div
                 key={article.id}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.1 }}
+                initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
+                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.15,
+                  ease: [0.16, 1, 0.3, 1]
+                }}
                 whileHover={{ y: -10 }}
                 className="relative group cursor-pointer"
               >

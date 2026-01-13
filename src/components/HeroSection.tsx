@@ -48,16 +48,11 @@ export function HeroSection() {
 
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-20">
         {/* Left Content */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="space-y-8"
-        >
+        <div className="space-y-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            initial={{ opacity: 0, x: -150 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.8, delay: 1.5, ease: [0.16, 1, 0.3, 1] }}
           >
             <h1 fetchpriority="high" className="hero-h1 text-5xl lg:text-7xl tracking-tight leading-tight">
               Intelligence Engineered for{" "}
@@ -70,9 +65,9 @@ export function HeroSection() {
           </motion.div>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+            initial={{ opacity: 0, x: 150 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.8, delay: 3.8, ease: [0.16, 1, 0.3, 1] }}
             className="text-xl text-gray-400 leading-relaxed"
           >
             We build AI-driven systems, intelligent platforms, and automated
@@ -81,14 +76,25 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
+            transition={{ duration: 1.5, delay: 5.2, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-wrap gap-4"
           >
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.95 }}
+              animate={{
+                y: [0, -8, 0],
+              }}
+              transition={{
+                y: {
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 6.8 // Start floating after entrance
+                }
+              }}
               onClick={() => {
                 const event = new CustomEvent("navigate", {
                   detail: "request-demo",
@@ -104,8 +110,19 @@ export function HeroSection() {
             </motion.button>
 
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.95 }}
+              animate={{
+                y: [0, -8, 0],
+              }}
+              transition={{
+                y: {
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 7.0
+                }
+              }}
               onClick={() => {
                 const event = new CustomEvent("navigate", {
                   detail: "services",
@@ -125,7 +142,7 @@ export function HeroSection() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
+            transition={{ delay: 6.8 }}
             className="flex items-center gap-4 text-sm text-gray-500"
           >
             <span className="flex items-center gap-2">
@@ -137,13 +154,13 @@ export function HeroSection() {
             <span>•</span>
             <span>NDA available</span>
           </motion.div>
-        </motion.div>
+        </div>
 
         {/* Right Visual */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.3 }}
+          initial={{ opacity: 0, x: 200 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 2.0, delay: 2.5, ease: [0.16, 1, 0.3, 1] }}
           className="relative"
         >
           <IdeaTransformation />

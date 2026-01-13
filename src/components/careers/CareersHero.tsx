@@ -15,13 +15,13 @@ export function CareersHero() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-2xl"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2 }}
+              initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}
+              animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+              transition={{ delay: 0.4, duration: 1, ease: [0.16, 1, 0.3, 1] }}
               className="inline-flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-indigo-950/50 to-cyan-950/50 rounded-full border border-indigo-500/30 mb-8"
             >
               <Rocket className="w-4 h-4 text-indigo-400" />
@@ -31,9 +31,9 @@ export function CareersHero() {
             </motion.div>
 
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+              initial={{ opacity: 0, x: -50, filter: "blur(20px)" }}
+              animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+              transition={{ delay: 0.6, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
               className="text-5xl lg:text-6xl mb-8 leading-tight"
             >
               Careers at{" "}
@@ -43,9 +43,9 @@ export function CareersHero() {
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
+              initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ delay: 0.8, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
               className="text-2xl mb-6 text-white"
             >
               Join us in our early days. Build something
@@ -53,9 +53,9 @@ export function CareersHero() {
             </motion.p>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
+              initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ delay: 1.0, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
               className="text-xl text-gray-400 leading-relaxed mb-4"
             >
               Quroix Labs is a young and fast-moving team building
@@ -64,9 +64,9 @@ export function CareersHero() {
             </motion.p>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
+              initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ delay: 1.2, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
               className="text-lg text-gray-400 leading-relaxed"
             >
               If you want to grow fast, solve real problems, and
@@ -77,9 +77,9 @@ export function CareersHero() {
 
           {/* Hero Image */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9, filter: "blur(20px)" }}
+            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+            transition={{ delay: 1.4, duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
             className="relative group"
           >
             <div className="absolute -inset-4 bg-gradient-to-r from-indigo-600/20 to-cyan-600/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500" />

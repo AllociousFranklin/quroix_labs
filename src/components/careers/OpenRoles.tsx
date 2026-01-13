@@ -60,9 +60,10 @@ export function OpenRoles() {
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl mb-4">Open Roles</h2>
@@ -75,11 +76,15 @@ export function OpenRoles() {
           {roles.map((role, index) => (
             <motion.div
               key={role.id}
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -50, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ x: 10 }}
+              transition={{
+                duration: 1.2,
+                delay: index * 0.15,
+                ease: [0.16, 1, 0.3, 1]
+              }}
+              whileHover={{ x: 12 }}
               className="relative group"
             >
               <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-950/80 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 backdrop-blur-sm">
