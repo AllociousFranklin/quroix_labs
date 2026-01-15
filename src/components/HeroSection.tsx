@@ -52,7 +52,7 @@ export function HeroSection() {
           <motion.div
             initial={{ opacity: 0, x: -150 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.8, delay: 1.5, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
             <h1 fetchpriority="high" className="hero-h1 text-5xl lg:text-7xl tracking-tight leading-tight">
               Intelligence Engineered for{" "}
@@ -67,7 +67,7 @@ export function HeroSection() {
           <motion.p
             initial={{ opacity: 0, x: 150 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.8, delay: 3.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="text-xl text-gray-400 leading-relaxed"
           >
             We build AI-driven systems, intelligent platforms, and automated
@@ -78,7 +78,7 @@ export function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, delay: 5.2, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.5, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-wrap gap-4 relative z-40"
           >
             <motion.button
@@ -92,7 +92,7 @@ export function HeroSection() {
                   duration: 5,
                   repeat: Infinity,
                   ease: "easeInOut",
-                  delay: 6.8 // Start floating after entrance
+                  delay: 2.0 // Start floating after entrance
                 }
               }}
               onClick={() => {
@@ -120,7 +120,7 @@ export function HeroSection() {
                   duration: 5,
                   repeat: Infinity,
                   ease: "easeInOut",
-                  delay: 7.0
+                  delay: 2.2
                 }
               }}
               onClick={() => {
@@ -142,7 +142,7 @@ export function HeroSection() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 6.8 }}
+            transition={{ delay: 1.0 }}
             className="flex items-center gap-4 text-sm text-gray-500"
           >
             <span className="flex items-center gap-2">
@@ -160,7 +160,7 @@ export function HeroSection() {
         <motion.div
           initial={{ opacity: 0, x: 200 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 2.0, delay: 2.5, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 2.0, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="relative"
         >
           <IdeaTransformation />
