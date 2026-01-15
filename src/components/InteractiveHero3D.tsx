@@ -169,13 +169,18 @@ export function InteractiveHero3D() {
             canvas.height = window.innerHeight * dpr;
             ctx.scale(dpr, dpr);
 
+            // Responsive Density
+            const isMobile = window.innerWidth < 768;
+            const finalNodeCount = isMobile ? Math.floor(nodeCount * 0.4) : nodeCount;
+            const finalBgStarCount = isMobile ? Math.floor(bgStarCount * 0.3) : bgStarCount;
+
             particles = [];
-            for (let i = 0; i < nodeCount; i++) {
+            for (let i = 0; i < finalNodeCount; i++) {
                 particles.push(new Node());
             }
 
             backgroundStars = [];
-            for (let i = 0; i < bgStarCount; i++) {
+            for (let i = 0; i < finalBgStarCount; i++) {
                 backgroundStars.push({
                     x: Math.random() * window.innerWidth,
                     y: Math.random() * window.innerHeight,
@@ -213,6 +218,10 @@ export function InteractiveHero3D() {
                 particles.slice(i + 1).forEach(p2 => {
                     const dx = p.x - p2.x;
                     const dy = p.y - p2.y;
+
+                    // Optimization: Skip expensive Math.sqrt if crude distance is too far
+                    if (Math.abs(dx) > 180 || Math.abs(dy) > 180) return;
+
                     const dist = Math.sqrt(dx * dx + dy * dy);
                     if (dist < 180) {
                         const alpha = (1 - dist / 180) * 0.15;
@@ -247,8 +256,18 @@ export function InteractiveHero3D() {
 
         window.addEventListener("mousemove", handleMouseMove);
         window.addEventListener("resize", handleResize);
-        init();
-        animate();
+
+        // Defer initialization to avoid blocking Main Thread during hydration
+        const startAnimation = () => {
+            init();
+            animate();
+        };
+
+        if ('requestIdleCallback' in window) {
+            (window as any).requestIdleCallback(startAnimation);
+        } else {
+            setTimeout(startAnimation, 100);
+        }
 
         return () => {
             window.removeEventListener("mousemove", handleMouseMove);
@@ -265,7 +284,7 @@ export function InteractiveHero3D() {
             <div className="absolute inset-0 bg-gradient-to-tr from-indigo-950/10 via-transparent to-cyan-950/10" />
             <canvas
                 ref={canvasRef}
-                className="w-full h-full block"
+                className="w-full h-full block transition-opacity duration-1000 ease-in-out"
                 style={{ opacity: 0.8 }}
             />
         </div>
