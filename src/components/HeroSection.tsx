@@ -13,7 +13,7 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-950/20 via-transparent to-cyan-950/20" />
 
       {/* 3D Particle Field */}
-      <div className="absolute inset-0 z-10">
+      <div className="absolute inset-0 z-10 pointer-events-none">
         <Suspense fallback={<div className="absolute inset-0 bg-black/0" />}>
           <InteractiveHero3D />
         </Suspense>
@@ -46,7 +46,7 @@ export function HeroSection() {
         }}
       />
 
-      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-20">
+      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-30">
         {/* Left Content */}
         <div className="space-y-8">
           <motion.div
@@ -79,7 +79,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 5.2, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-wrap gap-4"
+            className="flex flex-wrap gap-4 relative z-40"
           >
             <motion.button
               whileHover={{ scale: 1.05, y: -5 }}
@@ -101,7 +101,7 @@ export function HeroSection() {
                 });
                 window.dispatchEvent(event);
               }}
-              className="relative px-8 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-lg text-lg flex items-center gap-2 overflow-hidden group"
+              className="relative px-8 py-4 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-lg text-lg flex items-center gap-2 overflow-hidden group cursor-pointer"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-2xl bg-gradient-to-r from-indigo-500 to-cyan-500" />
@@ -129,7 +129,7 @@ export function HeroSection() {
                 });
                 window.dispatchEvent(event);
               }}
-              className="relative px-8 py-4 border border-gray-700 rounded-lg text-lg flex items-center gap-2 overflow-hidden group"
+              className="relative px-8 py-4 border border-gray-700 rounded-lg text-lg flex items-center gap-2 overflow-hidden group cursor-pointer"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-cyan-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute inset-0 border border-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />

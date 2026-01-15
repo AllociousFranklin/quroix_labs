@@ -5,6 +5,22 @@ import { ArrowRight, TrendingUp, Building2, Briefcase } from "lucide-react";
 const caseStudies = [
   {
     id: 1,
+    company: "Work4U Digital Agency",
+    industry: "Agency",
+    logo: "💎",
+    color: "from-amber-400 to-yellow-600",
+    problem: "Needed a flagship agency website with high-end 3D interactivity to establish immediate authority in the digital space.",
+    solution: "Built a 'Premium Neural' 3D experience using React Three Fiber & Framer Motion, featuring a dark-mode gold aesthetic and immersive node-based hero.",
+    result: "High-Authority Brand Identity",
+    link: "https://work4u-phi.vercel.app/",
+    metrics: [
+      { label: "Visual Impact", value: "Elite" },
+      { label: "Performance", value: "100/100" },
+      { label: "Engagement", value: "High" },
+    ],
+  },
+  {
+    id: 2,
     company: "Theory of Arts",
     industry: "Design",
     logo: "🎨",
@@ -20,7 +36,7 @@ const caseStudies = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     company: "Brim LED Clocks",
     industry: "Retail",
     logo: "⏰",
@@ -33,22 +49,6 @@ const caseStudies = [
       { label: "Lead Gen", value: "+300%" },
       { label: "Engagement", value: "+150%" },
       { label: "Conversion", value: "+25%" },
-    ],
-  },
-  {
-    id: 3,
-    company: "Enterprise AI Analytics",
-    industry: "Tech",
-    logo: "🤖",
-    color: "from-blue-500 to-cyan-500",
-    problem: "Processing massive datasets for real-time actionable insights was too slow and resource-intensive for existing infrastructure.",
-    solution: "Developing a scalable AI analytics suite capable of processing terabytes of data in real-time for enterprise decision-making.",
-    result: "Optimized data workflows",
-    link: "#",
-    metrics: [
-      { label: "Processing", value: "10TB/day" },
-      { label: "Latency", value: "-90%" },
-      { label: "Efficiency", value: "+500%" },
     ],
   },
 ];
@@ -80,8 +80,8 @@ export function CaseStudiesGrid() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`px-6 py-3 rounded-xl text-sm transition-all duration-300 ${selectedIndustry === industry
-                    ? "bg-gradient-to-r from-orange-600 to-cyan-600 text-white shadow-lg shadow-orange-500/30"
-                    : "bg-gray-900/80 border border-gray-800 text-gray-400 hover:border-gray-700 hover:text-white"
+                  ? "bg-gradient-to-r from-orange-600 to-cyan-600 text-white shadow-lg shadow-orange-500/30"
+                  : "bg-gray-900/80 border border-gray-800 text-gray-400 hover:border-gray-700 hover:text-white"
                   }`}
               >
                 {industry}

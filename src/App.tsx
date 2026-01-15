@@ -10,6 +10,7 @@ import { SmoothScroll } from "./components/SmoothScroll";
 
 /* Pages */
 import { HomePage } from "./components/HomePage";
+import { CustomCursor } from "./components/CustomCursor";
 
 // Lazy load heavy pages
 const ServicesPage = lazy(() => import("./components/ServicesPage").then(m => ({ default: m.ServicesPage })));
@@ -183,6 +184,7 @@ export default function App() {
       <SEO {...getSEOConfig()} />
 
       <SmoothScroll />
+      <CustomCursor />
       <CommandPalette />
       <ScrollProgress />
       <Navigation currentPage={currentPage} setCurrentPage={setCurrentPage} />

@@ -31,5 +31,54 @@ export const pageSEO = {
     description:
       "Get in touch with Quroix Labs for AI consulting, custom ML development, and intelligent automation solutions.",
     canonical: `${SITE.url}/contact`
+  },
+
+  products: {
+    title: "AI Products & Platforms — Quroix Labs",
+    description:
+      "Explore our suite of AI products and intelligent platforms designed for enterprise automation.",
+    canonical: `${SITE.url}/products`
+  },
+
+  caseStudies: {
+    title: "Case Studies — AI Success Stories | Quroix Labs",
+    description:
+      "See how Quroix Labs has transformed businesses with custom AI solutions and automation strategies.",
+    canonical: `${SITE.url}/case-studies`
+  },
+
+  careers: {
+    title: "Careers at Quroix Labs — Join the AI Revolution",
+    description:
+      "Join our team of engineers and researchers building the future of intelligent systems.",
+    canonical: `${SITE.url}/careers`
+  },
+
+  partnership: {
+    title: "Partnership Program — Collaborate with Quroix Labs",
+    description:
+      "Partner with us to deliver cutting-edge AI solutions to your clients.",
+    canonical: `${SITE.url}/partnership`
+  },
+
+  requestDemo: {
+    title: "Request a Demo — Experience Intelligent Automation",
+    description:
+      "Schedule a personalized demo of our AI platforms and see how they can benefit your business.",
+    canonical: `${SITE.url}/request-demo`
+  },
+
+  privacy: {
+    title: "Privacy Policy — Quroix Labs",
+    description:
+      "Our commitment to protecting your data and privacy.",
+    canonical: `${SITE.url}/privacy`
+  },
+
+  terms: {
+    title: "Terms of Service — Quroix Labs",
+    description:
+      "Terms and conditions for using Quroix Labs services and products.",
+    canonical: `${SITE.url}/terms`
   }
 };

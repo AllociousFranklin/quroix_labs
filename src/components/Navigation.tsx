@@ -61,6 +61,8 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
             className="flex items-center gap-2 cursor-pointer flex-shrink-0 group"
             whileHover={{ scale: 1.02 }}
             onClick={() => handleNavClick("home")}
+            role="link"
+            aria-label="Return to Home"
           >
             <img
               src="/assets/Quroix_white_Logo.svg"
@@ -166,6 +168,7 @@ export function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
                   <button
                     onClick={() => setMobileMenuOpen(false)}
                     className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-gray-800 transition-colors"
+                    aria-label="Close menu"
                   >
                     <X className="w-5 h-5" />
                   </button>
