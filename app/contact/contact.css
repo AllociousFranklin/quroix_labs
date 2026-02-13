@@ -1,0 +1,177 @@
+.contact {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+}
+
+.contact-content {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+}
+
+.contact-content-top {
+    display: flex;
+    flex-direction: column;
+    gap: 8.25vh;
+}
+
+.contact-content-row {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+}
+
+.contact-content-left {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+}
+
+.contact-divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.contact-content-column {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+/* Intro card with profile avatar */
+.contact-content-top-item {
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 calc(1px + 0px) rgba(255, 255, 255, 0.075), inset 0 0 2.5vw rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.025);
+    display: flex;
+    align-items: center;
+    padding: 1.5vw;
+    gap: 1vw;
+}
+
+.contact-content-top-item-profile {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.contact-content-top-item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-content-top-item-text {
+    width: 100%;
+    height: 100%;
+}
+
+/* Contact info cards */
+.contact-content-item {
+    width: 100%;
+    height: fit-content;
+    box-shadow: inset 0 0 0 calc(1px + 0px) rgba(255, 255, 255, 0.075), inset 0 0 2.5vw rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.025);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.25vw 1.5vw;
+    gap: 0.4vh;
+    border-radius: 10px;
+}
+
+/* Colored labels for each card section */
+.contact-item-label {
+    font-size: clamp(10px, 0.7vw, 14px);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: #8b7355;
+    margin-bottom: 0.2vh;
+}
+
+/* Globe 3D section */
+.contact-content-right {
+    width: 65%;
+    height: 66vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* ==================== MOBILE ==================== */
+@media (max-width: 768px) {
+
+    .contact {
+        padding: 0 5vw;
+        padding-top: 25vw;
+        padding-bottom: 10vw;
+        height: auto;
+    }
+
+    .contact-content {
+        gap: 10vw;
+    }
+
+    .contact-content-top {
+        gap: 8vw;
+    }
+
+    .contact-content-row {
+        flex-direction: column;
+        gap: 5vw;
+    }
+
+    .contact-content-left {
+        width: 100%;
+        gap: 8vw;
+    }
+
+    .contact-content-column {
+        gap: 3vw;
+    }
+
+    .contact-content-top-item {
+        padding: 4vw;
+        gap: 3vw;
+        border-radius: 15px;
+    }
+
+    .contact-content-top-item-profile {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .contact-content-item {
+        padding: 4vw;
+        gap: 1.5vw;
+        border-radius: 15px;
+    }
+
+    .contact-item-label {
+        font-size: clamp(10px, 3vw, 14px);
+    }
+
+    .contact-content-right {
+        width: 100%;
+        height: auto;
+        min-height: 70vw;
+    }
+
+}

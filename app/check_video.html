@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <video id="v" src="../public/videos/serviceshighquality.mp4" controls></video>
+  <div id="duration"></div>
+  <script>
+    const v = document.getElementById('v');
+    v.onloadedmetadata = function() {
+      document.getElementById('duration').innerText = 'Duration: ' + v.duration;
+    };
+  </script>
+</body>
+</html>

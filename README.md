@@ -1,8 +1,17 @@
+# Quroixlabs
 
+This is the landing page of a digital marcketplace platform by Quroixlabs.
+Live on [https://quroixlabs.com](https://quroixlabs.com)
 
-  ## Running the code
+![quroixlabs](public/images/quroixlabs.png)
+![globe](public/images/globe.png)
+![flower](public/images/flower.png)
 
-  Run `npm i` to install the dependencies.
+## Tech stack
 
-  Run `npm run dev` to start the development server.
-  
+* Next.js v14, App routing
+* Sass
+* Three.js
+* GSAP
+* Framer Motion
+* Typescript
