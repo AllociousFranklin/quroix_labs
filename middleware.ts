@@ -5,8 +5,8 @@ export function middleware(request: NextRequest) {
   // Extract visitor IP address
   // In Vercel, request.ip is usually populated.
   // We also check x-forwarded-for just in case.
-  const ip = request.ip || request.headers.get('x-forwarded-for') || 'unknown'
-  
+  const ip = (request as any).ip || request.headers.get('x-forwarded-for') || 'unknown'
+
   const userAgent = request.headers.get('user-agent') || 'unknown'
   const path = request.nextUrl.pathname
 
