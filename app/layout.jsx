@@ -3,16 +3,17 @@ import { Navigation } from "./Navigation";
 import Script from "next/script";
 
 export const metadata = {
+  metadataBase: new URL('https://quroixlabs.com'),
   title: "Quroixlabs | Websites, Automations & Software Engineered for Real-World Impact",
   description: "Build high-performance digital systems that drive growth. Custom websites, intelligent automation, and scalable software designed for startups and enterprises.",
   keywords: ["website design", "UX/UI design", "web development", "full-stack development", "custom websites", "digital solutions", "automation systems", "business automation", "custom software development", "enterprise software", "scalable web platforms", "intelligent automation", "workflow automation", "digital transformation", "AI automation", "process automation", "web applications", "SaaS development", "API development", "database design", "cloud solutions", "DevOps automation"],
   alternates: {
-    canonical: 'https://quroixlabs.com/',
+    canonical: '/',
   },
   openGraph: {
     title: "Quroixlabs | Websites, Automations & Software Engineered for Real-World Impact",
     description: "Build high-performance digital systems that drive growth. Custom websites, intelligent automation, and scalable software designed for startups and enterprises.",
-    images: [{ url: "/images/quroix_logo.svg", width: 1200, height: 630, alt: "Quroix Labs - Engineering Digital Systems" }],
+    images: [{ url: "/icon.svg", width: 1200, height: 630, alt: "Quroix Labs - Engineering Digital Systems" }],
     url: 'https://quroixlabs.com',
     siteName: 'Quroix Labs',
     locale: 'en_US',
@@ -68,7 +69,7 @@ export default function RootLayout({ children }) {
               "@id": "https://quroixlabs.com/#organization",
               "name": "Quroix Labs",
               "url": "https://quroixlabs.com",
-              "logo": "https://quroixlabs.com/assets/Q.png.48x48.png",
+              "logo": "https://quroixlabs.com/icon.svg",
               "sameAs": [
                 "https://www.linkedin.com/company/quroixlabs",
                 "https://x.com/quroixlabs",

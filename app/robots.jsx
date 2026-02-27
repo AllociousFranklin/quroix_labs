@@ -3,7 +3,7 @@ export default function robots() {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: '/private/',
+      disallow: ['/private/', '/_next/', '/api/'],
     },
     sitemap: 'https://quroixlabs.com/sitemap.xml',
   }
