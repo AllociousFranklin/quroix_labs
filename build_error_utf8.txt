@@ -1,0 +1,86 @@
+﻿
+> kinimatic@0.1.0 build
+> next build
+
+  Γû▓ Next.js 14.2.20
+
+   Creating an optimized production build ...
+node.exe : Failed to compile.
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~
+    + CategoryInfo          : Not 
+   Specified: (Failed to compile  
+  .:String) [], RemoteException
+    + FullyQualifiedErrorId : Nat 
+   iveCommandError
+ 
+
+./app/Main/SectionFooter.jsx
+Error: 
+  [31mx[0m You're importing a 
+component that needs useEffect. 
+It only works in a Client 
+Component but none of its parents 
+are marked with "use client", so 
+they're Server Components by 
+default.
+  [31m|[0m Learn more: https://n
+extjs.org/docs/getting-started/rea
+ct-essentials
+  [31m|[0m 
+  [31m|[0m 
+   ,-[[36;1;4mC:\Users\Valarmathi
+\Quroixlabs\app\Main\SectionFooter
+.jsx[0m:1:1]
+ [2m1[0m | import React, { 
+useEffect, useRef } from "react";
+   : [31;1m                
+^^^^^^^^^[0m
+ [2m2[0m | import gsap from 
+"gsap";
+ [2m3[0m | import SplitText 
+from "gsap/src/SplitText";
+ [2m3[0m | import ScrollTrigger 
+from "gsap/ScrollTrigger";
+   `----
+
+  [31mx[0m You're importing a 
+component that needs useRef. It 
+only works in a Client Component 
+but none of its parents are 
+marked with "use client", so 
+they're Server Components by 
+default.
+  [31m|[0m Learn more: https://n
+extjs.org/docs/getting-started/rea
+ct-essentials
+  [31m|[0m 
+  [31m|[0m 
+   ,-[[36;1;4mC:\Users\Valarmathi
+\Quroixlabs\app\Main\SectionFooter
+.jsx[0m:1:1]
+ [2m1[0m | import React, { 
+useEffect, useRef } from "react";
+   : [31;1m                      
+     ^^^^^^[0m
+ [2m2[0m | import gsap from 
+"gsap";
+ [2m3[0m | import SplitText 
+from "gsap/src/SplitText";
+ [2m3[0m | import ScrollTrigger 
+from "gsap/ScrollTrigger";
+   `----
+
+Import trace for requested module:
+./app/Main/SectionFooter.jsx
+./app/terms/page.jsx
+
+
+> Build failed because of webpack 
+errors
