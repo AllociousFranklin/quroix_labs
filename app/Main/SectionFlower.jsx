@@ -12,15 +12,25 @@ export const SectionFlower = () => {
     let frameCount = 300,
       urls = new Array(frameCount).fill().map((o, i) => `/imageSequence/image${i + 1}.webp`);
 
+    let loaded = false;
 
-    imageSequence({
-      urls,
-      canvas: "#image-sequence",
-      scrollTrigger: {
-        trigger: ".flower",
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true,
+    ScrollTrigger.create({
+      trigger: ".flower",
+      start: "top bottom+=500", // Start loading when the section is 500px from entering viewport
+      onEnter: () => {
+        if (!loaded) {
+          loaded = true;
+          imageSequence({
+            urls,
+            canvas: "#image-sequence",
+            scrollTrigger: {
+              trigger: ".flower",
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true,
+            }
+          });
+        }
       }
     });
 
@@ -55,7 +65,7 @@ export const SectionFlower = () => {
         scrollTrigger: config.scrollTrigger
       });
     }
-  })
+  }, []) // Empty dependency array ensures this only runs once on mount
 
   const imageRef1 = useRef();
   const imageRef2 = useRef();

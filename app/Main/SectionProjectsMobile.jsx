@@ -65,7 +65,7 @@ export const SectionProjectsMobile = () => {
         </div>
         <div className="titlebox">
           <div className="titlebox-big-gradient" />
-          <h2 className="subheadline white" ref={titleRef} >Pioneering Projects That Consistently <br className="hide-on-mobile" /> Redefine What's Possible</h2>
+          <h2 className="subheadline white" ref={titleRef} >Pioneering Projects That Consistently <br className="hide-on-mobile" /> Redefine What&apos;s Possible</h2>
         </div>
         <p className="description grey" ref={descriptionRef} >Transforming startups, SMEs, and industry <br className="hide-on-desktop" /> giants into digital leaders.</p>
       </div>
