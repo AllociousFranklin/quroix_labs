@@ -1041,6 +1041,12 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
   }
 
   .navigation-inside-right-mobile-line {

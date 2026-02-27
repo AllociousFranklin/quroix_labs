@@ -81,10 +81,10 @@ export const SectionTestimonials = () => {
                                         <img src="/images/pfp1.webp" alt="" />
                                     </div>
                                     <div className="testimonials-item-center">
-                                        <p className="big-description white" >Sarah Johnson</p>
-                                        <p className="description grey" >Small Business Owner</p>
+                                        <p className="big-description white" >Tanish</p>
+                                        <p className="description grey" >Artistic Visionary</p>
                                     </div>
-                                    <p className="description white" >Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.</p>
+                                    <p className="description white" >Quroix Labs completely elevated our artistic page. Their design perfectly captured our brand&apos;s essence, blending stunning visuals with a seamless user experience that our audience loves.</p>
                                 </div>
                                 <div className="testimonials-item-grid" />
                             </div>
@@ -94,10 +94,10 @@ export const SectionTestimonials = () => {
                                         <img src="/images/pfp2.webp" alt="" />
                                     </div>
                                     <div className="testimonials-item-center">
-                                        <p className="big-description white" >David Patel</p>
-                                        <p className="description grey" >Project Manager</p>
+                                        <p className="big-description white" >Harishvaran</p>
+                                        <p className="description grey" >Founder, SMMA Agency</p>
                                     </div>
-                                    <p className="description white" >Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.</p>
+                                    <p className="description white" >The website they built for our SMMA agency has been a game-changer. It not only looks highly professional but has significantly boosted our lead generation and conversion rates. Highly recommended!</p>
                                 </div>
                                 <div className="testimonials-item-grid" />
                             </div>
@@ -107,10 +107,10 @@ export const SectionTestimonials = () => {
                                         <img src="/images/pfp1.webp" alt="" />
                                     </div>
                                     <div className="testimonials-item-center">
-                                        <p className="big-description white" >Emily Carter</p>
-                                        <p className="description grey" >Operations Manager</p>
+                                        <p className="big-description white" >Elena Rostova</p>
+                                        <p className="description grey" >E-Commerce Director</p>
                                     </div>
-                                    <p className="description white" >Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.</p>
+                                    <p className="description white" >The custom e-commerce platform delivered by the team was beyond our expectations. It&apos;s incredibly fast, reliable, and the intuitive backend has saved us countless hours of manual work.</p>
                                 </div>
                                 <div className="testimonials-item-grid" />
                             </div>
@@ -120,49 +120,10 @@ export const SectionTestimonials = () => {
                                         <img src="/images/pfp2.webp" alt="" />
                                     </div>
                                     <div className="testimonials-item-center">
-                                        <p className="big-description white" >Sarah Johnson</p>
-                                        <p className="description grey" >Small Business Owner</p>
+                                        <p className="big-description white" >Marcus Thorne</p>
+                                        <p className="description grey" >Head of Operations</p>
                                     </div>
-                                    <p className="description white" >Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.</p>
-                                </div>
-                                <div className="testimonials-item-grid" />
-                            </div>
-                            <div className="testimonials-item" >
-                                <div className="testimonials-item-content">
-                                    <div className="testimonials-item-profile">
-                                        <img src="/images/pfp2.webp" alt="" />
-                                    </div>
-                                    <div className="testimonials-item-center">
-                                        <p className="big-description white" >David Patel</p>
-                                        <p className="description grey" >Project Manager</p>
-                                    </div>
-                                    <p className="description white" >Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.</p>
-                                </div>
-                                <div className="testimonials-item-grid" />
-                            </div>
-                            <div className="testimonials-item" >
-                                <div className="testimonials-item-content">
-                                    <div className="testimonials-item-profile">
-                                        <img src="/images/pfp1.webp" alt="" />
-                                    </div>
-                                    <div className="testimonials-item-center">
-                                        <p className="big-description white" >Emily Carter</p>
-                                        <p className="description grey" >Operations Manager</p>
-                                    </div>
-                                    <p className="description white" >Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.</p>
-                                </div>
-                                <div className="testimonials-item-grid" />
-                            </div>
-                            <div className="testimonials-item" >
-                                <div className="testimonials-item-content">
-                                    <div className="testimonials-item-profile">
-                                        <img src="/images/pfp2.webp" alt="" />
-                                    </div>
-                                    <div className="testimonials-item-center">
-                                        <p className="big-description white" >Sarah Johnson</p>
-                                        <p className="description grey" >Small Business Owner</p>
-                                    </div>
-                                    <p className="description white" >Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.</p>
+                                    <p className="description white" >We hired them to automate our internal workflows, and the transformation has been phenomenal. Their tailored software solutions eliminated our bottlenecks and streamlined our entire process.</p>
                                 </div>
                                 <div className="testimonials-item-grid" />
                             </div>
