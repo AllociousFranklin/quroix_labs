@@ -209,6 +209,40 @@ export const WorksPageSection = () => {
                 <div className="works-carousel-row">
                   <div className="works-item-padding" />
                   <div className="works-item" >
+                    <a href="https://trielementdesign.vercel.app/" target="_blank" rel="noopener noreferrer" className="works-item-content" style={{ textDecoration: 'none' }} title="MEP Design Consultants Custom Website" aria-label="View MEP Design Consultants website project">
+                      <div className="works-item-content-textbox">
+                        <h2 className="subheadline white" >MEP DESIGN CONSULTANTS</h2>
+                        <div className="works-item-content-textbox-row">
+                          <div className="works-item-content-textbox-button">
+                            <p className="small-description white" >Web Design & Development</p>
+                          </div>
+                          <div className="works-item-content-textbox-button">
+                            <p className="small-description white" >Branding</p>
+                          </div>
+                        </div>
+                      </div>
+                      <Image src="/mockups/trielementdesign.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="MEP Design Consultants custom website development by Quroix Labs" />
+                    </a>
+                    <div className="works-item-border" />
+                  </div>
+                  <div className="works-item" >
+                    <a href="https://www.studiotrielement.com/" target="_blank" rel="noopener noreferrer" className="works-item-content" style={{ textDecoration: 'none' }} title="BIM Engineering Studio Custom Website" aria-label="View BIM Engineering Studio website project">
+                      <div className="works-item-content-textbox">
+                        <h2 className="subheadline white" >BIM ENGINEERING STUDIO</h2>
+                        <div className="works-item-content-textbox-row">
+                          <div className="works-item-content-textbox-button">
+                            <p className="small-description white" >Web Design & Development</p>
+                          </div>
+                          <div className="works-item-content-textbox-button">
+                            <p className="small-description white" >Branding</p>
+                          </div>
+                        </div>
+                      </div>
+                      <Image src="/mockups/trielement.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="BIM Engineering Studio custom website design by Quroix Labs" />
+                    </a>
+                    <div className="works-item-border" />
+                  </div>
+                  <div className="works-item" >
                     <a href="https://wework4u.services/" target="_blank" rel="noopener noreferrer" className="works-item-content" style={{ textDecoration: 'none' }}>
                       <div className="works-item-content-textbox">
                         <h2 className="subheadline white" >SMMA AGENCY</h2>

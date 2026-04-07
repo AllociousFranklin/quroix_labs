@@ -141,6 +141,12 @@ export const SectionProjects = () => {
           <div className="projects-carousel" ref={emblaRef} >
             <div className="projects-carousel-row">
               <div className="projects-carousel-item">
+                <Image src="/mockups/trielementdesign.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="MEP Design Consultants custom website development by Quroix Labs" />
+              </div>
+              <div className="projects-carousel-item">
+                <Image src="/mockups/trielement.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="BIM Engineering Studio custom website design by Quroix Labs" />
+              </div>
+              <div className="projects-carousel-item">
                 <Image src="/mockups/kinimatic.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="Kinimatic - SMMA Agency Website by Quroix Labs" />
               </div>
               <div className="projects-carousel-item">
