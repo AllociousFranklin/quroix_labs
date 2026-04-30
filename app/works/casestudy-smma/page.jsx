@@ -99,23 +99,35 @@ const CaseStudySMMA = () => {
             <img src="/mockups/kinimatic.webp" ref={imageRef} className="casestudy-top-image" alt="" />
           </div>
           <div className="casestudy-center">
-            <h2 className="small-subheadline white" ref={descriptionRef} >For a dynamic Social Media Marketing Agency, we developed a conversion-optimized hub that streamlines client onboarding. The project involved deep integration of lead capture forms and automated workflow triggers to maximize their team's efficiency.</h2>
+            <h2 className="small-subheadline white" ref={descriptionRef} >We engineered an autonomous growth engine for a high-volume SMMA, deploying AI-driven lead scoring and automated onboarding pipelines. By integrating real-time sentiment analysis and multi-channel orchestration, we transformed their client acquisition process from a manual bottleneck into a scalable, intelligent system.</h2>
             <div className="casestudy-center-content">
               <div className="casestudy-center-item">
-                <p className="small-description white" ref={casestudyCenterRef1} >Scope</p>
-                <p className="small-description grey" ref={casestudyCenterRef2} >Conversion Rate Optimization, Workflow Automation, Landing Page Design, API Integrations, Analytics Dashboard.</p>
+                <p className="small-description white" ref={casestudyCenterRef1} >Industrial Context</p>
+                <p className="small-description grey" ref={casestudyCenterRef2} >AI-driven lead scoring and automated multi-channel onboarding for creative agencies.</p>
               </div>
               <div className="casestudy-center-item">
-                <p className="small-description white" ref={casestudyCenterRef3} >Impact</p>
+                <p className="small-description white" ref={casestudyCenterRef3} >Technical Complexity</p>
+                <p className="small-description grey" ref={casestudyCenterRef4} >Implementing real-time sentiment analysis on incoming lead data and orchestrating asynchronous workflows across 7,000+ app integrations.</p>
+              </div>
+              <div className="casestudy-center-item">
+                <p className="small-description white" ref={casestudyCenterRef5} >Architectural Blueprint</p>
+                <p className="small-description grey" ref={casestudyCenterRef6} >Custom orchestration layer utilizing the FlowPilot engine integrated with Zapier Agents and proprietary Python microservices.</p>
+              </div>
+              <div className="casestudy-center-item">
+                <p className="small-description white" >Implementation Timeline</p>
+                <p className="small-description grey" >4-week agile deployment from workflow mapping to live automated execution.</p>
+              </div>
+              <div className="casestudy-center-item">
+                <p className="small-description white" >Measurable ROI</p>
                 <div className="casestudy-center-item-column">
-                  <div className="casestudy-center-item-profile" ref={casestudyCenterRef4} >
-                    <p className="small-description white" >65% Faster Client Onboarding</p>
+                  <div className="casestudy-center-item-profile" >
+                    <p className="small-description white" >25% Boost in Sales Conversions via AI Lead Scoring</p>
                   </div>
-                  <div className="casestudy-center-item-profile" ref={casestudyCenterRef5} >
-                    <p className="small-description white" >Double-Digit Increase in Conversion Rates</p>
+                  <div className="casestudy-center-item-profile" >
+                    <p className="small-description white" >65% Faster Client Onboarding Lifecycle</p>
                   </div>
-                  <div className="casestudy-center-item-profile" ref={casestudyCenterRef6} >
-                    <p className="small-description white" >Fully Automated Lead Routing System</p>
+                  <div className="casestudy-center-item-profile" >
+                    <p className="small-description white" >40% Reduction in Operational Engineering Costs</p>
                   </div>
                 </div>
               </div>

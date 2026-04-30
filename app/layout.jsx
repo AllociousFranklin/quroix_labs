@@ -1,19 +1,20 @@
 import "./globals.css";
 import { Navigation } from "./Navigation";
 import Script from "next/script";
+import { SchemaMarkup } from "./components/SchemaMarkup";
 
 export const metadata = {
   metadataBase: new URL('https://quroixlabs.com'),
-  title: "Quroixlabs | Websites, Automations & Software Engineered for Real-World Impact",
-  description: "Build high-performance digital systems that drive growth. Custom websites, intelligent automation, and scalable software designed for startups and enterprises.",
-  keywords: ["website design", "UX/UI design", "web development", "full-stack development", "custom websites", "digital solutions", "automation systems", "business automation", "custom software development", "enterprise software", "scalable web platforms", "intelligent automation", "workflow automation", "digital transformation", "AI automation", "process automation", "web applications", "SaaS development", "API development", "database design", "cloud solutions", "DevOps automation"],
+  title: "Quroix Labs | Engineering Intelligence & AI Automation for Enterprise",
+  description: "Architecting autonomous AI agents, intelligent workflows, and custom software. Elite AI automation agency utilizing the FlowPilot engine and AgentCore Framework.",
+  keywords: ["AI Automation Agency", "Autonomous AI Agents", "Intelligent Workflows", "FlowPilot engine", "AgentCore Framework", "Enterprise AI Architecture", "RAG pipeline architecture", "LLM orchestration", "n8n integration", "business automation", "custom software development"],
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "Quroixlabs | Websites, Automations & Software Engineered for Real-World Impact",
-    description: "Build high-performance digital systems that drive growth. Custom websites, intelligent automation, and scalable software designed for startups and enterprises.",
-    images: [{ url: "/icon.svg", width: 1200, height: 630, alt: "Quroix Labs - Engineering Digital Systems" }],
+    title: "Quroix Labs | Engineering Intelligence & AI Automation",
+    description: "Architecting autonomous AI agents and intelligent workflows for the global enterprise.",
+    images: [{ url: "/icon.svg", width: 1200, height: 630, alt: "Quroix Labs - Engineering Intelligence" }],
     url: 'https://quroixlabs.com',
     siteName: 'Quroix Labs',
     locale: 'en_US',
@@ -59,51 +60,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://firebaseinstallations.googleapis.com" />
 
-        {/* Organization Structured Data (JSON-LD) */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "@id": "https://quroixlabs.com/#organization",
-              "name": "Quroix Labs",
-              "url": "https://quroixlabs.com",
-              "logo": "https://quroixlabs.com/icon.svg",
-              "sameAs": [
-                "https://www.linkedin.com/company/quroixlabs",
-                "https://x.com/quroixlabs",
-                "https://www.youtube.com/@quroixlabs",
-                "https://www.instagram.com/quroixlabs",
-                "https://github.com/quroixlabs",
-                "https://medium.com/@quroixlabs"
-              ],
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+91-6382696238",
-                "contactType": "customer service"
-              }
-            }),
-          }}
-        />
-
-        {/* Website Structured Data (JSON-LD) */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "Quroix Labs",
-              "url": "https://quroixlabs.com",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://quroixlabs.com/?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            })
-          }}
-        />
+        <SchemaMarkup />
       </head>
       <body>
         {/* Hidden SEO Backlinks Section */}

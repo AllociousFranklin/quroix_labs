@@ -99,23 +99,35 @@ const CaseStudyGym = () => {
             <img src="/mockups/heave.webp" ref={imageRef} className="casestudy-top-image" alt="" />
           </div>
           <div className="casestudy-center">
-            <h2 className="small-subheadline white" ref={descriptionRef} >Apex Gym required a digital identity that resonated with their high-performance fitness community. We designed a vibrant, high-energy website that highlights their premium facilities and streamlines the membership sign-up process.</h2>
+            <h2 className="small-subheadline white" ref={descriptionRef} >We deployed an automated membership intelligence system for Apex Gym, utilizing persistent, always-on recurring agents to manage member engagement and retention. By orchestrating the AgentCore Framework with personalized productivity agents, we created a seamless, high-energy digital experience that proactively addresses member churn.</h2>
             <div className="casestudy-center-content">
               <div className="casestudy-center-item">
-                <p className="small-description white" ref={casestudyCenterRef1} >Scope</p>
-                <p className="small-description grey" ref={casestudyCenterRef2} >Brand Identity, Web Design, Membership Portal, Social Content Strategy, Video Production Support.</p>
+                <p className="small-description white" ref={casestudyCenterRef1} >Industrial Context</p>
+                <p className="small-description grey" ref={casestudyCenterRef2} >Automated membership intelligence and retention workflows for luxury fitness centers.</p>
               </div>
               <div className="casestudy-center-item">
-                <p className="small-description white" ref={casestudyCenterRef3} >Impact</p>
+                <p className="small-description white" ref={casestudyCenterRef3} >Technical Complexity</p>
+                <p className="small-description grey" ref={casestudyCenterRef4} >Deploying persistent, always-on recurring agents that synchronize across mobile and web endpoints to provide real-time engagement triggers.</p>
+              </div>
+              <div className="casestudy-center-item">
+                <p className="small-description white" ref={casestudyCenterRef5} >Architectural Blueprint</p>
+                <p className="small-description grey" ref={casestudyCenterRef6} >Implementation of the AgentCore Framework integrated with Lindy AI and custom webhook orchestration for membership management.</p>
+              </div>
+              <div className="casestudy-center-item">
+                <p className="small-description white" >Implementation Timeline</p>
+                <p className="small-description grey" >5-week engineering cycle from behavioral mapping to automated system deployment.</p>
+              </div>
+              <div className="casestudy-center-item">
+                <p className="small-description white" >Measurable ROI</p>
                 <div className="casestudy-center-item-column">
-                  <div className="casestudy-center-item-profile" ref={casestudyCenterRef4} >
-                    <p className="small-description white" >Strong Community Engagement Online</p>
+                  <div className="casestudy-center-item-profile" >
+                    <p className="small-description white" >30% Reduction in Membership Churn</p>
                   </div>
-                  <div className="casestudy-center-item-profile" ref={casestudyCenterRef5} >
-                    <p className="small-description white" >30% Increase in Direct Membership Sign-ups</p>
+                  <div className="casestudy-center-item-profile" >
+                    <p className="small-description white" >45% Increase in Member Engagement Scores</p>
                   </div>
-                  <div className="casestudy-center-item-profile" ref={casestudyCenterRef6} >
-                    <p className="small-description white" >Premium Brand Positioning in Local Market</p>
+                  <div className="casestudy-center-item-profile" >
+                    <p className="small-description white" >20% Growth in Direct Digital Sign-ups</p>
                   </div>
                 </div>
               </div>

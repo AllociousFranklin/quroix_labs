@@ -120,9 +120,9 @@ export const SectionHero = () => {
             <div className="hero-textbox">
               <div className="hero-titlebox">
                 <div className="hero-titlebox-gradient" />
-                <h1 className="headline hero-headline white" ref={titleRef}>Engineering Digital Systems <br /> That Let Businesses Scale <br /> Without Chaos</h1>
+                <h1 className="headline hero-headline white" ref={titleRef}>Engineering Intelligence <br /> & AI Automation For <br /> Global Enterprise</h1>
               </div>
-              <p className="big-description grey opacity-blur" ref={descriptionRef} >Websites, automations, and custom software designed to reduce friction and increase operational clarity.</p>
+              <p className="big-description grey opacity-blur" ref={descriptionRef} >Architecting autonomous AI agents, intelligent workflows, and custom software designed to reduce friction and increase operational clarity.</p>
             </div>
             <div className="hero-buttons-row">
               <Link href="/contact" className="button button-transparent-border link opacity-blur" ref={buttonRef1} >

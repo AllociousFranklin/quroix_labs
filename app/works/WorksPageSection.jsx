@@ -200,7 +200,7 @@ export const WorksPageSection = () => {
                   <div className="subpage-titlebox-gradient" />
                   <h1 className="headline white" ref={titleRef} >Selected Client Projects</h1>
                 </div>
-                <p className="description grey opacity-blur" ref={descriptionRef} >Real solutions delivered for businesses across industries — from custom websites to full-scale automation systems.</p>
+                <p className="description grey opacity-blur" ref={descriptionRef} >Engineering intelligence through autonomous agents and intelligent workflows — delivering high-ROI automation for the global enterprise.</p>
               </div>
               <div className="works-content-top-divider" ref={lineRef} />
             </div>
@@ -215,14 +215,14 @@ export const WorksPageSection = () => {
                         <h2 className="subheadline white" >MEP DESIGN CONSULTANTS</h2>
                         <div className="works-item-content-textbox-row">
                           <div className="works-item-content-textbox-button">
-                            <p className="small-description white" >Web Design & Development</p>
+                            <p className="small-description white" >Intelligent Workflows</p>
                           </div>
                           <div className="works-item-content-textbox-button">
-                            <p className="small-description white" >Branding</p>
+                            <p className="small-description white" >AI Orchestration</p>
                           </div>
                         </div>
                       </div>
-                      <Image src="/mockups/trielementdesign.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="MEP Design Consultants custom website development by Quroix Labs" />
+                      <Image src="/mockups/trielementdesign.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="Deployment of autonomous AI agents and intelligent workflows for MEP Design Consultants utilizing the Quroix Labs FlowPilot engine." />
                     </Link>
                     <div className="works-item-border" />
                   </div>
@@ -232,14 +232,14 @@ export const WorksPageSection = () => {
                         <h2 className="subheadline white" >BIM ENGINEERING STUDIO</h2>
                         <div className="works-item-content-textbox-row">
                           <div className="works-item-content-textbox-button">
-                            <p className="small-description white" >Web Design & Development</p>
+                            <p className="small-description white" >Enterprise AI Architecture</p>
                           </div>
                           <div className="works-item-content-textbox-button">
-                            <p className="small-description white" >Branding</p>
+                            <p className="small-description white" >Agentic Deployment</p>
                           </div>
                         </div>
                       </div>
-                      <Image src="/mockups/trielement.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="BIM Engineering Studio custom website design by Quroix Labs" />
+                      <Image src="/mockups/trielement.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="BIM Engineering Studio custom AI automation and intelligent architecture by Quroix Labs FlowPilot engine." />
                     </Link>
                     <div className="works-item-border" />
                   </div>
@@ -249,14 +249,14 @@ export const WorksPageSection = () => {
                         <h2 className="subheadline white" >SMMA AGENCY</h2>
                         <div className="works-item-content-textbox-row">
                           <div className="works-item-content-textbox-button">
-                            <p className="small-description white" >Web Design & Development</p>
+                            <p className="small-description white" >Conversion Automation</p>
                           </div>
                           <div className="works-item-content-textbox-button">
-                            <p className="small-description white" >Branding</p>
+                            <p className="small-description white" >Growth Intelligence</p>
                           </div>
                         </div>
                       </div>
-                      <Image src="/mockups/kinimatic.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="SMMA Agency website design by Quroix Labs" />
+                      <Image src="/mockups/kinimatic.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="SMMA Agency AI-driven growth engine and workflow automation by Quroix Labs AgentCore Framework." />
                     </Link>
                     <div className="works-item-border" />
                   </div>
@@ -266,14 +266,14 @@ export const WorksPageSection = () => {
                         <h2 className="subheadline white" >APEX GYM</h2>
                         <div className="works-item-content-textbox-row">
                           <div className="works-item-content-textbox-button">
-                            <p className="small-description white" >Web Design & Development</p>
+                            <p className="small-description white" >Membership Intelligence</p>
                           </div>
                           <div className="works-item-content-textbox-button">
-                            <p className="small-description white" >Branding</p>
+                            <p className="small-description white" >Retention Systems</p>
                           </div>
                         </div>
                       </div>
-                      <Image src="/mockups/heave.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="Apex Gym website by Quroix Labs" />
+                      <Image src="/mockups/heave.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="Apex Gym custom membership portal and automated retention workflows by Quroix Labs." />
                     </Link>
                     <div className="works-item-border" />
                   </div>
@@ -283,7 +283,7 @@ export const WorksPageSection = () => {
                         <h2 className="subheadline white" >ARTIST PORTFOLIO</h2>
                         <div className="works-item-content-textbox-row">
                           <div className="works-item-content-textbox-button">
-                            <p className="small-description white" >Web Design & Development</p>
+                            <p className="small-description white" >Intelligent Systems</p>
                           </div>
                           <div className="works-item-content-textbox-button">
                             <p className="small-description white" >Branding</p>
@@ -300,7 +300,7 @@ export const WorksPageSection = () => {
                         <h2 className="subheadline white" >AURA the Luxury Salon</h2>
                         <div className="works-item-content-textbox-row">
                           <div className="works-item-content-textbox-button">
-                            <p className="small-description white" >Web Design & Development</p>
+                            <p className="small-description white" >AI Orchestration</p>
                           </div>
                           <div className="works-item-content-textbox-button">
                             <p className="small-description white" >Branding</p>
@@ -317,7 +317,7 @@ export const WorksPageSection = () => {
                         <h2 className="subheadline white" >WholeSale Product Catalogue</h2>
                         <div className="works-item-content-textbox-row">
                           <div className="works-item-content-textbox-button">
-                            <p className="small-description white" >Web Design & Development</p>
+                            <p className="small-description white" >Automated Catalogue</p>
                           </div>
                           <div className="works-item-content-textbox-button">
                             <p className="small-description white" >Branding</p>
@@ -334,7 +334,7 @@ export const WorksPageSection = () => {
                         <h2 className="subheadline white" >BRIM Clocks</h2>
                         <div className="works-item-content-textbox-row">
                           <div className="works-item-content-textbox-button">
-                            <p className="small-description white" >Web Design & Development</p>
+                            <p className="small-description white" >E-Commerce Intelligence</p>
                           </div>
                           <div className="works-item-content-textbox-button">
                             <p className="small-description white" >Branding</p>
@@ -387,7 +387,7 @@ export const WorksPageSection = () => {
                 <div className="titlebox-medium-gradient" />
                 <h2 className="subheadline white" ref={subtitleRef1} >Expertise Across <br /> Multiple Industries</h2>
               </div>
-              <p className="description grey" ref={subdescriptionRef1} >From e-commerce to creative agencies — we&apos;ve delivered scalable websites, automation systems, and custom software for businesses in various sectors.</p>
+              <p className="description grey" ref={subdescriptionRef1} >Engineering cognitive infrastructure — we deploy autonomous agents, RAG pipelines, and intelligent systems for high-growth enterprises.</p>
             </div>
             <div className="works-industries-container">
               <div className="works-industries-divider" />
@@ -430,7 +430,7 @@ export const WorksPageSection = () => {
                 </div>
                 <div className="works-industries-item-right">
                   <div className="works-industries-item-right-imagebox" ref={industryImageRef4} >
-                    <img src="/images/test19.webp" className="works-industries-item-right-image" alt="Modern AI agency website by Quroix Labs" />
+                    <img src="/images/test19.webp" className="works-industries-item-right-image" alt="Autonomous agent orchestration and multi-agent systems deployment by Quroix Labs." />
                   </div>
                 </div>
               </div>
@@ -458,10 +458,10 @@ export const WorksPageSection = () => {
                       <div className="casestudies-item-content-textbox">
                         <div className="subheadline-box" >
                           <Zap className="subheadline-box-icon" />
-                          <h2 className="small-description grey" >Web Development</h2>
+                          <h2 className="small-description grey" >AI Automation</h2>
                         </div>
                         <h3 className="small-subheadline white" >MEP Design Consultants</h3>
-                        <p className="description grey" >Engineering Precision: Building a high-performance digital hub for global MEP consultants.</p>
+                        <p className="description grey" >Engineering Intelligence: Deploying autonomous agents for global MEP consultants using the FlowPilot engine.</p>
                       </div>
                       <div className="casestudies-item-content-imagebox" >
                         <div className="button casestudies-item-content-imagebox-button" >
@@ -480,10 +480,10 @@ export const WorksPageSection = () => {
                       <div className="casestudies-item-content-textbox">
                         <div className="subheadline-box" >
                           <Zap className="subheadline-box-icon" />
-                          <h2 className="small-description grey" >Web Design</h2>
+                          <h2 className="small-description grey" >Intelligent Architecture</h2>
                         </div>
                         <h3 className="small-subheadline white" >BIM Engineering Studio</h3>
-                        <p className="description grey" >Visualizing Architecture: Bringing technical precision to life with immersive scroll experiences.</p>
+                        <p className="description grey" >Visualizing Complexity: Scaling technical precision with custom RAG pipelines and AgentCore Framework.</p>
                       </div>
                       <div className="casestudies-item-content-imagebox" >
                         <div className="button casestudies-item-content-imagebox-button">

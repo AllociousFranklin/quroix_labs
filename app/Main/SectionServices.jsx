@@ -90,9 +90,9 @@ export const SectionServices = () => {
           </div>
           <div className="titlebox">
             <div className="titlebox-gradient" />
-            <h2 className="subheadline white" ref={titleRef} >Infrastructure That <br /> Compounds Your Growth</h2>
+            <h2 className="subheadline white" ref={titleRef} >Agentic Infrastructure <br /> That Compounds Growth</h2>
           </div>
-          <p className="description grey" ref={descriptionRef} >From initial concept to deployed product — we build websites, automation systems, and custom software <br /> designed to solve real problems and drive measurable growth.</p>
+          <p className="description grey" ref={descriptionRef} >From initial concept to deployed agent — we build intelligent workflows, automation systems, and custom software <br /> designed to solve real problems and drive measurable growth.</p>
           <div className="contact-button-wrapper opacity-blur" ref={buttonRef} onClick={toggleOverlay} >
             <button className="contact-button-white" >
               <span>

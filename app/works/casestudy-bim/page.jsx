@@ -99,23 +99,35 @@ const CaseStudyBIM = () => {
             <img src="/mockups/trielement.webp" ref={imageRef} className="casestudy-top-image" alt="" />
           </div>
           <div className="casestudy-center">
-            <h2 className="small-subheadline white" ref={descriptionRef} >For BIM Engineering Studio, we built a digital experience that mirrors the complexity and precision of Building Information Modeling. The site utilizes immersive scroll-based interactions to guide visitors through their sophisticated project lifecycle.</h2>
+            <h2 className="small-subheadline white" ref={descriptionRef} >We architected a secure, multi-agent orchestration layer for BIM Engineering Studio, enabling real-time analysis of Building Information Modeling data. Utilizing the AgentCore Framework, we deployed custom RAG pipelines that allow architects and engineers to query complex CAD datasets via natural language, drastically reducing information retrieval time.</h2>
             <div className="casestudy-center-content">
               <div className="casestudy-center-item">
-                <p className="small-description white" ref={casestudyCenterRef1} >Scope</p>
-                <p className="small-description grey" ref={casestudyCenterRef2} >Interactive Web Design, GSAP Animation, Content Strategy, 3D Asset Integration, SEO for Engineering Sectors.</p>
+                <p className="small-description white" ref={casestudyCenterRef1} >Industrial Context</p>
+                <p className="small-description grey" ref={casestudyCenterRef2} >Intelligent 3D visualization and cognitive data retrieval for architectural engineering.</p>
               </div>
               <div className="casestudy-center-item">
-                <p className="small-description white" ref={casestudyCenterRef3} >Impact</p>
+                <p className="small-description white" ref={casestudyCenterRef3} >Technical Complexity</p>
+                <p className="small-description grey" ref={casestudyCenterRef4} >Scaling multi-agent coordination to handle high-dimensional CAD/BIM metadata and ensuring SOC2-aligned data governance.</p>
+              </div>
+              <div className="casestudy-center-item">
+                <p className="small-description white" ref={casestudyCenterRef5} >Architectural Blueprint</p>
+                <p className="small-description grey" ref={casestudyCenterRef6} >Deployment of the AgentCore Framework integrated with LangGraph for complex, stateful multi-agent workflows.</p>
+              </div>
+              <div className="casestudy-center-item">
+                <p className="small-description white" >Implementation Timeline</p>
+                <p className="small-description grey" >8-week engineering sprint from architectural design to live production rollout.</p>
+              </div>
+              <div className="casestudy-center-item">
+                <p className="small-description white" >Measurable ROI</p>
                 <div className="casestudy-center-item-column">
-                  <div className="casestudy-center-item-profile" ref={casestudyCenterRef4} >
-                    <p className="small-description white" >Enhanced Brand Perception in Tier-1 Markets</p>
+                  <div className="casestudy-center-item-profile" >
+                    <p className="small-description white" >3.5x Faster ROI on Production AI Rollouts</p>
                   </div>
-                  <div className="casestudy-center-item-profile" ref={casestudyCenterRef5} >
-                    <p className="small-description white" >Highly Engaging Interactive Portfolio</p>
+                  <div className="casestudy-center-item-profile" >
+                    <p className="small-description white" >90% Accuracy in Conversational Data Analysis</p>
                   </div>
-                  <div className="casestudy-center-item-profile" ref={casestudyCenterRef6} >
-                    <p className="small-description white" >Significant Boost in On-Site User Retension</p>
+                  <div className="casestudy-center-item-profile" >
+                    <p className="small-description white" >60% Reduction in Project Discovery Latency</p>
                   </div>
                 </div>
               </div>

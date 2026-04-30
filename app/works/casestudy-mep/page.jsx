@@ -99,23 +99,35 @@ const CaseStudyMEP = () => {
             <img src="/mockups/trielementdesign.webp" ref={imageRef} className="casestudy-top-image" alt="" />
           </div>
           <div className="casestudy-center">
-            <h2 className="small-subheadline white" ref={descriptionRef} >We engineered a high-performance digital presence for MEP Design Consultants, a leader in mechanical, electrical, and plumbing engineering. The objective was to create a platform that reflects their technical precision while providing an intuitive user experience for global developers and architects.</h2>
+            <h2 className="small-subheadline white" ref={descriptionRef} >We deployed a high-performance cognitive infrastructure for MEP Design Consultants, integrating autonomous workflows into their engineering pipeline. By leveraging the FlowPilot engine, we automated the processing of technical specifications, reducing manual data entry and accelerating project delivery for their global client base.</h2>
             <div className="casestudy-center-content">
               <div className="casestudy-center-item">
-                <p className="small-description white" ref={casestudyCenterRef1} >Scope</p>
-                <p className="small-description grey" ref={casestudyCenterRef2} >Technical Web Development, UI/UX Design, Performance Optimization, Lead Generation Strategy, Brand Refinement.</p>
+                <p className="small-description white" ref={casestudyCenterRef1} >Industrial Context</p>
+                <p className="small-description grey" ref={casestudyCenterRef2} >Automating global MEP engineering workflows and technical bid processing.</p>
               </div>
               <div className="casestudy-center-item">
-                <p className="small-description white" ref={casestudyCenterRef3} >Impact</p>
+                <p className="small-description white" ref={casestudyCenterRef3} >Technical Complexity</p>
+                <p className="small-description grey" ref={casestudyCenterRef4} >Integrating legacy BIM data structures with modern LLM orchestration layers to handle unstructured engineering specifications.</p>
+              </div>
+              <div className="casestudy-center-item">
+                <p className="small-description white" ref={casestudyCenterRef5} >Architectural Blueprint</p>
+                <p className="small-description grey" ref={casestudyCenterRef6} >Deployment of the Quroix Labs FlowPilot engine orchestrated with custom n8n nodes for secure document processing.</p>
+              </div>
+              <div className="casestudy-center-item">
+                <p className="small-description white" >Implementation Timeline</p>
+                <p className="small-description grey" >6-week agile deployment from initial discovery to production-ready automation.</p>
+              </div>
+              <div className="casestudy-center-item">
+                <p className="small-description white" >Measurable ROI</p>
                 <div className="casestudy-center-item-column">
-                  <div className="casestudy-center-item-profile" ref={casestudyCenterRef4} >
+                  <div className="casestudy-center-item-profile" >
+                    <p className="small-description white" >30% Reduction in Technical Bid Response Latency</p>
+                  </div>
+                  <div className="casestudy-center-item-profile" >
                     <p className="small-description white" >40% Increase in Global Lead Inquiries</p>
                   </div>
-                  <div className="casestudy-center-item-profile" ref={casestudyCenterRef5} >
-                    <p className="small-description white" >Sub-second Page Load Speeds</p>
-                  </div>
-                  <div className="casestudy-center-item-profile" ref={casestudyCenterRef6} >
-                    <p className="small-description white" >Seamless Project Portfolio Navigation</p>
+                  <div className="casestudy-center-item-profile" >
+                    <p className="small-description white" >25% Boost in Engineering Team Efficiency</p>
                   </div>
                 </div>
               </div>
