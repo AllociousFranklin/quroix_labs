@@ -127,7 +127,7 @@ export const SectionFlower = () => {
             </span>
             <span>
               <div className="flower-content-right-content-item" ref={imageRef1} >
-                <img src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="" />
+                <img src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="Mobile app interface showcasing Quroix Labs digital presence design" />
               </div>
             </span>
           </div>
@@ -148,7 +148,7 @@ export const SectionFlower = () => {
             </span>
             <span>
               <div className="flower-content-right-content-item" ref={imageRef2} >
-                <img src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="" />
+                <img src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="Smartphone showcasing responsive web design by Quroix Labs" />
               </div>
             </span>
             <span>

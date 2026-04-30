@@ -5,21 +5,47 @@ import { SchemaMarkup } from "./components/SchemaMarkup";
 
 export const metadata = {
   metadataBase: new URL('https://quroixlabs.com'),
-  title: "QuroixLabs | Engineering Intelligence & AI Automation for Enterprise",
-  description: "Architecting autonomous AI agents, intelligent workflows, and custom software. Elite AI automation agency utilizing the FlowPilot engine and AgentCore Framework.",
-  keywords: ["AI Automation Agency", "Autonomous AI Agents", "Intelligent Workflows", "FlowPilot engine", "AgentCore Framework", "Enterprise AI Architecture", "RAG pipeline architecture", "LLM orchestration", "n8n integration", "business automation", "custom software development"],
+  title: {
+    default: "Quroix Labs | Engineering Intelligence & AI Automation for Enterprise",
+    template: "%s | Quroix Labs",
+  },
+  description: "Quroix Labs is an elite AI automation agency architecting autonomous AI agents, intelligent workflows, and custom software. Utilizing the proprietary FlowPilot engine and AgentCore Framework for enterprise-grade automation.",
+  keywords: ["AI Automation Agency", "Autonomous AI Agents", "Intelligent Workflows", "FlowPilot engine", "AgentCore Framework", "Enterprise AI Architecture", "RAG pipeline architecture", "LLM orchestration", "n8n integration", "business automation", "custom software development", "AI agents for enterprise", "workflow automation", "Quroix Labs"],
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "QuroixLabs | Engineering Intelligence & AI Automation",
-    description: "Architecting autonomous AI agents and intelligent workflows for the global enterprise.",
-    images: [{ url: "/icon.svg", width: 1200, height: 630, alt: "QuroixLabs - Engineering Intelligence" }],
+    title: "Quroix Labs | Engineering Intelligence & AI Automation",
+    description: "Architecting autonomous AI agents and intelligent workflows for the global enterprise. 50+ projects delivered, 10,000+ hours of manual labor replaced.",
+    images: [{ url: "/images/quroixlabs.png", width: 1200, height: 630, alt: "Quroix Labs - Engineering Intelligence & AI Automation Agency" }],
     url: 'https://quroixlabs.com',
-    siteName: 'QuroixLabs',
+    siteName: 'Quroix Labs',
     locale: 'en_US',
     type: 'website',
-  }
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@quroixlabs',
+    creator: '@quroixlabs',
+    title: "Quroix Labs | Engineering Intelligence & AI Automation",
+    description: "Architecting autonomous AI agents and intelligent workflows for the global enterprise.",
+    images: ["/images/quroixlabs.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'G-PKD0WX02BV',
+  },
+  category: 'technology',
 };
 
 export default function RootLayout({ children }) {
@@ -59,28 +85,10 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://firebaseinstallations.googleapis.com" />
-        <link rel="alternate" type="text/markdown" title="Markdown Mirror" href="/mirrors/index.md" />
 
         <SchemaMarkup />
       </head>
       <body>
-        {/* Hidden SEO Backlinks Section */}
-        <section style={{ display: "none" }} aria-hidden="true">
-          <h1>QuroixLabs: Engineering Intelligence & AI Automation</h1>
-          <p>
-            QuroixLabs specializes in autonomous AI agents, intelligent systems,
-            and scalable digital platforms using our proprietary FlowPilot engine.
-          </p>
-          <nav>
-            <ul>
-              <li>AI Automation Agency</li>
-              <li>Autonomous AI Agents</li>
-              <li>AgentCore Framework</li>
-              <li>Intelligent Workflows</li>
-            </ul>
-          </nav>
-        </section>
-
         <Navigation />
         {children}
 
@@ -110,4 +118,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-

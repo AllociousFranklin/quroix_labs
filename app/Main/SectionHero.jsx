@@ -160,27 +160,27 @@ export const SectionHero = () => {
         <div className="hero-content-bottom opacity-blur" ref={logosWrapperRef} >
           <Marquee className="hero-content-bottom-row" gradient={true} gradientColor="#010101" gradientWidth={250}>
             {[
-              "/logos/adobe.webp",
-              "/logos/webflow.svg",
-              "/logos/stripe.svg",
-              "/logos/adobe.webp",
-              "/logos/webflow.svg",
-              "/logos/stripe.svg",
-              "/logos/adobe.webp",
-              "/logos/webflow.svg",
-              "/logos/stripe.svg",
-              "/logos/adobe.webp",
-              "/logos/webflow.svg",
-              "/logos/stripe.svg",
-              "/logos/adobe.webp",
-              "/logos/webflow.svg",
-              "/logos/stripe.svg",
-              "/logos/adobe.webp",
-              "/logos/webflow.svg",
-              "/logos/stripe.svg",
-            ].map((src, i) => (
+              { src: "/logos/adobe.webp", alt: "Adobe" },
+              { src: "/logos/webflow.svg", alt: "Webflow" },
+              { src: "/logos/stripe.svg", alt: "Stripe" },
+              { src: "/logos/adobe.webp", alt: "Adobe" },
+              { src: "/logos/webflow.svg", alt: "Webflow" },
+              { src: "/logos/stripe.svg", alt: "Stripe" },
+              { src: "/logos/adobe.webp", alt: "Adobe" },
+              { src: "/logos/webflow.svg", alt: "Webflow" },
+              { src: "/logos/stripe.svg", alt: "Stripe" },
+              { src: "/logos/adobe.webp", alt: "Adobe" },
+              { src: "/logos/webflow.svg", alt: "Webflow" },
+              { src: "/logos/stripe.svg", alt: "Stripe" },
+              { src: "/logos/adobe.webp", alt: "Adobe" },
+              { src: "/logos/webflow.svg", alt: "Webflow" },
+              { src: "/logos/stripe.svg", alt: "Stripe" },
+              { src: "/logos/adobe.webp", alt: "Adobe" },
+              { src: "/logos/webflow.svg", alt: "Webflow" },
+              { src: "/logos/stripe.svg", alt: "Stripe" },
+            ].map((item, i) => (
               <div className="hero-content-bottom-item" key={i}>
-                <Image width={100} height={100} src={src} alt={`Marquee item ${i + 1}`} className="hero-content-bottom-image" />
+                <Image width={100} height={100} src={item.src} alt={`${item.alt} logo - Quroix Labs technology partner`} className="hero-content-bottom-image" />
               </div>
             ))}
           </Marquee>

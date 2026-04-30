@@ -2,16 +2,22 @@ import "./contact.css";
 import { ContactPageSection } from "./ContactPageSection";
 
 export const metadata = {
-  title: "Contact QuroixLabs | Start Your Project",
-  description: "Ready to scale? Get in touch with QuroixLabs for a consultation on your website, automation, or custom software needs.",
+  title: "Contact Quroix Labs | Start Your AI Automation Project",
+  description: "Ready to scale? Get in touch with Quroix Labs for a consultation on AI automation, intelligent workflows, custom software, or enterprise website development.",
   alternates: {
     canonical: 'https://quroixlabs.com/contact',
   },
   openGraph: {
-    title: 'Contact QuroixLabs | Start Your Project',
-    description: "Ready to scale? Get in touch with QuroixLabs for a consultation on your website, automation, or custom software needs.",
+    title: 'Contact Quroix Labs | Start Your AI Automation Project',
+    description: "Schedule a 30-minute strategy call with Quroix Labs. AI automation, intelligent workflows, and custom software consultation.",
     url: 'https://quroixlabs.com/contact',
-    images: [{ url: '/images/quroix_logo.svg', width: 1200, height: 630, alt: 'Contact QuroixLabs' }],
+    images: [{ url: '/images/quroixlabs.png', width: 1200, height: 630, alt: 'Contact Quroix Labs - Start Your AI Automation Project' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Quroix Labs | Start Your AI Automation Project',
+    description: "Schedule a 30-minute strategy call for AI automation and custom software consultation.",
+    images: ['/images/quroixlabs.png'],
   },
 };
 
@@ -24,17 +30,12 @@ export default function Contact() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ContactPage",
-            "name": "Contact QuroixLabs",
-            "description": "Get in touch with QuroixLabs regarding your project.",
+            "name": "Contact Quroix Labs",
+            "description": "Get in touch with Quroix Labs regarding AI automation, custom software, or enterprise projects.",
             "url": "https://quroixlabs.com/contact",
             "mainEntity": {
               "@type": "Organization",
-              "name": "QuroixLabs",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+91-6382696238",
-                "contactType": "customer service"
-              }
+              "@id": "https://quroixlabs.com/#organization"
             }
           })
         }}

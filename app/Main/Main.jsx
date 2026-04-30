@@ -3,15 +3,14 @@ import { ReactLenis, useLenis } from 'lenis/react'
 import { SectionHero } from "./SectionHero";
 import dynamic from 'next/dynamic';
 
-const SectionFooter = dynamic(() => import("./SectionFooter").then((mod) => mod.SectionFooter), { ssr: false });
-const SectionTestimonials = dynamic(() => import("./SectionTestimonials").then((mod) => mod.SectionTestimonials), { ssr: false });
-const SectionTechstack = dynamic(() => import("./SectionTechstack").then((mod) => mod.SectionTechstack), { ssr: false });
+const SectionFooter = dynamic(() => import("./SectionFooter").then((mod) => mod.SectionFooter));
+const SectionTestimonials = dynamic(() => import("./SectionTestimonials").then((mod) => mod.SectionTestimonials));
+const SectionTechstack = dynamic(() => import("./SectionTechstack").then((mod) => mod.SectionTechstack));
 const SectionFlower = dynamic(() => import("./SectionFlower").then((mod) => mod.SectionFlower), { ssr: false });
-const SectionServices = dynamic(() => import("./SectionServices").then((mod) => mod.SectionServices), { ssr: false });
-const SectionProjects = dynamic(() => import("./SectionProjects").then((mod) => mod.SectionProjects), { ssr: false });
-const SectionProjectsMobile = dynamic(() => import("./SectionProjectsMobile").then((mod) => mod.SectionProjectsMobile), { ssr: false });
-const SectionKPI = dynamic(() => import("./SectionKPI").then((mod) => mod.SectionKPI), { ssr: false });
-const SectionFAQ = dynamic(() => import("./SectionFAQ").then((mod) => mod.SectionFAQ), { ssr: false });
+const SectionServices = dynamic(() => import("./SectionServices").then((mod) => mod.SectionServices));
+const SectionProjects = dynamic(() => import("./SectionProjects").then((mod) => mod.SectionProjects));
+const SectionProjectsMobile = dynamic(() => import("./SectionProjectsMobile").then((mod) => mod.SectionProjectsMobile));
+const SectionKPI = dynamic(() => import("./SectionKPI").then((mod) => mod.SectionKPI));
 
 import "./main.css";
 import { useEffect, useLayoutEffect, useState } from 'react';
@@ -34,7 +33,7 @@ const Main = () => {
     <ReactLenis root>
       <div className={`initial-loading-screen ${fadeOut ? "fade-out" : ""}`} >
         <div className="loading-image-box" >
-          <img src="/images/loading.gif" className="loading-image" alt="Loading Image" />
+          <img src="/images/loading.gif" className="loading-image" alt="Quroix Labs loading animation" />
         </div>
       </div>
       <SectionHero />
@@ -54,8 +53,6 @@ const Main = () => {
       <SectionKPI />
       <div className="normal-padding" />
       <SectionFlower />
-      <div className="normal-padding" />
-      <SectionFAQ />
       <div className="normal-padding" />
       <SectionFooter />
     </ReactLenis>
