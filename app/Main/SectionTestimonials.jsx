@@ -78,7 +78,7 @@ export const SectionTestimonials = () => {
                             <div className="testimonials-item" >
                                 <div className="testimonials-item-content">
                                     <div className="testimonials-item-profile">
-                                        <img src="/images/pfp1.webp" alt="" />
+                                        <img src="https://ui-avatars.com/api/?name=Tanish&background=0D0D0D&color=fff" alt="Tanish" />
                                     </div>
                                     <div className="testimonials-item-center">
                                         <p className="big-description white" >Tanish</p>
@@ -91,7 +91,7 @@ export const SectionTestimonials = () => {
                             <div className="testimonials-item" >
                                 <div className="testimonials-item-content">
                                     <div className="testimonials-item-profile">
-                                        <img src="/images/pfp2.webp" alt="" />
+                                        <img src="https://ui-avatars.com/api/?name=Harishvaran&background=0D0D0D&color=fff" alt="Harishvaran" />
                                     </div>
                                     <div className="testimonials-item-center">
                                         <p className="big-description white" >Harishvaran</p>
@@ -104,7 +104,7 @@ export const SectionTestimonials = () => {
                             <div className="testimonials-item" >
                                 <div className="testimonials-item-content">
                                     <div className="testimonials-item-profile">
-                                        <img src="/images/pfp1.webp" alt="" />
+                                        <img src="https://ui-avatars.com/api/?name=Elena+Rostova&background=0D0D0D&color=fff" alt="Elena Rostova" />
                                     </div>
                                     <div className="testimonials-item-center">
                                         <p className="big-description white" >Elena Rostova</p>
@@ -117,7 +117,7 @@ export const SectionTestimonials = () => {
                             <div className="testimonials-item" >
                                 <div className="testimonials-item-content">
                                     <div className="testimonials-item-profile">
-                                        <img src="/images/pfp2.webp" alt="" />
+                                        <img src="https://ui-avatars.com/api/?name=Marcus+Thorne&background=0D0D0D&color=fff" alt="Marcus Thorne" />
                                     </div>
                                     <div className="testimonials-item-center">
                                         <p className="big-description white" >Marcus Thorne</p>

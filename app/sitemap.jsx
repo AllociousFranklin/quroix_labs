@@ -28,10 +28,28 @@ export default function sitemap() {
     },
     // Case Studies
     {
-      url: `${baseUrl}/works/casestudy1`,
+      url: `${baseUrl}/works/casestudy-mep`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/works/casestudy-bim`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/works/casestudy-smma`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/works/casestudy-gym`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     // Legal Pages
     {

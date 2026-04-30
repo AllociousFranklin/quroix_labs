@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   // Extract visitor IP address
   // In Vercel, request.ip is usually populated.
   // We also check x-forwarded-for just in case.

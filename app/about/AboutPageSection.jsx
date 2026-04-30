@@ -53,7 +53,7 @@ export const AboutPageSection = () => {
                     delay: index * 0.2,
                     ease: "power3",
                     scrollTrigger: {
-                        trigger: ".five-content",
+                        trigger: ".about-team",
                         start: "top bottom"
                     }
                 }
