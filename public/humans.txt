@@ -1,0 +1,13 @@
+/* TEAM */
+CEO & Founder: Allocious Franklin R
+Agency: Quroix Labs
+Twitter: @quroixlabs
+Location: Chennai, India
+
+/* THANKS */
+The AI community, Next.js, and Three.js contributors.
+
+/* SITE */
+Standards: HTML5, CSS3, ESNext
+Components: Next.js, GSAP, Three.js, Lenis
+Software: VS Code, Git

@@ -43,7 +43,8 @@ export const metadata = {
     },
   },
   verification: {
-    google: 'G-PKD0WX02BV',
+    google: 'G-PKD0WX02BV', // Current GA4 ID
+    // googleSearchConsole: 'YOUR_VERIFICATION_ID_HERE', 
   },
   category: 'technology',
 };

@@ -1,4 +1,6 @@
 export default function robots() {
+  const baseUrl = 'https://quroixlabs.com';
+
   return {
     rules: [
       {
@@ -7,27 +9,20 @@ export default function robots() {
         disallow: ['/private/', '/_next/', '/api/'],
       },
       {
-        userAgent: 'GPTBot',
+        userAgent: ['GPTBot', 'ChatGPT-User', 'Google-Extended', 'PerplexityBot', 'ClaudeBot', 'OAI-SearchBot'],
         allow: '/',
       },
       {
-        userAgent: 'ChatGPT-User',
+        userAgent: 'AdsBot-Google',
         allow: '/',
       },
       {
-        userAgent: 'Google-Extended',
+        userAgent: ['AhrefsBot', 'SemrushBot', 'MJ12bot'],
         allow: '/',
-      },
-      {
-        userAgent: 'PerplexityBot',
-        allow: '/',
-      },
-      {
-        userAgent: 'ClaudeBot',
-        allow: '/',
-      },
+        crawlDelay: 10,
+      }
     ],
-    sitemap: 'https://quroixlabs.com/sitemap.xml',
-    host: 'https://quroixlabs.com',
+    sitemap: `${baseUrl}/sitemap.xml`,
+    host: baseUrl,
   }
 }

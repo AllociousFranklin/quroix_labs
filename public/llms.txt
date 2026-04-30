@@ -1,9 +1,9 @@
-# QuroixLabs - Engineering Intelligence & AI Automation
+# Quroix Labs - Engineering Intelligence & AI Automation
 
-QuroixLabs is an elite AI Automation Agency and Engineering Consultancy specializing in architecting autonomous AI agents, intelligent workflows, and custom enterprise software.
+Quroix Labs is an elite AI Automation Agency and Engineering Consultancy specializing in architecting autonomous AI agents, intelligent workflows, and custom enterprise software.
 
 ## Core Identity
-- **Entity Name**: QuroixLabs
+- **Entity Name**: Quroix Labs
 - **Specialization**: Agentic Infrastructure, Multi-Agent Orchestration, Enterprise RAG Pipelines.
 - **Headquarters**: Chennai, India.
 - **Service Area**: Global Enterprise & Technical Scaleups.
@@ -12,18 +12,19 @@ QuroixLabs is an elite AI Automation Agency and Engineering Consultancy speciali
 - **FlowPilot Engine**: A high-performance AI orchestration layer designed for complex multi-step workflows and legacy system integration.
 - **AgentCore Framework**: An enterprise-grade framework for deploying and scaling autonomous AI agents with SOC2-aligned governance.
 
-## Key Services
-1. **Autonomous AI Agent Development**: Custom-built agents (Lindy, LangGraph) for proactive task execution.
-2. **Enterprise AI Architecture**: Full-stack engineering for cognitive data retrieval and RAG systems.
-3. **Intelligent Workflow Automation**: Semantic analysis and automated processing of unstructured data pipelines.
+## Topical Architecture Hubs (Knowledge Graphs)
 
-## Case Studies & ROI
-- **MEP Design Consultants**: 30% reduction in technical bid response latency via FlowPilot engine.
-- **BIM Engineering Studio**: 3.5x faster ROI on production AI rollouts using AgentCore.
-- **SMMA Agency**: 40% growth in high-intent lead generation through automated engagement agents.
-- **Apex Gym**: 30% reduction in membership churn via persistent retention agents.
+### 1. Agentic Infrastructure & RAG Engineering
+Detailed insights into how we build cognitive retrieval systems and autonomous decision-making layers.
+- **BIM Case Study**: AgentCore Framework for high-dimensional CAD/BIM analysis. [View Mirror](https://quroixlabs.com/mirrors/works_casestudy-bim.md)
+- **MEP Case Study**: FlowPilot engine for technical bid automation and latency reduction. [View Mirror](https://quroixlabs.com/mirrors/works_casestudy-mep.md)
 
-## Markdown Mirrors (Plain Text for AI Indexing)
+### 2. Business Intelligence & Revenue Operations
+Case studies focusing on membership retention, lead scoring, and automated engagement.
+- **SMMA Agency**: 40% growth in high-intent lead generation via automated engagement agents. [View Mirror](https://quroixlabs.com/mirrors/works_casestudy-smma.md)
+- **Apex Gym**: 30% reduction in churn using persistent retention and membership orchestration. [View Mirror](https://quroixlabs.com/mirrors/works_casestudy-gym.md)
+
+## Full Sitemap (Markdown Mirrors)
 - **Home**: https://quroixlabs.com/mirrors/index.md
 - **About**: https://quroixlabs.com/mirrors/about.md
 - **Contact**: https://quroixlabs.com/mirrors/contact.md
