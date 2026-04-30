@@ -209,7 +209,7 @@ export const WorksPageSection = () => {
                 <div className="works-carousel-row">
                   <div className="works-item-padding" />
                   <div className="works-item" >
-                    <a href="https://trielementdesign.vercel.app/" target="_blank" rel="noopener noreferrer" className="works-item-content" style={{ textDecoration: 'none' }} title="MEP Design Consultants Custom Website" aria-label="View MEP Design Consultants website project">
+                    <a href="https://trielementdesign.com/" target="_blank" rel="noopener noreferrer" className="works-item-content" style={{ textDecoration: 'none' }} title="MEP Design Consultants Custom Website" aria-label="View MEP Design Consultants website project">
                       <div className="works-item-content-textbox">
                         <h2 className="subheadline white" >MEP DESIGN CONSULTANTS</h2>
                         <div className="works-item-content-textbox-row">

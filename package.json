@@ -24,7 +24,7 @@
     "lenis": "^1.1.13",
     "lucide-react": "^0.445.0",
     "maath": "^0.10.8",
-    "next": "^16.1.6",
+    "next": "^16.2.4",
     "next-seo": "^6.6.0",
     "postprocessing": "^6.36.4",
     "react": "^19.2.4",
@@ -40,7 +40,14 @@
     "@types/react-dom": "^19.2.3",
     "@types/three": "^0.171.0",
     "eslint": "^9.39.2",
-    "eslint-config-next": "^16.1.6",
+    "eslint-config-next": "^16.2.4",
     "typescript": "5.7.2"
+  },
+  "overrides": {
+    "react": "$react",
+    "react-dom": "$react-dom",
+    "postcss": "^8.5.10",
+    "picomatch": "^4.0.4",
+    "minimatch": "^9.0.7"
   }
 }
