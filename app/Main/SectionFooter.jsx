@@ -42,8 +42,8 @@ export const SectionFooter = () => {
       </Marquee>
       <div className="footer-content">
         <div className="footer-content-left" ref={topRef1} >
-          <Image src="/images/quroix_logo.svg" className="footer-logo" alt="Quroix Labs Logo" width={80} height={80} priority />
-          <h2 className="subheadline white" >Quroixlabs</h2>
+          <Image src="/images/quroix_logo.svg" className="footer-logo" alt="QuroixLabs Logo" width={80} height={80} priority />
+          <h2 className="subheadline white" >QuroixLabs</h2>
           <p className="description grey"  >Engineering intelligence for the real world. Websites, automations, and software built to scale with your business.</p>
         </div>
         <div className="footer-content-right" ref={topRef2} >
@@ -65,6 +65,14 @@ export const SectionFooter = () => {
             </nav>
           </div>
           <div className="footer-content-right-column" ref={topRef3} >
+            <h3 className="description white" >Locations</h3>
+            <div className="footer-column-contents">
+              <div className="footer-column-contents-item">
+                <Link href="/location/chennai" className="description grey hover-text-grey link">Chennai</Link>
+              </div>
+            </div>
+          </div>
+          <div className="footer-content-right-column">
             <h3 className="description white" >Legal</h3>
             <div className="footer-column-contents">
               <div className="footer-column-contents-item">
@@ -78,11 +86,12 @@ export const SectionFooter = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
       <div className="footer-divider" ref={centerRef1} />
       <div className="footer-content-bottom">
-        <p className="small-description grey" ref={bottomRef1} >© 2026 Quroixlabs All Rights Reserved</p>
+        <p className="small-description grey" ref={bottomRef1} >© 2026 QuroixLabs All Rights Reserved</p>
         <div className="footer-socials" ref={bottomRef2} >
           <a href="https://instagram.com/quroixlabs" target="_blank" rel="noopener noreferrer" aria-label="Follow Quroix Labs on Instagram">
             <Instagram strokeWidth={1.25} className="footer-socials-icon" />

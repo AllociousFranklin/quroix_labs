@@ -11,6 +11,7 @@ const SectionServices = dynamic(() => import("./SectionServices").then((mod) => 
 const SectionProjects = dynamic(() => import("./SectionProjects").then((mod) => mod.SectionProjects), { ssr: false });
 const SectionProjectsMobile = dynamic(() => import("./SectionProjectsMobile").then((mod) => mod.SectionProjectsMobile), { ssr: false });
 const SectionKPI = dynamic(() => import("./SectionKPI").then((mod) => mod.SectionKPI), { ssr: false });
+const SectionFAQ = dynamic(() => import("./SectionFAQ").then((mod) => mod.SectionFAQ), { ssr: false });
 
 import "./main.css";
 import { useEffect, useLayoutEffect, useState } from 'react';
@@ -53,6 +54,8 @@ const Main = () => {
       <SectionKPI />
       <div className="normal-padding" />
       <SectionFlower />
+      <div className="normal-padding" />
+      <SectionFAQ />
       <div className="normal-padding" />
       <SectionFooter />
     </ReactLenis>

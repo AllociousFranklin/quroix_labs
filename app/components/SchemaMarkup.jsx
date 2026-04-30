@@ -6,7 +6,7 @@ export const SchemaMarkup = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Quroix Labs",
+    "name": "QuroixLabs",
     "url": "https://quroixlabs.com",
     "logo": "https://quroixlabs.com/icon.svg",
     "sameAs": [
@@ -14,6 +14,41 @@ export const SchemaMarkup = () => {
       "https://x.com/quroixlabs"
     ],
     "description": "Elite AI Automation Agency specializing in Engineering Intelligence and Autonomous AI Agents."
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "QuroixLabs",
+    "image": "https://quroixlabs.com/images/quroix_logo.svg",
+    "@id": "https://quroixlabs.com",
+    "url": "https://quroixlabs.com",
+    "telephone": "+91-6382696238",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "43, Vivekanandhar Street, KK Nagar",
+      "addressLocality": "Chennai",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "600078",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 13.0333,
+      "longitude": 80.2000
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
   };
 
   const flowPilotSchema = {
@@ -45,7 +80,7 @@ export const SchemaMarkup = () => {
     "serviceType": "AI Integration & Automation",
     "provider": {
       "@type": "Organization",
-      "name": "Quroix Labs"
+      "name": "QuroixLabs"
     },
     "description": "Custom AI software development, intelligent workflow automation, and enterprise RAG pipeline architecture.",
     "areaServed": "Global",
@@ -90,6 +125,22 @@ export const SchemaMarkup = () => {
           "@type": "Answer",
           "text": "Clients typically report 30-40% reduction in operational overhead and a 3.5x faster ROI compared to traditional software development, with initial pilot programs achieving production readiness in 4-8 weeks."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "Does QuroixLabs provide custom AI automation for global clients?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, QuroixLabs is a global AI automation agency based in Chennai, delivering bespoke agentic infrastructure and intelligent workflows to enterprise clients across North America, Europe, and Asia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What industries does QuroixLabs serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We specialize in high-complexity sectors including Engineering (BIM/MEP), Healthcare, Financial Services, and Digital Commerce, where accuracy and autonomous decision-making are critical."
+        }
       }
     ]
   };
@@ -99,6 +150,10 @@ export const SchemaMarkup = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <script
         type="application/ld+json"

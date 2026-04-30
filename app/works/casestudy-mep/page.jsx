@@ -111,7 +111,7 @@ const CaseStudyMEP = () => {
               </div>
               <div className="casestudy-center-item">
                 <p className="small-description white" ref={casestudyCenterRef5} >Architectural Blueprint</p>
-                <p className="small-description grey" ref={casestudyCenterRef6} >Deployment of the Quroix Labs FlowPilot engine orchestrated with custom n8n nodes for secure document processing.</p>
+                <p className="small-description grey" ref={casestudyCenterRef6} >Deployment of the QuroixLabs FlowPilot engine orchestrated with custom n8n nodes for secure document processing.</p>
               </div>
               <div className="casestudy-center-item">
                 <p className="small-description white" >Implementation Timeline</p>

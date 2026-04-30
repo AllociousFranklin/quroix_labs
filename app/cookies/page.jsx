@@ -2,8 +2,8 @@ import React from 'react';
 import { SectionFooter } from '../Main/SectionFooter';
 
 export const metadata = {
-    title: "Cookie Policy | Quroix Labs",
-    description: "Explanation of how Quroix Labs utilizes browser cookies to enhance digital performance.",
+    title: "Cookie Policy | QuroixLabs",
+    description: "Explanation of how QuroixLabs utilizes browser cookies to enhance digital performance.",
     alternates: {
         canonical: 'https://quroixlabs.com/cookies',
     }
@@ -19,7 +19,7 @@ export default function CookiesPage() {
 
                     <div style={{ display: "flex", flexDirection: "column", gap: "3vh" }}>
                         <p className="description grey" style={{ lineHeight: "160%" }}>
-                            Quroix Labs uses cookies and similar digital tracing technologies to augment your browsing experience, analyze live website traffics, and intelligently verify server operations globally. This Cookie Policy clarifies exactly what cookies are, why we heavily rely on them, and how you inherently possess control over them.
+                            QuroixLabs uses cookies and similar digital tracing technologies to augment your browsing experience, analyze live website traffics, and intelligently verify server operations globally. This Cookie Policy clarifies exactly what cookies are, why we heavily rely on them, and how you inherently possess control over them.
                         </p>
 
                         <h2 className="subheadline white" style={{ fontSize: "2vw" }}>1. Defining Cookies</h2>
@@ -29,7 +29,7 @@ export default function CookiesPage() {
 
                         <h2 className="subheadline white" style={{ fontSize: "2vw" }}>2. Our Implementation Model</h2>
                         <p className="description grey" style={{ lineHeight: "160%" }}>
-                            Across Quroix Labs, our infrastructural environments operate three cookie partitions:
+                            Across QuroixLabs, our infrastructural environments operate three cookie partitions:
                             <br /><br />
                             • <b>Essential Operations:</b> Cookies required inextricably for standard digital functionality and routing requests internally.
                             <br />
@@ -50,7 +50,7 @@ export default function CookiesPage() {
 
                         <h2 className="subheadline white" style={{ fontSize: "2vw" }}>5. Queries & Verification</h2>
                         <p className="description grey" style={{ lineHeight: "160%" }}>
-                            For specialized requests analyzing the cookie footprint or third-party associations present inside Quroix Labs infrastructures, ping our networking divisions at legal@quroixlabs.com.
+                            For specialized requests analyzing the cookie footprint or third-party associations present inside QuroixLabs infrastructures, ping our networking divisions at legal@quroixlabs.com.
                         </p>
                     </div>
                 </div>

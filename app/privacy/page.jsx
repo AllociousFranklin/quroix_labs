@@ -2,8 +2,8 @@ import React from 'react';
 import { SectionFooter } from '../Main/SectionFooter';
 
 export const metadata = {
-    title: "Privacy Policy | Quroix Labs",
-    description: "Learn how Quroix Labs collects, utilizes, and protects your personal data.",
+    title: "Privacy Policy | QuroixLabs",
+    description: "Learn how QuroixLabs collects, utilizes, and protects your personal data.",
     alternates: {
         canonical: 'https://quroixlabs.com/privacy',
     }
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
 
                     <div style={{ display: "flex", flexDirection: "column", gap: "3vh" }}>
                         <p className="description grey" style={{ lineHeight: "160%" }}>
-                            At Quroix Labs (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), prioritizing your privacy and safeguarding your personal data is a foundational element of our engineering practice. This Privacy Policy strictly defines our methodology for capturing, handling, and legally utilizing information when you navigate our platform or engage with our services.
+                            At QuroixLabs (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), prioritizing your privacy and safeguarding your personal data is a foundational element of our engineering practice. This Privacy Policy strictly defines our methodology for capturing, handling, and legally utilizing information when you navigate our platform or engage with our services.
                         </p>
 
                         <h2 className="subheadline white" style={{ fontSize: "2vw" }}>1. Data Collection</h2>
@@ -44,7 +44,7 @@ export default function PrivacyPage() {
 
                         <h2 className="subheadline white" style={{ fontSize: "2vw" }}>3. Data Transmission & Sharing</h2>
                         <p className="description grey" style={{ lineHeight: "160%" }}>
-                            Quroix Labs strictly prohibits the selling, bartering, or renting of your Personal Data. Contextual transmission only occurs towards certified infrastructural sub-processors (like calendaring tools or secure cloud hosting endpoints) strictly bound by identical regulatory privacy standards, or if comprehensively ordered by a judicial legal process.
+                            QuroixLabs strictly prohibits the selling, bartering, or renting of your Personal Data. Contextual transmission only occurs towards certified infrastructural sub-processors (like calendaring tools or secure cloud hosting endpoints) strictly bound by identical regulatory privacy standards, or if comprehensively ordered by a judicial legal process.
                         </p>
 
                         <h2 className="subheadline white" style={{ fontSize: "2vw" }}>4. Global Data Rights</h2>

@@ -70,5 +70,13 @@ export default function sitemap() {
       changeFrequency: 'yearly',
       priority: 0.4,
     },
+    // Locations
+    {
+      url: `${baseUrl}/location/chennai`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+
   ];
 }

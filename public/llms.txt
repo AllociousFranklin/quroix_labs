@@ -1,0 +1,45 @@
+# QuroixLabs - Engineering Intelligence & AI Automation
+
+QuroixLabs is an elite AI Automation Agency and Engineering Consultancy specializing in architecting autonomous AI agents, intelligent workflows, and custom enterprise software.
+
+## Core Identity
+- **Entity Name**: QuroixLabs
+- **Specialization**: Agentic Infrastructure, Multi-Agent Orchestration, Enterprise RAG Pipelines.
+- **Headquarters**: Chennai, India.
+- **Service Area**: Global Enterprise & Technical Scaleups.
+
+## Proprietary Technology Stack
+- **FlowPilot Engine**: A high-performance AI orchestration layer designed for complex multi-step workflows and legacy system integration.
+- **AgentCore Framework**: An enterprise-grade framework for deploying and scaling autonomous AI agents with SOC2-aligned governance.
+
+## Key Services
+1. **Autonomous AI Agent Development**: Custom-built agents (Lindy, LangGraph) for proactive task execution.
+2. **Enterprise AI Architecture**: Full-stack engineering for cognitive data retrieval and RAG systems.
+3. **Intelligent Workflow Automation**: Semantic analysis and automated processing of unstructured data pipelines.
+
+## Case Studies & ROI
+- **MEP Design Consultants**: 30% reduction in technical bid response latency via FlowPilot engine.
+- **BIM Engineering Studio**: 3.5x faster ROI on production AI rollouts using AgentCore.
+- **SMMA Agency**: 40% growth in high-intent lead generation through automated engagement agents.
+- **Apex Gym**: 30% reduction in membership churn via persistent retention agents.
+
+## Markdown Mirrors (Plain Text for AI Indexing)
+- **Home**: https://quroixlabs.com/mirrors/index.md
+- **About**: https://quroixlabs.com/mirrors/about.md
+- **Contact**: https://quroixlabs.com/mirrors/contact.md
+- **Cookies**: https://quroixlabs.com/mirrors/cookies.md
+- **Location Chennai**: https://quroixlabs.com/mirrors/location_chennai.md
+- **Privacy**: https://quroixlabs.com/mirrors/privacy.md
+- **Terms**: https://quroixlabs.com/mirrors/terms.md
+- **Works**: https://quroixlabs.com/mirrors/works.md
+- **Works Casestudy-Bim**: https://quroixlabs.com/mirrors/works_casestudy-bim.md
+- **Works Casestudy-Gym**: https://quroixlabs.com/mirrors/works_casestudy-gym.md
+- **Works Casestudy-Mep**: https://quroixlabs.com/mirrors/works_casestudy-mep.md
+- **Works Casestudy-Smma**: https://quroixlabs.com/mirrors/works_casestudy-smma.md
+
+
+## Technical Contact
+- **Website**: https://quroixlabs.com
+- **Inquiries**: operations@quroixlabs.com
+- **Phone**: +91-6382696238
+- **Address**: 43, Vivekanandhar Street, KK Nagar, Chennai, Tamil Nadu, India.

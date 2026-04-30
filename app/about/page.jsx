@@ -2,16 +2,16 @@ import "./about.css";
 import { AboutPageSection } from "./AboutPageSection";
 
 export const metadata = {
-  title: "About Quroixlabs | Engineering Team for Digital Growth",
-  description: "Meet the engineers and problem-solvers behind Quroix Labs. We build scalable websites, automation systems, and custom software that drive real business outcomes.",
+  title: "About QuroixLabs | Engineering Team for Digital Growth",
+  description: "Meet the engineers and problem-solvers behind QuroixLabs. We build scalable websites, automation systems, and custom software that drive real business outcomes.",
   alternates: {
     canonical: 'https://quroixlabs.com/about',
   },
   openGraph: {
-    title: 'About Quroixlabs | Engineering Team for Digital Growth',
-    description: "Meet the engineers and problem-solvers behind Quroix Labs. We build scalable websites, automation systems, and custom software that drive real business outcomes.",
+    title: 'About QuroixLabs | Engineering Team for Digital Growth',
+    description: "Meet the engineers and problem-solvers behind QuroixLabs. We build scalable websites, automation systems, and custom software that drive real business outcomes.",
     url: 'https://quroixlabs.com/about',
-    images: [{ url: '/images/quroix_logo.svg', width: 1200, height: 630, alt: 'About Quroix Labs Team' }],
+    images: [{ url: '/images/quroix_logo.svg', width: 1200, height: 630, alt: 'About QuroixLabs Team' }],
   },
 };
 
@@ -24,12 +24,12 @@ export default function About() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "AboutPage",
-            "name": "About Quroix Labs",
-            "description": "Meet the engineers and problem-solvers behind Quroix Labs.",
+            "name": "About QuroixLabs",
+            "description": "Meet the engineers and problem-solvers behind QuroixLabs.",
             "url": "https://quroixlabs.com/about",
             "mainEntity": {
               "@type": "Organization",
-              "name": "Quroix Labs",
+              "name": "QuroixLabs",
               "logo": "https://quroixlabs.com/images/quroix_logo.svg"
             }
           })

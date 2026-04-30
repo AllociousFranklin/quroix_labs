@@ -222,7 +222,7 @@ export const WorksPageSection = () => {
                           </div>
                         </div>
                       </div>
-                      <Image src="/mockups/trielementdesign.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="Deployment of autonomous AI agents and intelligent workflows for MEP Design Consultants utilizing the Quroix Labs FlowPilot engine." />
+                      <Image src="/mockups/trielementdesign.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="Deployment of autonomous AI agents and intelligent workflows for MEP Design Consultants utilizing the QuroixLabs FlowPilot engine." />
                     </Link>
                     <div className="works-item-border" />
                   </div>
@@ -239,7 +239,7 @@ export const WorksPageSection = () => {
                           </div>
                         </div>
                       </div>
-                      <Image src="/mockups/trielement.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="BIM Engineering Studio custom AI automation and intelligent architecture by Quroix Labs FlowPilot engine." />
+                      <Image src="/mockups/trielement.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="BIM Engineering Studio custom AI automation and intelligent architecture by QuroixLabs FlowPilot engine." />
                     </Link>
                     <div className="works-item-border" />
                   </div>
@@ -256,7 +256,7 @@ export const WorksPageSection = () => {
                           </div>
                         </div>
                       </div>
-                      <Image src="/mockups/kinimatic.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="SMMA Agency AI-driven growth engine and workflow automation by Quroix Labs AgentCore Framework." />
+                      <Image src="/mockups/kinimatic.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="SMMA Agency AI-driven growth engine and workflow automation by QuroixLabs AgentCore Framework." />
                     </Link>
                     <div className="works-item-border" />
                   </div>
@@ -273,7 +273,7 @@ export const WorksPageSection = () => {
                           </div>
                         </div>
                       </div>
-                      <Image src="/mockups/heave.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="Apex Gym custom membership portal and automated retention workflows by Quroix Labs." />
+                      <Image src="/mockups/heave.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="Apex Gym custom membership portal and automated retention workflows by QuroixLabs." />
                     </Link>
                     <div className="works-item-border" />
                   </div>
@@ -290,7 +290,7 @@ export const WorksPageSection = () => {
                           </div>
                         </div>
                       </div>
-                      <Image src="/mockups/essentia.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="Artist portfolio website by Quroix Labs" />
+                      <Image src="/mockups/essentia.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="Artist portfolio website by QuroixLabs" />
                     </Link>
                     <div className="works-item-border" />
                   </div>
@@ -307,7 +307,7 @@ export const WorksPageSection = () => {
                           </div>
                         </div>
                       </div>
-                      <Image src="/mockups/vitalenta.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="Aura luxury salon website by Quroix Labs" />
+                      <Image src="/mockups/vitalenta.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="Aura luxury salon website by QuroixLabs" />
                     </Link>
                     <div className="works-item-border" />
                   </div>
@@ -324,7 +324,7 @@ export const WorksPageSection = () => {
                           </div>
                         </div>
                       </div>
-                      <Image src="/mockups/peak.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="Wholesale product catalogue by Quroix Labs" />
+                      <Image src="/mockups/peak.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="Wholesale product catalogue by QuroixLabs" />
                     </Link>
                     <div className="works-item-border" />
                   </div>
@@ -341,7 +341,7 @@ export const WorksPageSection = () => {
                           </div>
                         </div>
                       </div>
-                      <Image src="/mockups/rev.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="BRIM Clocks e-commerce website by Quroix Labs" />
+                      <Image src="/mockups/rev.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="BRIM Clocks e-commerce website by QuroixLabs" />
                     </Link>
                     <div className="works-item-border" />
                   </div>
@@ -397,7 +397,7 @@ export const WorksPageSection = () => {
                 </div>
                 <div className="works-industries-item-right">
                   <div className="works-industries-item-right-imagebox" ref={industryImageRef1} >
-                    <img src="/images/test14.webp" className="works-industries-item-right-image" alt="E-commerce platform development by Quroix Labs" />
+                    <img src="/images/test14.webp" className="works-industries-item-right-image" alt="E-commerce platform development by QuroixLabs" />
                   </div>
                 </div>
               </div>
@@ -408,7 +408,7 @@ export const WorksPageSection = () => {
                 </div>
                 <div className="works-industries-item-right">
                   <div className="works-industries-item-right-imagebox" ref={industryImageRef2} >
-                    <img src="/images/test17.webp" className="works-industries-item-right-image" alt="Luxury gym and clinic website by Quroix Labs" />
+                    <img src="/images/test17.webp" className="works-industries-item-right-image" alt="Luxury gym and clinic website by QuroixLabs" />
                   </div>
                 </div>
               </div>
@@ -419,7 +419,7 @@ export const WorksPageSection = () => {
                 </div>
                 <div className="works-industries-item-right">
                   <div className="works-industries-item-right-imagebox" ref={industryImageRef3} >
-                    <img src="/images/test18.webp" className="works-industries-item-right-image" alt="Creative artist portfolio by Quroix Labs" />
+                    <img src="/images/test18.webp" className="works-industries-item-right-image" alt="Creative artist portfolio by QuroixLabs" />
                   </div>
                 </div>
               </div>
@@ -430,7 +430,7 @@ export const WorksPageSection = () => {
                 </div>
                 <div className="works-industries-item-right">
                   <div className="works-industries-item-right-imagebox" ref={industryImageRef4} >
-                    <img src="/images/test19.webp" className="works-industries-item-right-image" alt="Autonomous agent orchestration and multi-agent systems deployment by Quroix Labs." />
+                    <img src="/images/test19.webp" className="works-industries-item-right-image" alt="Autonomous agent orchestration and multi-agent systems deployment by QuroixLabs." />
                   </div>
                 </div>
               </div>

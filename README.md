@@ -1,9 +1,9 @@
-# Quroixlabs
+# QuroixLabs
 
-This is the landing page of a digital marcketplace platform by Quroixlabs.
+This is the landing page of a digital marketplace platform by QuroixLabs.
 Live on [https://quroixlabs.com](https://quroixlabs.com)
 
-![quroixlabs](public/images/quroixlabs.png)
+![QuroixLabs](public/images/quroixlabs.png)
 ![globe](public/images/globe.png)
 ![flower](public/images/flower.png)
 

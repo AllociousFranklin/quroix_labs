@@ -64,7 +64,7 @@ export const ContactPageSection = () => {
                 {/* Intro card with profile */}
                 <div className="contact-content-top-item opacity-blur" ref={contactItem1} >
                   <div className="contact-content-top-item-profile">
-                    <img src="/images/mockup4.webp" className="contact-content-top-item-image" alt="Quroix Labs team member profile" />
+                    <img src="/images/mockup4.webp" className="contact-content-top-item-image" alt="QuroixLabs team member profile" />
                   </div>
                   <div className="contact-content-top-item-text">
                     <p className="description white" >Ready to build something that drives real results? Reach out directly to discuss your project and get a clear path forward.</p>

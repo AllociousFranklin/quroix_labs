@@ -2,16 +2,16 @@ import "./contact.css";
 import { ContactPageSection } from "./ContactPageSection";
 
 export const metadata = {
-  title: "Contact Quroixlabs | Start Your Project",
-  description: "Ready to scale? Get in touch with Quroix Labs for a consultation on your website, automation, or custom software needs.",
+  title: "Contact QuroixLabs | Start Your Project",
+  description: "Ready to scale? Get in touch with QuroixLabs for a consultation on your website, automation, or custom software needs.",
   alternates: {
     canonical: 'https://quroixlabs.com/contact',
   },
   openGraph: {
-    title: 'Contact Quroixlabs | Start Your Project',
-    description: "Ready to scale? Get in touch with Quroix Labs for a consultation on your website, automation, or custom software needs.",
+    title: 'Contact QuroixLabs | Start Your Project',
+    description: "Ready to scale? Get in touch with QuroixLabs for a consultation on your website, automation, or custom software needs.",
     url: 'https://quroixlabs.com/contact',
-    images: [{ url: '/images/quroix_logo.svg', width: 1200, height: 630, alt: 'Contact Quroix Labs' }],
+    images: [{ url: '/images/quroix_logo.svg', width: 1200, height: 630, alt: 'Contact QuroixLabs' }],
   },
 };
 
@@ -24,12 +24,12 @@ export default function Contact() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ContactPage",
-            "name": "Contact Quroix Labs",
-            "description": "Get in touch with Quroix Labs regarding your project.",
+            "name": "Contact QuroixLabs",
+            "description": "Get in touch with QuroixLabs regarding your project.",
             "url": "https://quroixlabs.com/contact",
             "mainEntity": {
               "@type": "Organization",
-              "name": "Quroix Labs",
+              "name": "QuroixLabs",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+91-6382696238",

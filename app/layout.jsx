@@ -5,18 +5,18 @@ import { SchemaMarkup } from "./components/SchemaMarkup";
 
 export const metadata = {
   metadataBase: new URL('https://quroixlabs.com'),
-  title: "Quroix Labs | Engineering Intelligence & AI Automation for Enterprise",
+  title: "QuroixLabs | Engineering Intelligence & AI Automation for Enterprise",
   description: "Architecting autonomous AI agents, intelligent workflows, and custom software. Elite AI automation agency utilizing the FlowPilot engine and AgentCore Framework.",
   keywords: ["AI Automation Agency", "Autonomous AI Agents", "Intelligent Workflows", "FlowPilot engine", "AgentCore Framework", "Enterprise AI Architecture", "RAG pipeline architecture", "LLM orchestration", "n8n integration", "business automation", "custom software development"],
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "Quroix Labs | Engineering Intelligence & AI Automation",
+    title: "QuroixLabs | Engineering Intelligence & AI Automation",
     description: "Architecting autonomous AI agents and intelligent workflows for the global enterprise.",
-    images: [{ url: "/icon.svg", width: 1200, height: 630, alt: "Quroix Labs - Engineering Intelligence" }],
+    images: [{ url: "/icon.svg", width: 1200, height: 630, alt: "QuroixLabs - Engineering Intelligence" }],
     url: 'https://quroixlabs.com',
-    siteName: 'Quroix Labs',
+    siteName: 'QuroixLabs',
     locale: 'en_US',
     type: 'website',
   }
@@ -59,15 +59,16 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://firebaseinstallations.googleapis.com" />
+        <link rel="alternate" type="text/markdown" title="Markdown Mirror" href="/mirrors/index.md" />
 
         <SchemaMarkup />
       </head>
       <body>
         {/* Hidden SEO Backlinks Section */}
         <section style={{ display: "none" }} aria-hidden="true">
-          <h1>Quroix Labs: Engineering Intelligence & AI Automation</h1>
+          <h1>QuroixLabs: Engineering Intelligence & AI Automation</h1>
           <p>
-            Quroix Labs specializes in autonomous AI agents, intelligent systems,
+            QuroixLabs specializes in autonomous AI agents, intelligent systems,
             and scalable digital platforms using our proprietary FlowPilot engine.
           </p>
           <nav>
