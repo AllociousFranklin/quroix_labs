@@ -5,7 +5,7 @@
 
 ## AI Automation Agency in Chennai
 
-QuroixLabs is Chennai's premier engineering consultancy for autonomous AI agents and intelligent workflows. We bridge the gap between complex industrial challenges and agentic AI solutions.
+QuroixLabs is Chennai&apos;s premier engineering consultancy for autonomous AI agents and intelligent workflows. We bridge the gap between complex industrial challenges and agentic AI solutions.
 
 Regional Headquarters
 
@@ -13,7 +13,7 @@ Regional Headquarters
 
 Local Impact
 
-Optimizing Chennai's industrial engineering and manufacturing sectors with the FlowPilot engine.
+Optimizing Chennai&apos;s industrial engineering and manufacturing sectors with the FlowPilot engine.
 
 Technical Infrastructure
 
@@ -25,7 +25,7 @@ Chennai-based engineering support with global SOC2-aligned data privacy standard
 
 ### Why Chennai?
 
-Chennai's robust engineering ecosystem and automotive heritage provide the perfect environment for stress-testing Agentic AI. We leverage local talent to build systems that scale globally.
+Chennai&apos;s robust engineering ecosystem and automotive heritage provide the perfect environment for stress-testing Agentic AI. We leverage local talent to build systems that scale globally.
 
 
 --- 

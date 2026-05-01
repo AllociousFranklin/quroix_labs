@@ -1,4 +1,6 @@
 "use client";
+
+import Image from "next/image";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { ReactLenis } from 'lenis/react'
 import { SectionFooter } from "../Main/SectionFooter";
@@ -158,7 +160,7 @@ export const AboutPageSection = () => {
                             </div>
                             <div className="about-sticky-item-right">
                                 <div className="about-sticky-item-right-imagebox">
-                                    <img src="/images/mockup4.webp" className="about-sticky-item-right-image" alt="High-performance website design by QuroixLabs" />
+                                    <Image src="/images/mockup4.webp" className="about-sticky-item-right-image" alt="High-performance website design by QuroixLabs"  width={1920} height={1080} />
                                 </div>
                             </div>
                         </div>
@@ -176,7 +178,7 @@ export const AboutPageSection = () => {
                             </div>
                             <div className="about-sticky-item-right">
                                 <div className="about-sticky-item-right-imagebox">
-                                    <img src="/images/mockup12.webp" className="about-sticky-item-right-image" alt="Intelligent automation system by QuroixLabs" />
+                                    <Image src="/images/mockup12.webp" className="about-sticky-item-right-image" alt="Intelligent automation system by QuroixLabs"  width={1920} height={1080} />
                                 </div>
                             </div>
                         </div>
@@ -194,7 +196,7 @@ export const AboutPageSection = () => {
                             </div>
                             <div className="about-sticky-item-right">
                                 <div className="about-sticky-item-right-imagebox">
-                                    <img src="/images/mockup7.webp" className="about-sticky-item-right-image" alt="Custom software development by QuroixLabs" />
+                                    <Image src="/images/mockup7.webp" className="about-sticky-item-right-image" alt="Custom software development by QuroixLabs"  width={1920} height={1080} />
                                 </div>
                             </div>
                         </div>
@@ -212,7 +214,7 @@ export const AboutPageSection = () => {
                             </div>
                             <div className="about-sticky-item-right">
                                 <div className="about-sticky-item-right-imagebox">
-                                    <img src="/images/mockup11.webp" className="about-sticky-item-right-image" alt="Integrated digital systems by QuroixLabs" />
+                                    <Image src="/images/mockup11.webp" className="about-sticky-item-right-image" alt="Integrated digital systems by QuroixLabs"  width={1920} height={1080} />
                                 </div>
                             </div>
                         </div>

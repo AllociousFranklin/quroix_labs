@@ -25,17 +25,9 @@ Architectural Blueprint
 
 Deployment of the Quroix Labs FlowPilot engine orchestrated with custom n8n nodes for secure document processing.
 
-Implementation Timeline
-
-6-week agile deployment from initial discovery to production-ready automation.
-
 Measurable ROI
 
-30% Reduction in Technical Bid Response Latency
-
-40% Increase in Global Lead Inquiries
-
-25% Boost in Engineering Team Efficiency
+30% reduction in technical bid response latency and a 40% increase in global lead inquiries.
 
 
 --- 

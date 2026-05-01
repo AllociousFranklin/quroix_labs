@@ -1,4 +1,6 @@
 "use client";
+
+import Image from "next/image";
 import { ReactLenis, useLenis } from 'lenis/react'
 import { SectionHero } from "./SectionHero";
 import dynamic from 'next/dynamic';
@@ -33,7 +35,7 @@ const Main = () => {
     <ReactLenis root>
       <div className={`initial-loading-screen ${fadeOut ? "fade-out" : ""}`} >
         <div className="loading-image-box" >
-          <img src="/images/loading.gif" className="loading-image" alt="Quroix Labs loading animation" />
+          <Image src="/images/loading.gif" className="loading-image" alt="Quroix Labs loading animation"  width={1920} height={1080} />
         </div>
       </div>
       <SectionHero />

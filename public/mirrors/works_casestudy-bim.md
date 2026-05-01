@@ -25,17 +25,9 @@ Architectural Blueprint
 
 Deployment of the AgentCore Framework integrated with LangGraph for complex, stateful multi-agent workflows.
 
-Implementation Timeline
-
-8-week engineering sprint from architectural design to live production rollout.
-
 Measurable ROI
 
-3.5x Faster ROI on Production AI Rollouts
-
-90% Accuracy in Conversational Data Analysis
-
-60% Reduction in Project Discovery Latency
+3.5x Faster ROI on Production AI Rollouts and 90% accuracy in conversational data analysis.
 
 
 --- 

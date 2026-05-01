@@ -1,3 +1,4 @@
+import Image from "next/image";
 /* eslint-disable react/jsx-key */
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -127,7 +128,7 @@ export const SectionFlower = () => {
             </span>
             <span>
               <div className="flower-content-right-content-item" ref={imageRef1} >
-                <img src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="Mobile app interface showcasing Quroix Labs digital presence design" />
+                <Image src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="Mobile app interface showcasing Quroix Labs digital presence design"  width={1920} height={1080} />
               </div>
             </span>
           </div>
@@ -148,7 +149,7 @@ export const SectionFlower = () => {
             </span>
             <span>
               <div className="flower-content-right-content-item" ref={imageRef2} >
-                <img src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="Smartphone showcasing responsive web design by Quroix Labs" />
+                <Image src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="Smartphone showcasing responsive web design by Quroix Labs"  width={1920} height={1080} />
               </div>
             </span>
             <span>

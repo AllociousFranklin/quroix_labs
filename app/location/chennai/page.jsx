@@ -31,7 +31,7 @@ export default function ChennaiLocation() {
               <h1 className="headline white" ref={titleRef}>AI Automation Agency <br /> in Chennai</h1>
             </div>
             <p className="description grey" style={{ marginTop: "2vh", maxWidth: "800px" }}>
-              QuroixLabs is Chennai's premier engineering consultancy for autonomous AI agents and intelligent workflows. We bridge the gap between complex industrial challenges and agentic AI solutions.
+              QuroixLabs is Chennai&apos;s premier engineering consultancy for autonomous AI agents and intelligent workflows. We bridge the gap between complex industrial challenges and agentic AI solutions.
             </p>
           </div>
 
@@ -47,7 +47,7 @@ export default function ChennaiLocation() {
                 <div className="contact-content-item">
                   <Zap className="contact-item-label" />
                   <p className="description white">Local Impact</p>
-                  <p className="small-description grey">Optimizing Chennai's industrial engineering and manufacturing sectors with the FlowPilot engine.</p>
+                  <p className="small-description grey">Optimizing Chennai&apos;s industrial engineering and manufacturing sectors with the FlowPilot engine.</p>
                 </div>
 
                 <div className="contact-content-item">
@@ -68,7 +68,7 @@ export default function ChennaiLocation() {
               <div className="contact-content-item" style={{ border: "1px solid rgba(255,255,255,0.1)", padding: "40px", borderRadius: "20px", background: "rgba(255,255,255,0.02)" }}>
                 <h2 className="subheadline white" style={{ fontSize: "2rem", marginBottom: "20px" }}>Why Chennai?</h2>
                 <p className="description grey" style={{ lineHeight: "1.6" }}>
-                  Chennai's robust engineering ecosystem and automotive heritage provide the perfect environment for stress-testing Agentic AI. We leverage local talent to build systems that scale globally.
+                  Chennai&apos;s robust engineering ecosystem and automotive heritage provide the perfect environment for stress-testing Agentic AI. We leverage local talent to build systems that scale globally.
                 </p>
                 <div style={{ marginTop: "40px" }}>
                   <button className="contact-button-white" onClick={() => window.location.href='/contact'}>

@@ -1,5 +1,6 @@
 "use client";
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { ReactLenis } from 'lenis/react'
 import { SectionFooter } from "../../Main/SectionFooter";
 import gsap from "gsap";
@@ -82,7 +83,7 @@ const CaseStudyGymContent = () => {
 
         <div className="casestudy-hero">
           <div className="casestudy-hero-image-wrapper">
-            <img src="/mockups/heave.webp" ref={imageRef} className="casestudy-hero-image" alt="Apex Gym case study visualization" />
+            <Image src="/mockups/heave.webp" ref={imageRef} className="casestudy-hero-image" alt="Apex Gym case study visualization"  width={1920} height={1080} />
           </div>
         </div>
 
@@ -112,13 +113,13 @@ const CaseStudyGymContent = () => {
 
         <div className="casestudy-gallery">
           <div className="casestudy-gallery-full" ref={casestudyImageRef1}>
-            <img src="/mockups/heave.webp" className="casestudy-gallery-image" alt="Apex Gym full landing page" />
+            <Image src="/mockups/heave.webp" className="casestudy-gallery-image" alt="Apex Gym full landing page"  width={1920} height={1080} />
           </div>
           <div className="casestudy-gallery-half" ref={casestudyImageRef2}>
-            <img src="/images/test17.webp" className="casestudy-gallery-image" alt="Apex Gym vibrant mobile design" />
+            <Image src="/images/test17.webp" className="casestudy-gallery-image" alt="Apex Gym vibrant mobile design"  width={1920} height={1080} />
           </div>
           <div className="casestudy-gallery-half" ref={casestudyImageRef3}>
-            <img src="/images/test14.webp" className="casestudy-gallery-image" alt="Apex Gym membership operational flow" />
+            <Image src="/images/test14.webp" className="casestudy-gallery-image" alt="Apex Gym membership operational flow"  width={1920} height={1080} />
           </div>
         </div>
       </article>

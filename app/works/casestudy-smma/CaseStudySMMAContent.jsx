@@ -1,5 +1,6 @@
 "use client";
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { ReactLenis } from 'lenis/react'
 import { SectionFooter } from "../../Main/SectionFooter";
 import gsap from "gsap";
@@ -82,7 +83,7 @@ const CaseStudySMMAContent = () => {
 
         <div className="casestudy-hero">
           <div className="casestudy-hero-image-wrapper">
-            <img src="/mockups/kinimatic.webp" ref={imageRef} className="casestudy-hero-image" alt="SMMA Agency case study visualization" />
+            <Image src="/mockups/kinimatic.webp" ref={imageRef} className="casestudy-hero-image" alt="SMMA Agency case study visualization"  width={1920} height={1080} />
           </div>
         </div>
 
@@ -112,13 +113,13 @@ const CaseStudySMMAContent = () => {
 
         <div className="casestudy-gallery">
           <div className="casestudy-gallery-full" ref={casestudyImageRef1}>
-            <img src="/mockups/kinimatic.webp" className="casestudy-gallery-image" alt="SMMA Agency full landing page" />
+            <Image src="/mockups/kinimatic.webp" className="casestudy-gallery-image" alt="SMMA Agency full landing page"  width={1920} height={1080} />
           </div>
           <div className="casestudy-gallery-half" ref={casestudyImageRef2}>
-            <img src="/images/test14.webp" className="casestudy-gallery-image" alt="SMMA Agency conversion funnel and lead flow" />
+            <Image src="/images/test14.webp" className="casestudy-gallery-image" alt="SMMA Agency conversion funnel and lead flow"  width={1920} height={1080} />
           </div>
           <div className="casestudy-gallery-half" ref={casestudyImageRef3}>
-            <img src="/images/abs.webp" className="casestudy-gallery-image" alt="SMMA Agency brand identity and visual design" />
+            <Image src="/images/abs.webp" className="casestudy-gallery-image" alt="SMMA Agency brand identity and visual design"  width={1920} height={1080} />
           </div>
         </div>
       </article>

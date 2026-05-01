@@ -1,5 +1,6 @@
 "use client";
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { ReactLenis } from 'lenis/react'
 import { SectionFooter } from "../../Main/SectionFooter";
 import gsap from "gsap";
@@ -82,7 +83,7 @@ const CaseStudyBIMContent = () => {
 
         <div className="casestudy-hero">
           <div className="casestudy-hero-image-wrapper">
-            <img src="/mockups/trielement.webp" ref={imageRef} className="casestudy-hero-image" alt="BIM Engineering Studio case study visualization" />
+            <Image src="/mockups/trielement.webp" ref={imageRef} className="casestudy-hero-image" alt="BIM Engineering Studio case study visualization"  width={1920} height={1080} />
           </div>
         </div>
 
@@ -112,13 +113,13 @@ const CaseStudyBIMContent = () => {
 
         <div className="casestudy-gallery">
           <div className="casestudy-gallery-full" ref={casestudyImageRef1}>
-            <img src="/mockups/trielement.webp" className="casestudy-gallery-image" alt="BIM Engineering Studio full desktop website view" />
+            <Image src="/mockups/trielement.webp" className="casestudy-gallery-image" alt="BIM Engineering Studio full desktop website view"  width={1920} height={1080} />
           </div>
           <div className="casestudy-gallery-half" ref={casestudyImageRef2}>
-            <img src="/images/test18.webp" className="casestudy-gallery-image" alt="BIM Engineering Studio architectural workflow interface" />
+            <Image src="/images/test18.webp" className="casestudy-gallery-image" alt="BIM Engineering Studio architectural workflow interface"  width={1920} height={1080} />
           </div>
           <div className="casestudy-gallery-half" ref={casestudyImageRef3}>
-            <img src="/images/test19.webp" className="casestudy-gallery-image" alt="BIM Engineering Studio grid system and data visualization" />
+            <Image src="/images/test19.webp" className="casestudy-gallery-image" alt="BIM Engineering Studio grid system and data visualization"  width={1920} height={1080} />
           </div>
         </div>
       </article>

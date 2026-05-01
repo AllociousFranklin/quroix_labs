@@ -1,5 +1,6 @@
 "use client";
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { ReactLenis } from 'lenis/react'
 import { SectionFooter } from "../../Main/SectionFooter";
 import gsap from "gsap";
@@ -82,7 +83,7 @@ const CaseStudyMEPContent = () => {
 
         <div className="casestudy-hero">
           <div className="casestudy-hero-image-wrapper">
-            <img src="/mockups/trielementdesign.webp" ref={imageRef} className="casestudy-hero-image" alt="MEP Design Consultants case study visualization" />
+            <Image src="/mockups/trielementdesign.webp" ref={imageRef} className="casestudy-hero-image" alt="MEP Design Consultants case study visualization"  width={1920} height={1080} />
           </div>
         </div>
 
@@ -112,13 +113,13 @@ const CaseStudyMEPContent = () => {
 
         <div className="casestudy-gallery">
           <div className="casestudy-gallery-full" ref={casestudyImageRef1}>
-            <img src="/mockups/trielementdesign.webp" className="casestudy-gallery-image" alt="MEP Design Consultants full desktop website view" />
+            <Image src="/mockups/trielementdesign.webp" className="casestudy-gallery-image" alt="MEP Design Consultants full desktop website view"  width={1920} height={1080} />
           </div>
           <div className="casestudy-gallery-half" ref={casestudyImageRef2}>
-            <img src="/images/test14.webp" className="casestudy-gallery-image" alt="MEP Design Consultants technical page layout" />
+            <Image src="/images/test14.webp" className="casestudy-gallery-image" alt="MEP Design Consultants technical page layout"  width={1920} height={1080} />
           </div>
           <div className="casestudy-gallery-half" ref={casestudyImageRef3}>
-            <img src="/images/test17.webp" className="casestudy-gallery-image" alt="MEP Design Consultants mobile responsive experience" />
+            <Image src="/images/test17.webp" className="casestudy-gallery-image" alt="MEP Design Consultants mobile responsive experience"  width={1920} height={1080} />
           </div>
         </div>
       </article>

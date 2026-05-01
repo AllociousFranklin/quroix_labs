@@ -397,7 +397,7 @@ export const WorksPageSection = () => {
                 </div>
                 <div className="works-industries-item-right">
                   <div className="works-industries-item-right-imagebox" ref={industryImageRef1} >
-                    <img src="/images/test14.webp" className="works-industries-item-right-image" alt="E-commerce platform development by QuroixLabs" />
+                    <Image src="/images/test14.webp" className="works-industries-item-right-image" alt="E-commerce platform development by QuroixLabs"  width={1920} height={1080} />
                   </div>
                 </div>
               </div>
@@ -408,7 +408,7 @@ export const WorksPageSection = () => {
                 </div>
                 <div className="works-industries-item-right">
                   <div className="works-industries-item-right-imagebox" ref={industryImageRef2} >
-                    <img src="/images/test17.webp" className="works-industries-item-right-image" alt="Luxury gym and clinic website by QuroixLabs" />
+                    <Image src="/images/test17.webp" className="works-industries-item-right-image" alt="Luxury gym and clinic website by QuroixLabs"  width={1920} height={1080} />
                   </div>
                 </div>
               </div>
@@ -419,7 +419,7 @@ export const WorksPageSection = () => {
                 </div>
                 <div className="works-industries-item-right">
                   <div className="works-industries-item-right-imagebox" ref={industryImageRef3} >
-                    <img src="/images/test18.webp" className="works-industries-item-right-image" alt="Creative artist portfolio by QuroixLabs" />
+                    <Image src="/images/test18.webp" className="works-industries-item-right-image" alt="Creative artist portfolio by QuroixLabs"  width={1920} height={1080} />
                   </div>
                 </div>
               </div>
@@ -430,7 +430,7 @@ export const WorksPageSection = () => {
                 </div>
                 <div className="works-industries-item-right">
                   <div className="works-industries-item-right-imagebox" ref={industryImageRef4} >
-                    <img src="/images/test19.webp" className="works-industries-item-right-image" alt="Autonomous agent orchestration and multi-agent systems deployment by QuroixLabs." />
+                    <Image src="/images/test19.webp" className="works-industries-item-right-image" alt="Autonomous agent orchestration and multi-agent systems deployment by QuroixLabs."  width={1920} height={1080} />
                   </div>
                 </div>
               </div>
@@ -471,7 +471,7 @@ export const WorksPageSection = () => {
                           </div>
                           <ArrowUpRight className="casestudies-item-content-imagebox-button-icon" />
                         </div>
-                        <img src="/mockups/trielementdesign.webp" className="casestudies-item-content-image" alt="MEP Design Consultants Case Study" />
+                        <Image src="/mockups/trielementdesign.webp" className="casestudies-item-content-image" alt="MEP Design Consultants Case Study"  width={1920} height={1080} />
                       </div>
                     </Link>
                   </div>
@@ -493,7 +493,7 @@ export const WorksPageSection = () => {
                           </div>
                           <ArrowUpRight className="casestudies-item-content-imagebox-button-icon" />
                         </div>
-                        <img src="/mockups/trielement.webp" className="casestudies-item-content-image" alt="BIM Engineering Case Study" />
+                        <Image src="/mockups/trielement.webp" className="casestudies-item-content-image" alt="BIM Engineering Case Study"  width={1920} height={1080} />
                       </div>
                     </Link>
                   </div>
@@ -515,7 +515,7 @@ export const WorksPageSection = () => {
                           </div>
                           <ArrowUpRight className="casestudies-item-content-imagebox-button-icon" />
                         </div>
-                        <img src="/mockups/kinimatic.webp" className="casestudies-item-content-image" alt="SMMA Agency Case Study" />
+                        <Image src="/mockups/kinimatic.webp" className="casestudies-item-content-image" alt="SMMA Agency Case Study"  width={1920} height={1080} />
                       </div>
                     </Link>
                   </div>
@@ -537,7 +537,7 @@ export const WorksPageSection = () => {
                           </div>
                           <ArrowUpRight className="casestudies-item-content-imagebox-button-icon" />
                         </div>
-                        <img src="/mockups/heave.webp" className="casestudies-item-content-image" alt="Apex Gym Case Study" />
+                        <Image src="/mockups/heave.webp" className="casestudies-item-content-image" alt="Apex Gym Case Study"  width={1920} height={1080} />
                       </div>
                     </Link>
                   </div>

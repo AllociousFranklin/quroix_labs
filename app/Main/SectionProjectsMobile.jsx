@@ -107,6 +107,7 @@ export const SectionProjectsMobile = () => {
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
+              aria-label={`Go to project slide ${index + 1}`}
               className={'embla__dot'.concat(
                 index === selectedIndex ? ' embla__dot--selected' : ''
               )}

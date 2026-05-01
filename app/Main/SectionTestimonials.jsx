@@ -1,3 +1,4 @@
+import Image from "next/image";
 /* eslint-disable react/jsx-key */
 import React, { Suspense, useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
@@ -78,7 +79,7 @@ export const SectionTestimonials = () => {
                             <div className="testimonials-item" >
                                 <div className="testimonials-item-content">
                                     <div className="testimonials-item-profile">
-                                        <img src="https://ui-avatars.com/api/?name=Tanish&background=0D0D0D&color=fff" alt="Tanish" />
+                                        <Image src="https://ui-avatars.com/api/?name=Tanish&background=0D0D0D&color=fff" alt="Tanish"  width={128} height={128} />
                                     </div>
                                     <div className="testimonials-item-center">
                                         <p className="big-description white" >Tanish</p>
@@ -91,7 +92,7 @@ export const SectionTestimonials = () => {
                             <div className="testimonials-item" >
                                 <div className="testimonials-item-content">
                                     <div className="testimonials-item-profile">
-                                        <img src="https://ui-avatars.com/api/?name=Harishvaran&background=0D0D0D&color=fff" alt="Harishvaran" />
+                                        <Image src="https://ui-avatars.com/api/?name=Harishvaran&background=0D0D0D&color=fff" alt="Harishvaran"  width={128} height={128} />
                                     </div>
                                     <div className="testimonials-item-center">
                                         <p className="big-description white" >Harishvaran</p>
@@ -104,7 +105,7 @@ export const SectionTestimonials = () => {
                             <div className="testimonials-item" >
                                 <div className="testimonials-item-content">
                                     <div className="testimonials-item-profile">
-                                        <img src="https://ui-avatars.com/api/?name=Elena+Rostova&background=0D0D0D&color=fff" alt="Elena Rostova" />
+                                        <Image src="https://ui-avatars.com/api/?name=Elena+Rostova&background=0D0D0D&color=fff" alt="Elena Rostova"  width={128} height={128} />
                                     </div>
                                     <div className="testimonials-item-center">
                                         <p className="big-description white" >Elena Rostova</p>
@@ -117,7 +118,7 @@ export const SectionTestimonials = () => {
                             <div className="testimonials-item" >
                                 <div className="testimonials-item-content">
                                     <div className="testimonials-item-profile">
-                                        <img src="https://ui-avatars.com/api/?name=Marcus+Thorne&background=0D0D0D&color=fff" alt="Marcus Thorne" />
+                                        <Image src="https://ui-avatars.com/api/?name=Marcus+Thorne&background=0D0D0D&color=fff" alt="Marcus Thorne"  width={128} height={128} />
                                     </div>
                                     <div className="testimonials-item-center">
                                         <p className="big-description white" >Marcus Thorne</p>
