@@ -16,10 +16,6 @@ export const SectionServices = () => {
   const titleRef = useRef()
   const descriptionRef = useRef()
   const buttonRef = useRef()
-  const overlayRef = useRef()
-  const overlayWidgetRef = useRef()
-  const overlayWidgetButtonRef = useRef()
-  const [isOverlayVisible, setIsOverlayVisible] = useState(false)
 
   useEffect(() => {
 
@@ -40,48 +36,11 @@ export const SectionServices = () => {
 
 
 
-  const toggleOverlay = () => {
-    if (!isOverlayVisible) {
-      // Show overlay
-      gsap.to(overlayRef.current, { display: "flex", opacity: 1, duration: 0.3 });
-      gsap.fromTo(overlayWidgetRef.current, { yPercent: 10, rotate: 5, opacity: 0 }, { yPercent: 0, rotate: 0, opacity: 1, duration: 0.5, ease: customEase });
-      gsap.fromTo(overlayWidgetButtonRef.current, { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.5, ease: customEase });
-    } else {
-      // Hide overlay
-      gsap.to(overlayWidgetRef.current, { yPercent: 10, rotate: 5, opacity: 0, duration: 0.5, ease: customEase });
-      gsap.to(overlayWidgetButtonRef.current, { opacity: 0, scale: 0.5, duration: 0.5, ease: customEase });
-      gsap.to(overlayRef.current, { delay: 0.1, opacity: 0, duration: 0.5, onComplete: () => { overlayRef.current.style.display = "none"; } });
-    }
-    setIsOverlayVisible(!isOverlayVisible);
-  };
-
   const serviceVideoRef = useRef();
 
-  useEffect(() => {
-    // Dynamically load the Calendly script
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    // Clean up script on component unmount
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
 
   return (
     <section className="services">
-      <div className="calendly-overlay" ref={overlayRef} style={{ display: "none", opacity: 0 }} onClick={toggleOverlay} >
-        <div className="calendly-overlay-widget" ref={overlayWidgetRef} >
-          <div className="calendly-overlay-widget-border" />
-          <div className="calendly-overlay-widget-scrollbar-hider" />
-          <div className="calendly-inline-widget" data-url="https://calendly.com/quroixlabs/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffffff&primary_color=9b92a2" />
-        </div>
-        <div className="calendly-overlay-widget-button" ref={overlayWidgetButtonRef} onClick={toggleOverlay} >
-          <X className="calendly-overlay-widget-button-icon" />
-        </div>
-      </div>
       <div className="services-content" >
         <div className="textbox">
           <div className="subheadline-box opacity-blur" ref={subheadlineBoxRef} >
@@ -93,7 +52,7 @@ export const SectionServices = () => {
             <h2 className="subheadline white" ref={titleRef} >Agentic Infrastructure <br /> That Compounds Growth</h2>
           </div>
           <p className="description grey" ref={descriptionRef} >From initial concept to deployed agent — we build intelligent workflows, automation systems, and custom software <br /> designed to solve real problems and drive measurable growth.</p>
-          <div className="contact-button-wrapper opacity-blur" ref={buttonRef} onClick={toggleOverlay} >
+          <div className="contact-button-wrapper opacity-blur" ref={buttonRef} >
             <button className="contact-button-white" >
               <span>
                 <span className="contact-button-container-white">
