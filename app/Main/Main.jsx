@@ -43,7 +43,7 @@ const Main = () => {
     <ReactLenis root>
       <div className={`initial-loading-screen ${fadeOut ? "fade-out" : ""}`} >
         <div className="loading-image-box" >
-          <Image src="/images/loading.gif" className="loading-image" alt="Quroix Labs loading animation"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
+          <Image src="/images/loading.gif" priority={true} unoptimized={true} className="loading-image" alt="Quroix Labs loading animation"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
         </div>
       </div>
       <SectionHero />
