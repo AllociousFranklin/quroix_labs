@@ -52,7 +52,7 @@ export const SectionFlower = () => {
           }
         };
       images = config.urls.map((url, i) => {
-        let img = new Image();
+        let img = new window.Image();
         img.src = url;
         i || (img.onload = updateImage);
         return img;
@@ -128,7 +128,7 @@ export const SectionFlower = () => {
             </span>
             <span>
               <div className="flower-content-right-content-item" ref={imageRef1} >
-                <Image src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="Mobile app interface showcasing Quroix Labs digital presence design"  width={1920} height={1080} />
+                <Image src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="Mobile app interface showcasing Quroix Labs digital presence design"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
               </div>
             </span>
           </div>
@@ -149,7 +149,7 @@ export const SectionFlower = () => {
             </span>
             <span>
               <div className="flower-content-right-content-item" ref={imageRef2} >
-                <Image src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="Smartphone showcasing responsive web design by Quroix Labs"  width={1920} height={1080} />
+                <Image src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="Smartphone showcasing responsive web design by Quroix Labs"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
               </div>
             </span>
             <span>

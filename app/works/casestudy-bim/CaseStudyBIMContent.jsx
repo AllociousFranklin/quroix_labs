@@ -83,7 +83,7 @@ const CaseStudyBIMContent = () => {
 
         <div className="casestudy-hero">
           <div className="casestudy-hero-image-wrapper">
-            <Image src="/mockups/trielement.webp" ref={imageRef} className="casestudy-hero-image" alt="BIM Engineering Studio case study visualization"  width={1920} height={1080} />
+            <Image src="/mockups/trielement.webp" ref={imageRef} className="casestudy-hero-image" alt="BIM Engineering Studio case study visualization"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
           </div>
         </div>
 
@@ -113,13 +113,13 @@ const CaseStudyBIMContent = () => {
 
         <div className="casestudy-gallery">
           <div className="casestudy-gallery-full" ref={casestudyImageRef1}>
-            <Image src="/mockups/trielement.webp" className="casestudy-gallery-image" alt="BIM Engineering Studio full desktop website view"  width={1920} height={1080} />
+            <Image src="/mockups/trielement.webp" className="casestudy-gallery-image" alt="BIM Engineering Studio full desktop website view"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
           </div>
           <div className="casestudy-gallery-half" ref={casestudyImageRef2}>
-            <Image src="/images/test18.webp" className="casestudy-gallery-image" alt="BIM Engineering Studio architectural workflow interface"  width={1920} height={1080} />
+            <Image src="/images/test18.webp" className="casestudy-gallery-image" alt="BIM Engineering Studio architectural workflow interface"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
           </div>
           <div className="casestudy-gallery-half" ref={casestudyImageRef3}>
-            <Image src="/images/test19.webp" className="casestudy-gallery-image" alt="BIM Engineering Studio grid system and data visualization"  width={1920} height={1080} />
+            <Image src="/images/test19.webp" className="casestudy-gallery-image" alt="BIM Engineering Studio grid system and data visualization"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
           </div>
         </div>
       </article>

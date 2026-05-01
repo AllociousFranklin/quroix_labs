@@ -141,28 +141,28 @@ export const SectionProjects = () => {
           <div className="projects-carousel" ref={emblaRef} >
             <div className="projects-carousel-row">
               <div className="projects-carousel-item">
-                <Image src="/mockups/trielementdesign.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="MEP Design Consultants custom website development by Quroix Labs" />
+                <Image src="/mockups/trielementdesign.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="MEP Design Consultants custom website development by Quroix Labs" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
               </div>
               <div className="projects-carousel-item">
-                <Image src="/mockups/trielement.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="BIM Engineering Studio custom website design by Quroix Labs" />
+                <Image src="/mockups/trielement.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="BIM Engineering Studio custom website design by Quroix Labs" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
               </div>
               <div className="projects-carousel-item">
-                <Image src="/mockups/kinimatic.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="Kinimatic - SMMA Agency Website by Quroix Labs" />
+                <Image src="/mockups/kinimatic.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="Kinimatic - SMMA Agency Website by Quroix Labs" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
               </div>
               <div className="projects-carousel-item">
-                <Image src="/mockups/heave.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="Heave - Apex Gym Website by Quroix Labs" />
+                <Image src="/mockups/heave.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="Heave - Apex Gym Website by Quroix Labs" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
               </div>
               <div className="projects-carousel-item">
-                <Image src="/mockups/essentia.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="Essentia - Artist Portfolio Website by Quroix Labs" />
+                <Image src="/mockups/essentia.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="Essentia - Artist Portfolio Website by Quroix Labs" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
               </div>
               <div className="projects-carousel-item">
-                <Image src="/mockups/vitalenta.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="Vitalenta - Aura Luxury Salon Website by Quroix Labs" />
+                <Image src="/mockups/vitalenta.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="Vitalenta - Aura Luxury Salon Website by Quroix Labs" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
               </div>
               <div className="projects-carousel-item">
-                <Image src="/mockups/peak.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="Peak - Wholesale Product Catalogue by Quroix Labs" />
+                <Image src="/mockups/peak.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="Peak - Wholesale Product Catalogue by Quroix Labs" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
               </div>
               <div className="projects-carousel-item">
-                <Image src="/mockups/rev.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="Rev - Brim Clocks E-commerce by Quroix Labs" />
+                <Image src="/mockups/rev.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="Rev - Brim Clocks E-commerce by Quroix Labs" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
               </div>
             </div>
           </div>

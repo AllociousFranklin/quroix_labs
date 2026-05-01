@@ -2,6 +2,36 @@ import "./globals.css";
 import { Navigation } from "./Navigation";
 import Script from "next/script";
 import { SchemaMarkup } from "./components/SchemaMarkup";
+import localFont from 'next/font/local';
+
+const sfProText = localFont({
+  src: '../public/fonts/SFProText-Regular.ttf',
+  variable: '--font-sf-text',
+  display: 'swap',
+});
+
+const sfProDisplay = localFont({
+  src: [
+    {
+      path: '../public/fonts/SF PRO DISPLAY 600.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/SF PRO DISPLAY 700.ttf',
+      weight: '700',
+      style: 'normal',
+    }
+  ],
+  variable: '--font-sf-display',
+  display: 'swap',
+});
+
+const causten = localFont({
+  src: '../public/fonts/Causten-Regular.otf',
+  variable: '--font-causten',
+  display: 'swap',
+});
 
 export const metadata = {
   metadataBase: new URL('https://quroixlabs.com'),
@@ -89,7 +119,7 @@ export default function RootLayout({ children }) {
 
         <SchemaMarkup />
       </head>
-      <body>
+      <body className={`${sfProText.variable} ${sfProDisplay.variable} ${causten.variable}`}>
         <Navigation />
         {children}
 

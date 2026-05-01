@@ -83,7 +83,7 @@ const CaseStudyMEPContent = () => {
 
         <div className="casestudy-hero">
           <div className="casestudy-hero-image-wrapper">
-            <Image src="/mockups/trielementdesign.webp" ref={imageRef} className="casestudy-hero-image" alt="MEP Design Consultants case study visualization"  width={1920} height={1080} />
+            <Image src="/mockups/trielementdesign.webp" ref={imageRef} className="casestudy-hero-image" alt="MEP Design Consultants case study visualization"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
           </div>
         </div>
 
@@ -113,13 +113,13 @@ const CaseStudyMEPContent = () => {
 
         <div className="casestudy-gallery">
           <div className="casestudy-gallery-full" ref={casestudyImageRef1}>
-            <Image src="/mockups/trielementdesign.webp" className="casestudy-gallery-image" alt="MEP Design Consultants full desktop website view"  width={1920} height={1080} />
+            <Image src="/mockups/trielementdesign.webp" className="casestudy-gallery-image" alt="MEP Design Consultants full desktop website view"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
           </div>
           <div className="casestudy-gallery-half" ref={casestudyImageRef2}>
-            <Image src="/images/test14.webp" className="casestudy-gallery-image" alt="MEP Design Consultants technical page layout"  width={1920} height={1080} />
+            <Image src="/images/test14.webp" className="casestudy-gallery-image" alt="MEP Design Consultants technical page layout"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
           </div>
           <div className="casestudy-gallery-half" ref={casestudyImageRef3}>
-            <Image src="/images/test17.webp" className="casestudy-gallery-image" alt="MEP Design Consultants mobile responsive experience"  width={1920} height={1080} />
+            <Image src="/images/test17.webp" className="casestudy-gallery-image" alt="MEP Design Consultants mobile responsive experience"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
           </div>
         </div>
       </article>

@@ -84,7 +84,7 @@ export const Navigation = () => {
                 <nav className="navigation-inside" ref={navigationBar} aria-label="Main navigation">
                     <div className="navigation-inside-left">
                         <Link href="/" aria-label="QuroixLabs - Home">
-                            <Image src="/images/quroix_logo.svg" className="navigation-inside-left-image" alt="QuroixLabs Logo"  width={256} height={64} />
+                            <Image src="/images/quroix_logo.svg" className="navigation-inside-left-image" alt="QuroixLabs Logo"  width={256} height={64} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                         </Link>
                     </div>
                     <div className="navigation-inside-big" ref={navigationBarCenter} >

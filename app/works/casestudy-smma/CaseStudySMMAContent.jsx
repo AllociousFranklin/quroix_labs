@@ -83,7 +83,7 @@ const CaseStudySMMAContent = () => {
 
         <div className="casestudy-hero">
           <div className="casestudy-hero-image-wrapper">
-            <Image src="/mockups/kinimatic.webp" ref={imageRef} className="casestudy-hero-image" alt="SMMA Agency case study visualization"  width={1920} height={1080} />
+            <Image src="/mockups/kinimatic.webp" ref={imageRef} className="casestudy-hero-image" alt="SMMA Agency case study visualization"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
           </div>
         </div>
 
@@ -113,13 +113,13 @@ const CaseStudySMMAContent = () => {
 
         <div className="casestudy-gallery">
           <div className="casestudy-gallery-full" ref={casestudyImageRef1}>
-            <Image src="/mockups/kinimatic.webp" className="casestudy-gallery-image" alt="SMMA Agency full landing page"  width={1920} height={1080} />
+            <Image src="/mockups/kinimatic.webp" className="casestudy-gallery-image" alt="SMMA Agency full landing page"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
           </div>
           <div className="casestudy-gallery-half" ref={casestudyImageRef2}>
-            <Image src="/images/test14.webp" className="casestudy-gallery-image" alt="SMMA Agency conversion funnel and lead flow"  width={1920} height={1080} />
+            <Image src="/images/test14.webp" className="casestudy-gallery-image" alt="SMMA Agency conversion funnel and lead flow"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
           </div>
           <div className="casestudy-gallery-half" ref={casestudyImageRef3}>
-            <Image src="/images/abs.webp" className="casestudy-gallery-image" alt="SMMA Agency brand identity and visual design"  width={1920} height={1080} />
+            <Image src="/images/abs.webp" className="casestudy-gallery-image" alt="SMMA Agency brand identity and visual design"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
           </div>
         </div>
       </article>

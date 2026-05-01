@@ -160,7 +160,7 @@ export const AboutPageSection = () => {
                             </div>
                             <div className="about-sticky-item-right">
                                 <div className="about-sticky-item-right-imagebox">
-                                    <Image src="/images/mockup4.webp" className="about-sticky-item-right-image" alt="High-performance website design by QuroixLabs"  width={1920} height={1080} />
+                                    <Image src="/images/mockup4.webp" className="about-sticky-item-right-image" alt="High-performance website design by QuroixLabs"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
                                 </div>
                             </div>
                         </div>
@@ -178,7 +178,7 @@ export const AboutPageSection = () => {
                             </div>
                             <div className="about-sticky-item-right">
                                 <div className="about-sticky-item-right-imagebox">
-                                    <Image src="/images/mockup12.webp" className="about-sticky-item-right-image" alt="Intelligent automation system by QuroixLabs"  width={1920} height={1080} />
+                                    <Image src="/images/mockup12.webp" className="about-sticky-item-right-image" alt="Intelligent automation system by QuroixLabs"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
                                 </div>
                             </div>
                         </div>
@@ -196,7 +196,7 @@ export const AboutPageSection = () => {
                             </div>
                             <div className="about-sticky-item-right">
                                 <div className="about-sticky-item-right-imagebox">
-                                    <Image src="/images/mockup7.webp" className="about-sticky-item-right-image" alt="Custom software development by QuroixLabs"  width={1920} height={1080} />
+                                    <Image src="/images/mockup7.webp" className="about-sticky-item-right-image" alt="Custom software development by QuroixLabs"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
                                 </div>
                             </div>
                         </div>
@@ -214,7 +214,7 @@ export const AboutPageSection = () => {
                             </div>
                             <div className="about-sticky-item-right">
                                 <div className="about-sticky-item-right-imagebox">
-                                    <Image src="/images/mockup11.webp" className="about-sticky-item-right-image" alt="Integrated digital systems by QuroixLabs"  width={1920} height={1080} />
+                                    <Image src="/images/mockup11.webp" className="about-sticky-item-right-image" alt="Integrated digital systems by QuroixLabs"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
                                 </div>
                             </div>
                         </div>
