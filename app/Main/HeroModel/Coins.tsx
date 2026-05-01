@@ -124,7 +124,7 @@ function CeremonialCoin() {
             />
           </mesh>
           <Text
-            font="/fonts/SF PRO DISPLAY 700.ttf"
+            // font removed
             fontSize={0.22}
             letterSpacing={0.08}
             anchorX="center"
@@ -154,7 +154,7 @@ function CeremonialCoin() {
             />
           </mesh>
           <Text
-            font="/fonts/SF PRO DISPLAY 700.ttf"
+            // font removed
             fontSize={0.22}
             letterSpacing={0.08}
             anchorX="center"

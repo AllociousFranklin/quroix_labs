@@ -160,7 +160,9 @@ export const SectionHero = () => {
                   <Float rotationIntensity={0.5} floatIntensity={2} speed={2}>
                     <Item3Dynamic />
                   </Float>
-                  <Environment preset="sunset" />
+                  <ambientLight intensity={1} />
+                  <directionalLight position={[10, 10, 5]} intensity={2} />
+                  <directionalLight position={[-10, -10, -5]} intensity={1} />
                   <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} enableRotate={true} enablePan={false} />
                 </Suspense>
               </Canvas>

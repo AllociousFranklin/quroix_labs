@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -11,6 +11,12 @@ export const SectionShowreel = () => {
 
   const videoRef = useRef();
   const playButtonRef = useRef();
+
+  const [loadVideo, setLoadVideo] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoadVideo(true), 3500);
+    return () => clearTimeout(timer);
+  }, []);
 
 
   useEffect(() => {
@@ -64,7 +70,7 @@ export const SectionShowreel = () => {
             <div className="background">
               <div className="trail"></div>
             </div>
-            <video src="/videos/ese.mp4" className="showreel-content-video" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
+            {loadVideo && <video src="/videos/ese.mp4" className="showreel-content-video" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />}
           </div>
         </div>
 

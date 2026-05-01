@@ -31,6 +31,14 @@ const Main = () => {
     }
   }, [progress, lenis]);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setFadeOut(true);
+      lenis?.start();
+    }, 2500); // 2.5s failsafe
+    return () => clearTimeout(timer);
+  }, [lenis]);
+
   return (
     <ReactLenis root>
       <div className={`initial-loading-screen ${fadeOut ? "fade-out" : ""}`} >

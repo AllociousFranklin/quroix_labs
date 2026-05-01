@@ -196,7 +196,7 @@ export const SectionTechstack = () => {
                                     </button>
                                 </div>
                             </div>
-                            <video className="techstack-item-content-video" ref={videoRef} src="/videos/logos.mp4" alt="Duotone" muted playsInline={true} data-wf-ignore="true" loop />
+                            <video className="techstack-item-content-video" ref={videoRef} src="/videos/logos.mp4" alt="Duotone" muted playsInline={true} data-wf-ignore="true" preload="metadata" loop />
                         </div>
                         <div className="background-gradient-circle" />
                         <div className="techstack-item-no-padding-border" />

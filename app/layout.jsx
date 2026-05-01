@@ -2,33 +2,22 @@ import "./globals.css";
 import { Navigation } from "./Navigation";
 import Script from "next/script";
 import { SchemaMarkup } from "./components/SchemaMarkup";
-import localFont from 'next/font/local';
+import { Inter, Space_Grotesk } from 'next/font/google';
 
-const sfProText = localFont({
-  src: '../public/fonts/SFProText-Regular.ttf',
+const sfProText = Inter({
+  subsets: ['latin'],
   variable: '--font-sf-text',
   display: 'swap',
 });
 
-const sfProDisplay = localFont({
-  src: [
-    {
-      path: '../public/fonts/SF PRO DISPLAY 600.ttf',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/SF PRO DISPLAY 700.ttf',
-      weight: '700',
-      style: 'normal',
-    }
-  ],
+const sfProDisplay = Space_Grotesk({
+  subsets: ['latin'],
   variable: '--font-sf-display',
   display: 'swap',
 });
 
-const causten = localFont({
-  src: '../public/fonts/Causten-Regular.otf',
+const causten = Inter({
+  subsets: ['latin'],
   variable: '--font-causten',
   display: 'swap',
 });
@@ -129,7 +118,9 @@ export default function RootLayout({ children }) {
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
-              setTimeout(function () {
+              const loadGTM = function () {
+                if (window.gtmLoaded) return;
+                window.gtmLoaded = true;
                 var script = document.createElement('script');
                 script.async = true;
                 script.src = "https://www.googletagmanager.com/gtag/js?id=G-PKD0WX02BV";
@@ -141,7 +132,10 @@ export default function RootLayout({ children }) {
                   gtag('js', new Date());
                   gtag('config', 'G-PKD0WX02BV');
                 };
-              }, 3500);
+                ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(e => window.removeEventListener(e, loadGTM));
+              };
+              ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(e => window.addEventListener(e, loadGTM, { once: true, passive: true }));
+              setTimeout(loadGTM, 7000);
             `,
           }}
         />
