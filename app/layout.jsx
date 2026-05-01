@@ -100,11 +100,10 @@ export default function RootLayout({ children }) {
         <SchemaMarkup />
       </head>
       <body className={`${sfProText.variable} ${sfProDisplay.variable} ${causten.variable}`}>
-        {/* Global Loading Screen - Pure CSS spinner, no heavy assets */}
+        {/* Global Loading Screen */}
         <div id="global-loader" style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundColor: '#010101', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'opacity 0.5s ease-in-out', pointerEvents: 'none' }}>
-          <div style={{ width: '40px', height: '40px', border: '3px solid rgba(255,255,255,0.1)', borderTopColor: '#ffffff', borderRadius: '50%', animation: 'loader-spin 0.8s linear infinite' }} />
+          <img src="/images/loading.gif" style={{ width: 'auto', height: 'auto', maxWidth: '100%', maxHeight: '100%' }} alt="Loading" />
         </div>
-        <style dangerouslySetInnerHTML={{ __html: `@keyframes loader-spin { to { transform: rotate(360deg); } }` }} />
         {/* Auto-dismiss loader after 3s — runs before React hydration */}
         <script dangerouslySetInnerHTML={{ __html: `
           setTimeout(function(){
