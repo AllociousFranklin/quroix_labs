@@ -11,11 +11,7 @@ gsap.registerPlugin(SplitText, ScrollTrigger, CustomEase);
 const customEase = CustomEase.create("customEase", ".4,0,.1,1");
 
 export const SectionServices = () => {
-  const [loadVideo, setLoadVideo] = useState(false);
-  useEffect(() => {
-    const timer = setTimeout(() => setLoadVideo(true), 3500);
-    return () => clearTimeout(timer);
-  }, []);
+  // video loaded immediately
 
   const subheadlineBoxRef = useRef()
   const titleRef = useRef()
@@ -74,11 +70,9 @@ export const SectionServices = () => {
           <div className="services-content-container-right" />
           <div className="services-content-container-bottom" />
           <div className="services-content-container-top" />
-          {loadVideo && (
-            <video src="/videos/serviceshighquality.mp4" className="services-content-video" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="none" loop aria-hidden="true" >
-              <track kind="captions" srcLang="en" label="English" />
-            </video>
-          )}
+          <video src="/videos/serviceshighquality.mp4" className="services-content-video" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="none" loop aria-hidden="true" >
+            <track kind="captions" srcLang="en" label="English" />
+          </video>
         </div>
       </div>
     </section>

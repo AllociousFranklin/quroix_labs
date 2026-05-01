@@ -106,13 +106,7 @@ export const SectionHero = () => {
     setShowCursor(false);
   };
 
-  const [load3D, setLoad3D] = useState(false);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoad3D(true);
-    }, 2000); // 2 second delay to ensure FCP/LCP complete first
-    return () => clearTimeout(timer);
-  }, []);
+  // 3D loads immediately so useProgress can track it for the loading screen
 
   return (
     <section className="hero">
@@ -150,7 +144,6 @@ export const SectionHero = () => {
             </div>
           </div>
           <div className="hero-content-right" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
-            {load3D && (
               <Canvas dpr={[1, 1.5]} gl={{ powerPreference: "high-performance", antialias: true }} style={{ pointerEvents: 'auto', width: "100%", height: "100%", position: "absolute", top: 0, left: 0, zIndex: 1 }} camera={{ position: [2, 0, 10], fov: 35 }}>
                 <Suspense fallback >
                   <Float rotationIntensity={0.5} floatIntensity={2} speed={2}>
@@ -162,7 +155,6 @@ export const SectionHero = () => {
                   <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} enableRotate={true} enablePan={false} />
                 </Suspense>
               </Canvas>
-            )}
           </div>
         </div>
         <div className="hero-content-bottom" ref={logosWrapperRef} >
