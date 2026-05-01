@@ -41,6 +41,7 @@ export const PrevButton = (props) => {
     <button
       className="carousel-button"
       type="button"
+      aria-label="Previous slide"
       {...restProps}
     >
       <svg className="carousel-button-icon" viewBox="0 0 532 532">
@@ -61,6 +62,7 @@ export const NextButton = (props) => {
     <button
       className="carousel-button"
       type="button"
+      aria-label="Next slide"
       {...restProps}
     >
       <svg className="carousel-button-icon" viewBox="0 0 532 532">

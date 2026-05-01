@@ -264,6 +264,7 @@ export const SectionTechstack = () => {
                                                 <DotButton
                                                     key={index}
                                                     onClick={() => onDotButtonClick(index)}
+                                                    aria-label={`Go to techstack slide ${index + 1}`}
                                                     className={'embla__dot-small'.concat(
                                                         index === selectedIndex ? ' embla__dot--selected-small' : ''
                                                     )}

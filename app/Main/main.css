@@ -539,6 +539,8 @@
     align-items: center;
     justify-content: center;
     border-radius: 999px;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .embla__dot:after {
@@ -912,6 +914,8 @@
     align-items: center;
     justify-content: center;
     border-radius: 999px;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .embla__dot-small:after {
