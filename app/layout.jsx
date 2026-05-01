@@ -101,10 +101,7 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        {/* GTM & GA Preconnects */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
-        <link rel="preconnect" href="https://firebaseinstallations.googleapis.com" />
+        {/* Removed deferred preconnects to prevent Lighthouse unused connection warnings */}
 
         <SchemaMarkup />
       </head>
@@ -135,7 +132,6 @@ export default function RootLayout({ children }) {
                 ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(e => window.removeEventListener(e, loadGTM));
               };
               ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(e => window.addEventListener(e, loadGTM, { once: true, passive: true }));
-              setTimeout(loadGTM, 7000);
             `,
           }}
         />

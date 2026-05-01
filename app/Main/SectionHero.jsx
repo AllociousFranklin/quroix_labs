@@ -30,20 +30,16 @@ export const SectionHero = () => {
   // GSAP ANIMATIONS
   useEffect(() => {
 
-    gsap.set(titleRef.current, { opacity: 1 })
+    gsap.fromTo(titleRef.current, { 'will-change': 'opacity, transform', filter: 'blur(8px)', opacity: 0, yPercent: 50 }, { delay: 0.4, opacity: 1, filter: 'blur(0px)', yPercent: 0, duration: 0.75, ease: "power1" });
 
-    const titleSplit = new SplitText(titleRef.current, { type: "chars" });
-    gsap.fromTo(titleSplit.chars, { 'will-change': 'opacity, transform', filter: 'blur(8px)', opacity: 0, yPercent: 50 }, { delay: 0.4, opacity: 1, filter: 'blur(0px)', yPercent: 0, stagger: 0.02, duration: 0.75, ease: "power1" });
-
-    // description text animation
-    gsap.to(descriptionRef.current, { opacity: 1, filter: 'blur(0px)', duration: 1, delay: 0.9 })
+    gsap.fromTo(descriptionRef.current, { opacity: 0, filter: 'blur(8px)' }, { opacity: 1, filter: 'blur(0px)', duration: 1, delay: 0.9 })
 
     // buttons animation
-    gsap.to(buttonRef1.current, { delay: 1.1, opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: "power1" })
-    gsap.to(buttonRef2.current, { delay: 1.4, opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: "power1" })
+    gsap.fromTo(buttonRef1.current, { opacity: 0, filter: 'blur(8px)' }, { delay: 1.1, opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: "power1" })
+    gsap.fromTo(buttonRef2.current, { opacity: 0, filter: 'blur(8px)' }, { delay: 1.4, opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: "power1" })
 
     // logos wrapper animation
-    gsap.to(logosWrapperRef.current, { opacity: 1, filter: 'blur(0px)', duration: 1, delay: 0.9 })
+    gsap.fromTo(logosWrapperRef.current, { opacity: 0, filter: 'blur(8px)' }, { opacity: 1, filter: 'blur(0px)', duration: 1, delay: 0.9 })
 
   }, [])
 
@@ -130,10 +126,10 @@ export const SectionHero = () => {
                 <div className="hero-titlebox-gradient" />
                 <h1 className="headline hero-headline white" ref={titleRef}>Engineering Intelligence <br /> & AI Automation For <br /> Global Enterprise</h1>
               </div>
-              <p className="big-description grey opacity-blur" ref={descriptionRef} >Architecting autonomous AI agents, intelligent workflows, and custom software designed to reduce friction and increase operational clarity.</p>
+              <p className="big-description grey" ref={descriptionRef} >Architecting autonomous AI agents, intelligent workflows, and custom software designed to reduce friction and increase operational clarity.</p>
             </div>
             <div className="hero-buttons-row">
-              <Link href="/contact" className="button button-transparent-border link opacity-blur" ref={buttonRef1} >
+              <Link href="/contact" className="button button-transparent-border link" ref={buttonRef1} >
                 <div className="button-content">
                   <span className="small-description">Get In Touch</span>
                   <span className="small-description">Get In Touch</span>
@@ -142,7 +138,7 @@ export const SectionHero = () => {
                   <ArrowUpRight className="button-icon" />
                 </div>
               </Link>
-              <Link href="/works" className="button button-transparent-border link opacity-blur" ref={buttonRef2} >
+              <Link href="/works" className="button button-transparent-border link" ref={buttonRef2} >
                 <div className="button-content">
                   <span className="small-description">View Work</span>
                   <span className="small-description">View Work</span>
@@ -169,7 +165,7 @@ export const SectionHero = () => {
             )}
           </div>
         </div>
-        <div className="hero-content-bottom opacity-blur" ref={logosWrapperRef} >
+        <div className="hero-content-bottom" ref={logosWrapperRef} >
           <Marquee className="hero-content-bottom-row" gradient={true} gradientColor="#010101" gradientWidth={250}>
             {[
               { src: "/logos/adobe.webp", alt: "Adobe" },
