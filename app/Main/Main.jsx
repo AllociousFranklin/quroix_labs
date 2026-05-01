@@ -26,26 +26,33 @@ const Main = () => {
 
   useLayoutEffect(() => {
     if (progress === 100) {
-      setFadeOut(true);
+      const loader = document.getElementById('global-loader');
+      if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => {
+          loader.style.display = 'none';
+        }, 250);
+      }
       lenis?.start();
     }
   }, [progress, lenis]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setFadeOut(true);
+      const loader = document.getElementById('global-loader');
+      if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => {
+          loader.style.display = 'none';
+        }, 250);
+      }
       lenis?.start();
-    }, 2500); // 2.5s failsafe
+    }, 3500); // Failsafe
     return () => clearTimeout(timer);
   }, [lenis]);
 
   return (
     <ReactLenis root>
-      <div className={`initial-loading-screen ${fadeOut ? "fade-out" : ""}`} >
-        <div className="loading-image-box" >
-          <Image src="/images/loading.gif" priority={true} unoptimized={true} className="loading-image" alt="Quroix Labs loading animation"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
-        </div>
-      </div>
       <SectionHero />
 
       <div className="border-padding">

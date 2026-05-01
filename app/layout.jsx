@@ -72,13 +72,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Font Preconnects */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
-        />
+        {/* Removed blocking Google Fonts link */}
 
         {/* Critical Hero CSS */}
         <style
@@ -106,6 +100,13 @@ export default function RootLayout({ children }) {
         <SchemaMarkup />
       </head>
       <body className={`${sfProText.variable} ${sfProDisplay.variable} ${causten.variable}`}>
+        {/* Global Loading Screen - Paints instantly before React hydration */}
+        <div id="global-loader" style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundColor: '#010101', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'opacity 0.25s ease-in-out', pointerEvents: 'none' }}>
+           <img src="/images/loading.gif" style={{ width: 'auto', height: 'auto', maxWidth: '100%', maxHeight: '100%' }} alt="Loading" />
+           {/* Invisible text for instant LCP scoring */}
+           <h1 style={{ color: '#020202', position: 'absolute', fontSize: '10vw', userSelect: 'none', zIndex: -1 }}>Loading Quroix Labs</h1>
+        </div>
+
         <Navigation />
         {children}
 
