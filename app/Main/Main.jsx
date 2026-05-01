@@ -24,30 +24,32 @@ const Main = () => {
   const [fadeOut, setFadeOut] = useState(false);
   const lenis = useLenis();
 
+  const dismissLoader = () => {
+    const loader = document.getElementById('global-loader');
+    if (loader && loader.style.display !== 'none') {
+      loader.style.opacity = '0';
+      setTimeout(() => { loader.style.display = 'none'; }, 500);
+    }
+    window.__loaderDismissed = true;
+  };
+
   useLayoutEffect(() => {
     if (progress === 100) {
-      const loader = document.getElementById('global-loader');
-      if (loader) {
-        loader.style.opacity = '0';
-        setTimeout(() => {
-          loader.style.display = 'none';
-        }, 250);
-      }
+      dismissLoader();
       lenis?.start();
     }
   }, [progress, lenis]);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      const loader = document.getElementById('global-loader');
-      if (loader) {
-        loader.style.opacity = '0';
-        setTimeout(() => {
-          loader.style.display = 'none';
-        }, 250);
-      }
+    // If inline script already dismissed it, just start lenis
+    if (window.__loaderDismissed) {
       lenis?.start();
-    }, 3500); // Failsafe
+      return;
+    }
+    const timer = setTimeout(() => {
+      dismissLoader();
+      lenis?.start();
+    }, 3500);
     return () => clearTimeout(timer);
   }, [lenis]);
 
