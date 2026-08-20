@@ -21,7 +21,7 @@ export const SchemaMarkup = () => {
       "https://x.com/quroixlabs",
       "https://instagram.com/quroixlabs"
     ],
-    "description": "Quroix Labs is an elite AI automation agency specializing in engineering intelligence, autonomous AI agents, and intelligent workflow automation for global enterprises.",
+    "description": "Quroix Labs is an elite AI automation agency delivering engineering technology that moves business forward, autonomous AI agents, and intelligent workflow automation.",
     "foundingDate": "2024",
     "founders": [
       {
@@ -63,7 +63,7 @@ export const SchemaMarkup = () => {
     "name": "Quroix Labs",
     "url": "https://quroixlabs.com",
     "publisher": { "@id": "https://quroixlabs.com/#organization" },
-    "description": "Engineering Intelligence & AI Automation for Enterprise",
+    "description": "Engineering Technology That Moves Business Forward",
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://quroixlabs.com/works?q={search_term_string}",

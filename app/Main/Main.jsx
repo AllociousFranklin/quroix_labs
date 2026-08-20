@@ -41,6 +41,11 @@ const Main = () => {
   }, [progress, lenis]);
 
   useEffect(() => {
+    // Stop scrolling on mount if loader is active
+    if (lenis && !window.__loaderDismissed) {
+      lenis.stop();
+    }
+
     // If inline script already dismissed it, just start lenis
     if (window.__loaderDismissed) {
       lenis?.start();

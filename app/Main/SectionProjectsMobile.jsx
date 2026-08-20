@@ -8,10 +8,21 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import Marquee from "react-fast-marquee";
 import { Hand, Star } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
-import { PrevButton, NextButton, usePrevNextButtons } from "./Carousel/EmblaCarouselArrowButtons"
 import { DotButton, useDotButton } from './Carousel/EmblaCarouselDotButton'
 import Fade from 'embla-carousel-fade'
 import Image from "next/image";
+import Link from 'next/link';
+
+const PROJECTS = [
+  { src: "/mockups/trielementdesign.webp", alt: "MEP Design Consultants custom website development by Quroix Labs", href: "https://trielementdesign.com/", external: true },
+  { src: "/mockups/trielement.webp", alt: "BIM Engineering Studio custom website design by Quroix Labs", href: "https://www.studiotrielement.com/", external: true },
+  { src: "/mockups/heave.webp", alt: "Heave - Apex Gym Website by Quroix Labs", href: "https://flamegym.vercel.app/", external: true },
+  { src: "/mockups/essentia.webp", alt: "Essentia - Artist Portfolio Website by Quroix Labs", href: "https://tanishartist.in/", external: true },
+  { src: "/mockups/kinimatic.webp", alt: "Kinimatic - SMMA Agency Website by Quroix Labs", href: "https://wework4u.services/", external: true },
+  { src: "/mockups/peak.webp", alt: "Peak - Wholesale Product Catalogue by Quroix Labs", href: "https://sribalajienterprises-xi.vercel.app/", external: true },
+  { src: "/mockups/vitalenta.webp", alt: "Vitalenta - Aura Luxury Salon Website by Quroix Labs", href: "https://studio-vogue.vercel.app/", external: true },
+  { src: "/mockups/rev.webp", alt: "Rev - Brim Clocks E-commerce by Quroix Labs", href: "https://brimclocks.com/", external: true }
+];
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -48,12 +59,12 @@ export const SectionProjectsMobile = () => {
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
 
-  const {
-    prevBtnDisabled,
-    nextBtnDisabled,
-    onPrevButtonClick,
-    onNextButtonClick
-  } = usePrevNextButtons(emblaApi)
+
+  const handleLinkClick = (e) => {
+    if (emblaApi && !emblaApi.clickAllowed()) {
+      e.preventDefault();
+    }
+  };
 
 
   return (
@@ -69,36 +80,24 @@ export const SectionProjectsMobile = () => {
         </div>
         <p className="description grey" ref={descriptionRef} >Transforming startups, SMEs, and industry <br className="hide-on-desktop" /> giants into digital leaders.</p>
       </div>
-      <div className="projects-content" ref={contentRef} onClick={onNextButtonClick} >
+      <div className="projects-content" ref={contentRef}>
         <div className="projects-gradient-top" />
         <div className="projects-gradient-bottom" />
         <div className="project-content-wrapper" ref={imageContainerRef} >
           <div className="projects-carousel" ref={emblaRef} >
             <div className="projects-carousel-row">
-              <div className="projects-carousel-item">
-                <Image src="/mockups/trielementdesign.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="MEP Design Consultants custom website development by Quroix Labs" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
-              </div>
-              <div className="projects-carousel-item">
-                <Image src="/mockups/trielement.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="BIM Engineering Studio custom website design by Quroix Labs" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
-              </div>
-              <div className="projects-carousel-item">
-                <Image src="/mockups/heave.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="Heave - Apex Gym Website by Quroix Labs" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
-              </div>
-              <div className="projects-carousel-item">
-                <Image src="/mockups/essentia.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="Essentia - Artist Portfolio Website by Quroix Labs" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
-              </div>
-              <div className="projects-carousel-item">
-                <Image src="/mockups/kinimatic.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="Kinimatic - SMMA Agency Website by Quroix Labs" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
-              </div>
-              <div className="projects-carousel-item">
-                <Image src="/mockups/peak.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="Peak - Wholesale Product Catalogue by Quroix Labs" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
-              </div>
-              <div className="projects-carousel-item">
-                <Image src="/mockups/vitalenta.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="Vitalenta - Aura Luxury Salon Website by Quroix Labs" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
-              </div>
-              <div className="projects-carousel-item">
-                <Image src="/mockups/rev.webp" width={1920} height={1080} className="projects-carousel-item-image" alt="Rev - Brim Clocks E-commerce by Quroix Labs" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
-              </div>
+              {PROJECTS.map((project, i) => (
+                <Link
+                  key={i}
+                  href={project.href}
+                  onClick={handleLinkClick}
+                  {...(project.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  className="projects-carousel-item"
+                  style={{ textDecoration: 'none' }}
+                >
+                  <Image src={project.src} width={1920} height={1080} className="projects-carousel-item-image" alt={project.alt} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
+                </Link>
+              ))}
             </div>
           </div>
         </div>

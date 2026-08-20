@@ -25,7 +25,7 @@ const causten = Inter({
 export const metadata = {
   metadataBase: new URL('https://quroixlabs.com'),
   title: {
-    default: "Quroix Labs | Engineering Intelligence & AI Automation for Enterprise",
+    default: "Quroix Labs | Engineering Technology That Moves Business Forward",
     template: "%s | Quroix Labs",
   },
   description: "Quroix Labs is an elite AI automation agency architecting autonomous AI agents, intelligent workflows, and custom software. Utilizing the proprietary FlowPilot engine and AgentCore Framework for enterprise-grade automation.",
@@ -34,9 +34,9 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Quroix Labs | Engineering Intelligence & AI Automation",
+    title: "Quroix Labs | Engineering Technology That Moves Business Forward",
     description: "Architecting autonomous AI agents and intelligent workflows for the global enterprise. 50+ projects delivered, 10,000+ hours of manual labor replaced.",
-    images: [{ url: "/images/quroixlabs.png", width: 1200, height: 630, alt: "Quroix Labs - Engineering Intelligence & AI Automation Agency" }],
+    images: [{ url: "/images/quroixlabs.png", width: 1200, height: 630, alt: "Quroix Labs - Engineering Technology That Moves Business Forward" }],
     url: 'https://quroixlabs.com',
     siteName: 'Quroix Labs',
     locale: 'en_US',
@@ -46,7 +46,7 @@ export const metadata = {
     card: 'summary_large_image',
     site: '@quroixlabs',
     creator: '@quroixlabs',
-    title: "Quroix Labs | Engineering Intelligence & AI Automation",
+    title: "Quroix Labs | Engineering Technology That Moves Business Forward",
     description: "Architecting autonomous AI agents and intelligent workflows for the global enterprise.",
     images: ["/images/quroixlabs.png"],
   },
@@ -101,7 +101,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${sfProText.variable} ${sfProDisplay.variable} ${causten.variable}`}>
         {/* Global Loading Screen */}
-        <div id="global-loader" style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundColor: '#010101', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'opacity 0.5s ease-in-out', pointerEvents: 'none' }}>
+        <div id="global-loader" style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundColor: '#010101', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'opacity 0.5s ease-in-out', pointerEvents: 'auto' }}>
           <img src="/images/loading.gif" style={{ width: 'auto', height: 'auto', maxWidth: '100%', maxHeight: '100%' }} alt="Loading" />
         </div>
         {/* Auto-dismiss loader after 3s — runs before React hydration */}

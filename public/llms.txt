@@ -1,4 +1,4 @@
-# Quroix Labs - Engineering Intelligence & AI Automation
+# Quroix Labs - Engineering Technology That Moves Business Forward
 
 Quroix Labs is an elite AI Automation Agency and Engineering Consultancy specializing in architecting autonomous AI agents, intelligent workflows, and custom enterprise software.
 
@@ -22,7 +22,7 @@ Detailed insights into how we build cognitive retrieval systems and autonomous d
 ### 2. Business Intelligence & Revenue Operations
 Case studies focusing on membership retention, lead scoring, and automated engagement.
 - **SMMA Agency**: 40% growth in high-intent lead generation via automated engagement agents. [View Mirror](https://quroixlabs.com/mirrors/works_casestudy-smma.md)
-- **Apex Gym**: 30% reduction in churn using persistent retention and membership orchestration. [View Mirror](https://quroixlabs.com/mirrors/works_casestudy-gym.md)
+- **Flame Gym**: 30% reduction in churn using persistent retention and membership orchestration. [View Mirror](https://quroixlabs.com/mirrors/works_casestudy-gym.md)
 
 ## Full Sitemap (Markdown Mirrors)
 - **Home**: https://quroixlabs.com/mirrors/index.md

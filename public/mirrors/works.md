@@ -9,7 +9,7 @@
 
 ## Selected Client Projects
 
-Engineering intelligence through autonomous agents and intelligent workflows — delivering high-ROI automation for the global enterprise.
+Engineering technology that moves business forward through autonomous agents and intelligent workflows — delivering high-ROI automation for the global enterprise.
 
 ### MEP DESIGN CONSULTANTS
 
@@ -29,7 +29,7 @@ Conversion Automation
 
 Growth Intelligence
 
-### APEX GYM
+### FLAME GYM
 
 Membership Intelligence
 
@@ -103,7 +103,7 @@ Growth Engine: Optimizing onboarding and conversion for a high-volume creative a
 
 ### Full Brand Hub
 
-#### Apex Gym
+#### Flame Gym
 
 Vibrant Performance: A high-energy digital experience for a modern fitness community.
 

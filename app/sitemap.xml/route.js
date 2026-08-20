@@ -12,14 +12,14 @@ export async function GET() {
       images: [
         {
           loc: `${baseUrl}/images/quroixlabs.png`,
-          title: 'Quroix Labs - Engineering Intelligence & AI Automation',
+          title: 'Quroix Labs - Engineering Technology That Moves Business Forward',
           caption: 'Architecting autonomous AI agents and intelligent workflows for the global enterprise.'
         }
       ],
       videos: [
         {
           thumbnail_loc: `${baseUrl}/images/quroixlabs.png`,
-          title: 'Quroix Labs - Engineering Intelligence Showreel',
+          title: 'Quroix Labs - Engineering Technology Showreel',
           description: 'Showcasing autonomous AI agents and enterprise-grade automation solutions powered by FlowPilot and AgentCore.',
           content_loc: `${baseUrl}/videos/hero.mp4`,
           player_loc: `${baseUrl}/`,
@@ -100,7 +100,7 @@ export async function GET() {
       images: [
         {
           loc: `${baseUrl}/images/test20.webp`,
-          title: 'Apex Gym Case Study',
+          title: 'Flame Gym Case Study',
           caption: '30% reduction in membership churn via persistent retention agents.'
         }
       ]

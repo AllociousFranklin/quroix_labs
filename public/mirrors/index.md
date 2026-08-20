@@ -31,7 +31,7 @@ The page you are looking for doesn&apos;t exist or has been moved. Let us help y
 
 ### QuroixLabs
 
-Engineering intelligence for the real world. Websites, automations, and software built to scale with your business.
+Engineering technology that moves business forward. Websites, automations, and software built to scale with your business.
 
 #### Company
 
@@ -41,7 +41,7 @@ Engineering intelligence for the real world. Websites, automations, and software
 
 © 2026 QuroixLabs All Rights Reserved
 
-## Engineering Intelligence & AI Automation For Global Enterprise
+## Engineering Technology That Moves Business Forward
 
 Architecting autonomous AI agents, intelligent workflows, and custom software designed to reduce friction and increase operational clarity.
 

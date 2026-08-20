@@ -39,7 +39,7 @@ export default function Works() {
                 { "@type": "ListItem", "position": 1, "name": "MEP Design Consultants", "url": "https://quroixlabs.com/works/casestudy-mep" },
                 { "@type": "ListItem", "position": 2, "name": "BIM Engineering Studio", "url": "https://quroixlabs.com/works/casestudy-bim" },
                 { "@type": "ListItem", "position": 3, "name": "SMMA Agency", "url": "https://quroixlabs.com/works/casestudy-smma" },
-                { "@type": "ListItem", "position": 4, "name": "Apex Gym", "url": "https://quroixlabs.com/works/casestudy-gym" }
+                { "@type": "ListItem", "position": 4, "name": "Flame Gym", "url": "https://quroixlabs.com/works/casestudy-gym" }
               ]
             }
           })

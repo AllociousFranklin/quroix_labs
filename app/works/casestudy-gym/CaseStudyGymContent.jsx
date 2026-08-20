@@ -78,18 +78,18 @@ const CaseStudyGymContent = () => {
             <ArrowLeft className="casestudy-navigation-icon" />
             <p className="small-description white">Back to Works</p>
           </div>
-          <h1 className="casestudy-title white" ref={titleRef}>Apex Gym</h1>
+          <h1 className="casestudy-title white" ref={titleRef}>Flame Gym</h1>
         </div>
 
         <div className="casestudy-hero">
           <div className="casestudy-hero-image-wrapper">
-            <Image src="/mockups/heave.webp" ref={imageRef} className="casestudy-hero-image" alt="Apex Gym case study visualization"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
+            <Image src="/mockups/heave.webp" ref={imageRef} className="casestudy-hero-image" alt="Flame Gym case study visualization"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
           </div>
         </div>
 
         <div className="casestudy-info">
           <div className="casestudy-info-left">
-            <h2 className="small-subheadline white" ref={descriptionRef}>We deployed an automated membership intelligence system for Apex Gym, utilizing persistent, always-on recurring agents to manage member engagement and retention. By orchestrating the AgentCore Framework with personalized productivity agents, we created a seamless, high-energy digital experience that proactively addresses member churn.</h2>
+            <h2 className="small-subheadline white" ref={descriptionRef}>We deployed an automated membership intelligence system for Flame Gym, utilizing persistent, always-on recurring agents to manage member engagement and retention. By orchestrating the AgentCore Framework with personalized productivity agents, we created a seamless, high-energy digital experience that proactively addresses member churn.</h2>
           </div>
           <div className="casestudy-info-right">
             <div className="casestudy-info-item" ref={casestudyCenterRef1}>
@@ -113,13 +113,13 @@ const CaseStudyGymContent = () => {
 
         <div className="casestudy-gallery">
           <div className="casestudy-gallery-full" ref={casestudyImageRef1}>
-            <Image src="/mockups/heave.webp" className="casestudy-gallery-image" alt="Apex Gym full landing page"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
+            <Image src="/mockups/heave.webp" className="casestudy-gallery-image" alt="Flame Gym full landing page"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
           </div>
           <div className="casestudy-gallery-half" ref={casestudyImageRef2}>
-            <Image src="/images/test17.webp" className="casestudy-gallery-image" alt="Apex Gym vibrant mobile design"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
+            <Image src="/images/test17.webp" className="casestudy-gallery-image" alt="Flame Gym vibrant mobile design"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
           </div>
           <div className="casestudy-gallery-half" ref={casestudyImageRef3}>
-            <Image src="/images/test14.webp" className="casestudy-gallery-image" alt="Apex Gym membership operational flow"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
+            <Image src="/images/test14.webp" className="casestudy-gallery-image" alt="Flame Gym membership operational flow"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
           </div>
         </div>
       </article>

@@ -27,6 +27,28 @@ Chennai
 
 Tamil Nadu
 
+### Frequently Asked Questions
+
+#### Initiate Blueprint Session
+
+Select a weekday and preferred time for your 30-minute consultation.
+
+Timezone: India Standard Time (IST)
+
+Choose an available date to view time slots
+
+(IST)
+
+##### Meeting Scheduled!
+
+A calendar invitation and strategy questionnaire have been sent to .
+
+Date:
+
+Time: (IST)
+
+Host: Allocious Franklin R
+
 
 --- 
 Source: https://quroixlabs.com/contact

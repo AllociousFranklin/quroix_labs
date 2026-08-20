@@ -1,6 +1,6 @@
 export default function manifest() {
   return {
-    name: 'Quroix Labs | Engineering Intelligence & AI Automation',
+    name: 'Quroix Labs | Engineering Technology That Moves Business Forward',
     short_name: 'Quroix Labs',
     description: 'Architecting autonomous AI agents and intelligent workflows for the global enterprise.',
     start_url: '/',

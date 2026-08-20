@@ -1,4 +1,8 @@
-# /location/chennai
+--- title: AI Automation Agency in Chennai | Quroix Labs ---
+# AI Automation Agency in Chennai | Quroix Labs
+
+> Quroix Labs is Chennai
+
 
 ## Semantic Content Architecture
 

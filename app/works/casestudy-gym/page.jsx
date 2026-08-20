@@ -2,20 +2,20 @@ import "../works.css";
 import CaseStudyGymContent from "./CaseStudyGymContent";
 
 export const metadata = {
-  title: "Apex Gym — Membership Intelligence Case Study",
-  description: "How Quroix Labs deployed automated membership intelligence for Apex Gym, achieving 30% reduction in churn, 45% increase in engagement, and 20% growth in digital sign-ups.",
+  title: "Flame Gym — Membership Intelligence Case Study",
+  description: "How Quroix Labs deployed automated membership intelligence for Flame Gym, achieving 30% reduction in churn, 45% increase in engagement, and 20% growth in digital sign-ups.",
   alternates: {
     canonical: 'https://quroixlabs.com/works/casestudy-gym',
   },
   openGraph: {
-    title: 'Apex Gym — Membership Intelligence Case Study | Quroix Labs',
+    title: 'Flame Gym — Membership Intelligence Case Study | Quroix Labs',
     description: "Automated membership intelligence and retention workflows. 30% less churn, 45% more engagement.",
     url: 'https://quroixlabs.com/works/casestudy-gym',
-    images: [{ url: '/mockups/heave.webp', width: 1920, height: 1080, alt: 'Apex Gym Membership Intelligence by Quroix Labs' }],
+    images: [{ url: '/mockups/heave.webp', width: 1920, height: 1080, alt: 'Flame Gym Membership Intelligence by Quroix Labs' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Apex Gym — Membership Intelligence Case Study | Quroix Labs',
+    title: 'Flame Gym — Membership Intelligence Case Study | Quroix Labs',
     description: "30% reduction in membership churn through autonomous AI agent deployment.",
     images: ['/mockups/heave.webp'],
   },
@@ -26,7 +26,7 @@ export default function CaseStudyGymPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "Article",
-        "headline": "Apex Gym — Membership Intelligence Case Study",
+        "headline": "Flame Gym — Membership Intelligence Case Study",
         "description": "Automated membership intelligence and AI-driven retention workflows for modern fitness centers.",
         "url": "https://quroixlabs.com/works/casestudy-gym",
         "image": "https://quroixlabs.com/mockups/heave.webp",
@@ -39,7 +39,7 @@ export default function CaseStudyGymPage() {
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://quroixlabs.com" },
           { "@type": "ListItem", "position": 2, "name": "Works", "item": "https://quroixlabs.com/works" },
-          { "@type": "ListItem", "position": 3, "name": "Apex Gym", "item": "https://quroixlabs.com/works/casestudy-gym" }
+          { "@type": "ListItem", "position": 3, "name": "Flame Gym", "item": "https://quroixlabs.com/works/casestudy-gym" }
         ]
       }) }} />
       <CaseStudyGymContent />

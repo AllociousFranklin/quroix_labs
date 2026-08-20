@@ -1,7 +1,7 @@
---- title: Apex Gym — Membership Intelligence Case Study ---
-# Apex Gym — Membership Intelligence Case Study
+--- title: Flame Gym — Membership Intelligence Case Study ---
+# Flame Gym — Membership Intelligence Case Study
 
-> How Quroix Labs deployed automated membership intelligence for Apex Gym, achieving 30% reduction in churn, 45% increase in engagement, and 20% growth in digital sign-ups.
+> How Quroix Labs deployed automated membership intelligence for Flame Gym, achieving 30% reduction in churn, 45% increase in engagement, and 20% growth in digital sign-ups.
 
 
 ## Semantic Content Architecture
@@ -9,9 +9,9 @@
 
 Back to Works
 
-## Apex Gym
+## Flame Gym
 
-### We deployed an automated membership intelligence system for Apex Gym, utilizing persistent, always-on recurring agents to manage member engagement and retention. By orchestrating the AgentCore Framework with personalized productivity agents, we created a seamless, high-energy digital experience that proactively addresses member churn.
+### We deployed an automated membership intelligence system for Flame Gym, utilizing persistent, always-on recurring agents to manage member engagement and retention. By orchestrating the AgentCore Framework with personalized productivity agents, we created a seamless, high-energy digital experience that proactively addresses member churn.
 
 Industrial Context
 

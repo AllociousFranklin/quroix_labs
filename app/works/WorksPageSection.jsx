@@ -200,7 +200,7 @@ export const WorksPageSection = () => {
                   <div className="subpage-titlebox-gradient" />
                   <h1 className="headline white" ref={titleRef} >Selected Client Projects</h1>
                 </div>
-                <p className="description grey opacity-blur" ref={descriptionRef} >Engineering intelligence through autonomous agents and intelligent workflows — delivering high-ROI automation for the global enterprise.</p>
+                <p className="description grey opacity-blur" ref={descriptionRef} >Engineering technology that moves business forward through autonomous agents and intelligent workflows — delivering high-ROI automation for the global enterprise.</p>
               </div>
               <div className="works-content-top-divider" ref={lineRef} />
             </div>
@@ -210,7 +210,7 @@ export const WorksPageSection = () => {
                 <div className="works-carousel-row">
                   <div className="works-item-padding" />
                   <div className="works-item" >
-                    <Link href="/works/casestudy-mep" className="works-item-content" style={{ textDecoration: 'none' }} title="MEP Design Consultants Case Study" aria-label="View MEP Design Consultants case study">
+                    <Link href="https://trielementdesign.com/" target="_blank" rel="noopener noreferrer" className="works-item-content" style={{ textDecoration: 'none' }} title="MEP Design Consultants" aria-label="Visit MEP Design Consultants website">
                       <div className="works-item-content-textbox">
                         <h2 className="subheadline white" >MEP DESIGN CONSULTANTS</h2>
                         <div className="works-item-content-textbox-row">
@@ -227,7 +227,7 @@ export const WorksPageSection = () => {
                     <div className="works-item-border" />
                   </div>
                   <div className="works-item" >
-                    <Link href="/works/casestudy-bim" className="works-item-content" style={{ textDecoration: 'none' }} title="BIM Engineering Studio Case Study" aria-label="View BIM Engineering Studio case study">
+                    <Link href="https://www.studiotrielement.com/" target="_blank" rel="noopener noreferrer" className="works-item-content" style={{ textDecoration: 'none' }} title="BIM Engineering Studio" aria-label="Visit BIM Engineering Studio website">
                       <div className="works-item-content-textbox">
                         <h2 className="subheadline white" >BIM ENGINEERING STUDIO</h2>
                         <div className="works-item-content-textbox-row">
@@ -244,7 +244,7 @@ export const WorksPageSection = () => {
                     <div className="works-item-border" />
                   </div>
                   <div className="works-item" >
-                    <Link href="/works/casestudy-smma" className="works-item-content" style={{ textDecoration: 'none' }} title="SMMA Agency Case Study" aria-label="View SMMA Agency case study">
+                    <Link href="https://wework4u.services/" target="_blank" rel="noopener noreferrer" className="works-item-content" style={{ textDecoration: 'none' }} title="SMMA Agency" aria-label="Visit SMMA Agency website">
                       <div className="works-item-content-textbox">
                         <h2 className="subheadline white" >SMMA AGENCY</h2>
                         <div className="works-item-content-textbox-row">
@@ -261,9 +261,9 @@ export const WorksPageSection = () => {
                     <div className="works-item-border" />
                   </div>
                   <div className="works-item" >
-                    <Link href="/works/casestudy-gym" className="works-item-content" style={{ textDecoration: 'none' }} title="Apex Gym Case Study" aria-label="View Apex Gym case study">
+                    <Link href="https://flamegym.vercel.app/" target="_blank" rel="noopener noreferrer" className="works-item-content" style={{ textDecoration: 'none' }} title="Flame Gym" aria-label="Visit Flame Gym website">
                       <div className="works-item-content-textbox">
-                        <h2 className="subheadline white" >APEX GYM</h2>
+                        <h2 className="subheadline white" >FLAME GYM</h2>
                         <div className="works-item-content-textbox-row">
                           <div className="works-item-content-textbox-button">
                             <p className="small-description white" >Membership Intelligence</p>
@@ -273,7 +273,7 @@ export const WorksPageSection = () => {
                           </div>
                         </div>
                       </div>
-                      <Image src="/mockups/heave.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="Apex Gym custom membership portal and automated retention workflows by QuroixLabs." sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                      <Image src="/mockups/heave.webp" className="works-item-content-image" width={750} height={750} loading="lazy" alt="Flame Gym custom membership portal and automated retention workflows by QuroixLabs." sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                     </Link>
                     <div className="works-item-border" />
                   </div>
@@ -454,7 +454,7 @@ export const WorksPageSection = () => {
                 <div className="casestudies-carousel-row">
                   <div className="casestudies-item-padding" />
                   <div className="casestudies-item" >
-                    <Link href="/works/casestudy-mep" className="casestudies-item-content" style={{ textDecoration: 'none' }}>
+                    <Link href="https://trielementdesign.com/" target="_blank" rel="noopener noreferrer" className="casestudies-item-content" style={{ textDecoration: 'none' }}>
                       <div className="casestudies-item-content-textbox">
                         <div className="subheadline-box" >
                           <Zap className="subheadline-box-icon" />
@@ -476,7 +476,7 @@ export const WorksPageSection = () => {
                     </Link>
                   </div>
                   <div className="casestudies-item" >
-                    <Link href="/works/casestudy-bim" className="casestudies-item-content" style={{ textDecoration: 'none' }}>
+                    <Link href="https://www.studiotrielement.com/" target="_blank" rel="noopener noreferrer" className="casestudies-item-content" style={{ textDecoration: 'none' }}>
                       <div className="casestudies-item-content-textbox">
                         <div className="subheadline-box" >
                           <Zap className="subheadline-box-icon" />
@@ -498,7 +498,7 @@ export const WorksPageSection = () => {
                     </Link>
                   </div>
                   <div className="casestudies-item" >
-                    <Link href="/works/casestudy-smma" className="casestudies-item-content" style={{ textDecoration: 'none' }}>
+                    <Link href="https://wework4u.services/" target="_blank" rel="noopener noreferrer" className="casestudies-item-content" style={{ textDecoration: 'none' }}>
                       <div className="casestudies-item-content-textbox">
                         <div className="subheadline-box" >
                           <Zap className="subheadline-box-icon" />
@@ -520,13 +520,13 @@ export const WorksPageSection = () => {
                     </Link>
                   </div>
                   <div className="casestudies-item" >
-                    <Link href="/works/casestudy-gym" className="casestudies-item-content" style={{ textDecoration: 'none' }}>
+                    <Link href="https://flamegym.vercel.app/" target="_blank" rel="noopener noreferrer" className="casestudies-item-content" style={{ textDecoration: 'none' }}>
                       <div className="casestudies-item-content-textbox">
                         <div className="subheadline-box" >
                           <Zap className="subheadline-box-icon" />
                           <h2 className="small-description grey" >Full Brand Hub</h2>
                         </div>
-                        <h3 className="small-subheadline white" >Apex Gym</h3>
+                        <h3 className="small-subheadline white" >Flame Gym</h3>
                         <p className="description grey" >Vibrant Performance: A high-energy digital experience for a modern fitness community.</p>
                       </div>
                       <div className="casestudies-item-content-imagebox" >
@@ -537,7 +537,7 @@ export const WorksPageSection = () => {
                           </div>
                           <ArrowUpRight className="casestudies-item-content-imagebox-button-icon" />
                         </div>
-                        <Image src="/mockups/heave.webp" className="casestudies-item-content-image" alt="Apex Gym Case Study"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
+                        <Image src="/mockups/heave.webp" className="casestudies-item-content-image" alt="Flame Gym Case Study"  width={1920} height={1080} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw" />
                       </div>
                     </Link>
                   </div>

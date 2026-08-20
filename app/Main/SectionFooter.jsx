@@ -44,7 +44,7 @@ export const SectionFooter = () => {
         <div className="footer-content-left" ref={topRef1} >
           <Image src="/images/quroix_logo.svg" className="footer-logo" alt="QuroixLabs Logo" width={80} height={80} priority />
           <h2 className="subheadline white" >QuroixLabs</h2>
-          <p className="description grey"  >Engineering intelligence for the real world. Websites, automations, and software built to scale with your business.</p>
+          <p className="description grey"  >Engineering technology that moves business forward. Websites, automations, and software built to scale with your business.</p>
         </div>
         <div className="footer-content-right" ref={topRef2} >
           <div className="footer-content-right-column">
