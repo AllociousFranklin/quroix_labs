@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import { ReactLenis } from 'lenis/react'
-import "../../main.css";
+import "../../Main/main.css";
 import "../../contact/contact.css";
 import { SectionFooter } from "../../Main/SectionFooter";
 import gsap from "gsap";
