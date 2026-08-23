@@ -1,6 +1,7 @@
 import Image from "next/image";
 /* eslint-disable react/jsx-key */
 import React, { Suspense, useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import Link from "next/link";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -134,8 +135,8 @@ export const SectionTestimonials = () => {
                                         <p className="description white" >Ready to transform your operations?</p>
                                     </div>
                                     <p className="small-subheadline white" >Let&apos;s discuss your project</p>
-                                    <div className="contact-button-wrapper">
-                                        <button className="contact-button-white" >
+                                    <Link href="/contact" className="contact-button-wrapper" style={{ textDecoration: 'none' }}>
+                                        <div className="contact-button-white" >
                                             <span>
                                                 <span className="contact-button-container-white">
                                                     <span className="contact-button-primary-white"></span>
@@ -143,8 +144,8 @@ export const SectionTestimonials = () => {
                                                 </span>
                                             </span>
                                             <span className="description black" >Book a call</span>
-                                        </button>
-                                    </div>
+                                        </div>
+                                    </Link>
                                 </div>
                                 <div className="background-gradient-circle-3" />
                                 <div className="testimonials-item-grid" />

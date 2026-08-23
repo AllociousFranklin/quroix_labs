@@ -349,8 +349,8 @@ export const WorksPageSection = () => {
                     <div className="works-item-last-content" >
                       <p className="description white" >Ready to start your project?</p>
                       <h2 className="subheadline white" >Let&apos;s discuss what you need</h2>
-                      <div className="contact-button-wrapper">
-                        <button className="contact-button-white" >
+                      <Link href="/contact" className="contact-button-wrapper" style={{ textDecoration: 'none' }}>
+                        <div className="contact-button-white" >
                           <span>
                             <span className="contact-button-container-white">
                               <span className="contact-button-primary-white"></span>
@@ -358,8 +358,8 @@ export const WorksPageSection = () => {
                             </span>
                           </span>
                           <span className="description black" >Book a call</span>
-                        </button>
-                      </div>
+                        </div>
+                      </Link>
                     </div>
                     <div className="works-item-border" />
                   </div>

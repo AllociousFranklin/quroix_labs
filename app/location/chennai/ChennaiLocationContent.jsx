@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
+import Link from "next/link";
 import { ReactLenis } from 'lenis/react'
 import "../../Main/main.css";
 import "../../contact/contact.css";
@@ -71,9 +72,11 @@ export default function ChennaiLocationContent() {
                   Chennai&apos;s robust engineering ecosystem and automotive heritage provide the perfect environment for stress-testing Agentic AI. We leverage local talent to build systems that scale globally.
                 </p>
                 <div style={{ marginTop: "40px" }}>
-                  <button className="contact-button-white" onClick={() => window.location.href='/contact'}>
-                    <span className="description black">Consult with our Chennai Team</span>
-                  </button>
+                  <Link href="/contact" style={{ textDecoration: 'none', display: 'inline-block' }}>
+                    <div className="contact-button-white" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <span className="description black">Consult with our Chennai Team</span>
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>

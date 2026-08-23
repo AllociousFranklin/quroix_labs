@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-key */
 import React, { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
+import Link from "next/link";
 import gsap from "gsap";
 import CustomEase from "gsap/CustomEase";
 import SplitText from "gsap/src/SplitText";
@@ -53,8 +54,8 @@ export const SectionServices = () => {
             <h2 className="subheadline white" ref={titleRef} >Agentic Infrastructure <br /> That Compounds Growth</h2>
           </div>
           <p className="description grey" ref={descriptionRef} >From initial concept to deployed agent — we build intelligent workflows, automation systems, and custom software <br /> designed to solve real problems and drive measurable growth.</p>
-          <div className="contact-button-wrapper opacity-blur" ref={buttonRef} >
-            <button className="contact-button-white" >
+          <Link href="/contact" className="contact-button-wrapper opacity-blur" ref={buttonRef} style={{ textDecoration: 'none' }}>
+            <div className="contact-button-white" >
               <span>
                 <span className="contact-button-container-white">
                   <span className="contact-button-primary-white"></span>
@@ -62,8 +63,8 @@ export const SectionServices = () => {
                 </span>
               </span>
               <span className="description black" >Book a call</span>
-            </button>
-          </div>
+            </div>
+          </Link>
         </div>
         <div className="services-content-container">
           <div className="services-content-container-left" />
