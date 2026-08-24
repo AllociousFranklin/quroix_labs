@@ -2,7 +2,6 @@ import path from 'path';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: 'build',
   productionBrowserSourceMaps: true,
   turbopack: {
     root: import.meta.dirname,
