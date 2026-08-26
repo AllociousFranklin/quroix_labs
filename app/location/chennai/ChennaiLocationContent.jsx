@@ -16,7 +16,7 @@ export default function ChennaiLocationContent() {
   const contentRef = useRef();
 
   useEffect(() => {
-    const titleSplit = new SplitText(titleRef.current, { type: "chars" });
+    const titleSplit = new SplitText(titleRef.current, { type: "words, chars" });
     gsap.fromTo(titleSplit.chars, { opacity: 0, y: 50, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", stagger: 0.02, duration: 0.8, ease: "power2.out" });
     
     gsap.fromTo(contentRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 1, delay: 0.5, ease: "power2.out" });

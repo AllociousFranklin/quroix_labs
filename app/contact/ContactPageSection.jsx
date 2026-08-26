@@ -60,7 +60,7 @@ export const ContactPageSection = () => {
 
   useEffect(() => {
     // headline text animation
-    const titleSplit = new SplitText(titleRef.current, { type: "chars" });
+    const titleSplit = new SplitText(titleRef.current, { type: "words, chars" });
     gsap.fromTo(titleSplit.chars, { 'will-change': 'opacity, transform', filter: 'blur(8px)', opacity: 0, yPercent: 50 }, { delay: 0.2, opacity: 1, filter: 'blur(0px)', yPercent: 0, stagger: 0.02, duration: 0.75, ease: "power1" });
 
     // line animation

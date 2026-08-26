@@ -85,14 +85,14 @@ export const SectionFlower = () => {
     gsap.fromTo(imageRef1.current, { width: 0, opacity: 0 }, { width: "5vw", opacity: 1, duration: 1, scrollTrigger: { trigger: imageRef1.current, start: "top 95%" } })
     gsap.fromTo(imageRef2.current, { width: 0, opacity: 0 }, { width: "5vw", opacity: 1, duration: 1, scrollTrigger: { trigger: imageRef2.current, start: "top 95%" } })
 
-    const textRefSplit1 = new SplitText(textRef1.current, { type: "chars" });
-    const textRefSplit2 = new SplitText(textRef2.current, { type: "chars" });
-    const textRefSplit3 = new SplitText(textRef3.current, { type: "chars" });
-    const textRefSplit4 = new SplitText(textRef4.current, { type: "chars" });
-    const textRefSplit5 = new SplitText(textRef5.current, { type: "chars" });
-    const textRefSplit6 = new SplitText(textRef6.current, { type: "chars" });
-    const textRefSplit7 = new SplitText(textRef7.current, { type: "chars" });
-    const textRefSplit8 = new SplitText(textRef8.current, { type: "chars" });
+    const textRefSplit1 = new SplitText(textRef1.current, { type: "words, chars" });
+    const textRefSplit2 = new SplitText(textRef2.current, { type: "words, chars" });
+    const textRefSplit3 = new SplitText(textRef3.current, { type: "words, chars" });
+    const textRefSplit4 = new SplitText(textRef4.current, { type: "words, chars" });
+    const textRefSplit5 = new SplitText(textRef5.current, { type: "words, chars" });
+    const textRefSplit6 = new SplitText(textRef6.current, { type: "words, chars" });
+    const textRefSplit7 = new SplitText(textRef7.current, { type: "words, chars" });
+    const textRefSplit8 = new SplitText(textRef8.current, { type: "words, chars" });
 
     gsap.fromTo(textRefSplit1.chars, { opacity: 0.25 }, { delay: 0, opacity: 1, duration: 0.5, stagger: 0.1, scrollTrigger: { trigger: textRef1.current, start: "top 95%" } })
     gsap.fromTo(textRefSplit2.chars, { opacity: 0.25 }, { delay: 0.25, opacity: 1, duration: 0.5, stagger: 0.1, scrollTrigger: { trigger: textRef2.current, start: "top 95%" } })

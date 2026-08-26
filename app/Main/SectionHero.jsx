@@ -28,7 +28,15 @@ export const SectionHero = () => {
   const logosWrapperRef = useRef()
   const cursor = useRef()
   const [showCursor, setShowCursor] = useState(false)
+  const [isDesktop, setIsDesktop] = useState(false)
   const mouseRef = useRef({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const checkDesktop = () => setIsDesktop(window.innerWidth > 768);
+    checkDesktop();
+    window.addEventListener('resize', checkDesktop);
+    return () => window.removeEventListener('resize', checkDesktop);
+  }, []);
 
   // TRACK MOUSE GLOBALLY FOR BACKGROUND GRID
   useEffect(() => {
@@ -46,16 +54,16 @@ export const SectionHero = () => {
   // GSAP ANIMATIONS
   useEffect(() => {
 
-    gsap.fromTo(titleRef.current, { 'will-change': 'opacity, transform', filter: 'blur(8px)', opacity: 0, yPercent: 50 }, { delay: 0.4, opacity: 1, filter: 'blur(0px)', yPercent: 0, duration: 0.75, ease: "power1" });
+    if (titleRef.current) gsap.fromTo(titleRef.current, { 'will-change': 'opacity, transform', filter: 'blur(8px)', opacity: 0, yPercent: 50 }, { delay: 0.4, opacity: 1, filter: 'blur(0px)', yPercent: 0, duration: 0.75, ease: "power1" });
 
-    gsap.fromTo(descriptionRef.current, { opacity: 0, filter: 'blur(8px)' }, { opacity: 1, filter: 'blur(0px)', duration: 1, delay: 0.9 })
+    if (descriptionRef.current) gsap.fromTo(descriptionRef.current, { opacity: 0, filter: 'blur(8px)' }, { opacity: 1, filter: 'blur(0px)', duration: 1, delay: 0.9 })
 
     // buttons animation
-    gsap.fromTo(buttonRef1.current, { opacity: 0, filter: 'blur(8px)' }, { delay: 1.1, opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: "power1" })
-    gsap.fromTo(buttonRef2.current, { opacity: 0, filter: 'blur(8px)' }, { delay: 1.4, opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: "power1" })
+    if (buttonRef1.current) gsap.fromTo(buttonRef1.current, { opacity: 0, filter: 'blur(8px)' }, { delay: 1.1, opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: "power1" })
+    if (buttonRef2.current) gsap.fromTo(buttonRef2.current, { opacity: 0, filter: 'blur(8px)' }, { delay: 1.4, opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: "power1" })
 
     // logos wrapper animation
-    gsap.fromTo(logosWrapperRef.current, { opacity: 0, filter: 'blur(8px)' }, { opacity: 1, filter: 'blur(0px)', duration: 1, delay: 0.9 })
+    if (logosWrapperRef.current) gsap.fromTo(logosWrapperRef.current, { opacity: 0, filter: 'blur(8px)' }, { opacity: 1, filter: 'blur(0px)', duration: 1, delay: 0.9 })
 
   }, [])
 
@@ -99,14 +107,14 @@ export const SectionHero = () => {
 
   useEffect(() => {
     if (showCursor) {
-      gsap.to(cursor.current, {
+      if (cursor.current) gsap.to(cursor.current, {
         autoAlpha: 1,
         scale: 1,
         duration: 0.3,
         ease: 'power3.out',
       });
     } else {
-      gsap.to(cursor.current, {
+      if (cursor.current) gsap.to(cursor.current, {
         autoAlpha: 0,
         scale: 0,
         duration: 0.3,
@@ -137,9 +145,9 @@ export const SectionHero = () => {
             {/* Waving Background Grid */}
             <InteractiveGrid mouseRef={mouseRef} />
 
-            {/* Floating Coins model positioned on the right */}
-            <Float rotationIntensity={0.5} floatIntensity={2} speed={2}>
-              <group position={[2.5, -0.25, 0]}>
+            {/* Floating Coins model: centered at top on mobile, right side on desktop */}
+            <Float rotationIntensity={0.5} floatIntensity={1.5} speed={2}>
+              <group position={isDesktop ? [2.5, -0.25, 0] : [0, 1.85, 0]} scale={isDesktop ? 1 : 0.62}>
                 <Item3Dynamic />
               </group>
             </Float>
@@ -154,6 +162,7 @@ export const SectionHero = () => {
 
       <div className="hero-content" style={{ position: 'relative', zIndex: 2, pointerEvents: 'none' }}>
         <div className="hero-content-row">
+          <div className="hero-content-top-spacer" />
           <div className="hero-content-left">
             <div className="hero-textbox">
               <div className="hero-titlebox">

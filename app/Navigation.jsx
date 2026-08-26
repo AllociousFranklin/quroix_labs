@@ -15,16 +15,18 @@ export const Navigation = () => {
     const navigationBarCenterRef1 = useRef()
     const navigationBarCenterRef2 = useRef()
     const navigationBarCenterRef3 = useRef()
-    const navigationBarCenterRef4 = useRef()
 
     useEffect(() => {
-        gsap.to(navigationBar.current, { opacity: 1, rotateY: "0deg", scale: "1", rotateX: "0deg", translateY: "0vh", duration: 0.75, ease: 'power1', delay: 0.75 })
-        gsap.fromTo(navigationBar.current, { width: "25%" }, { width: "100%", duration: 0.75, ease: "power1", delay: 1.75 })
-        gsap.fromTo(navigationBarCenter.current, { display: "none" }, { display: "flex", duration: 0.01, delay: 1.75 })
-        gsap.to(navigationBarCenterRef1.current, { opacity: 1, duration: 1, delay: 1.75 })
-        gsap.to(navigationBarCenterRef2.current, { opacity: 1, duration: 1, delay: 1.85 })
-        gsap.to(navigationBarCenterRef3.current, { opacity: 1, duration: 1, delay: 1.95 })
-        gsap.to(navigationBarCenterRef4.current, { opacity: 1, duration: 1, delay: 2.05 })
+        if (navigationBar.current) {
+            gsap.to(navigationBar.current, { opacity: 1, rotateY: "0deg", scale: "1", rotateX: "0deg", translateY: "0vh", duration: 0.75, ease: 'power1', delay: 0.75 })
+            gsap.fromTo(navigationBar.current, { width: "25%" }, { width: "100%", duration: 0.75, ease: "power1", delay: 1.75 })
+        }
+        if (navigationBarCenter.current) {
+            gsap.fromTo(navigationBarCenter.current, { display: "none" }, { display: "flex", duration: 0.01, delay: 1.75 })
+        }
+        if (navigationBarCenterRef1.current) gsap.to(navigationBarCenterRef1.current, { opacity: 1, duration: 1, delay: 1.75 })
+        if (navigationBarCenterRef2.current) gsap.to(navigationBarCenterRef2.current, { opacity: 1, duration: 1, delay: 1.85 })
+        if (navigationBarCenterRef3.current) gsap.to(navigationBarCenterRef3.current, { opacity: 1, duration: 1, delay: 1.95 })
     }, [])
 
     // NAVIGATION
@@ -84,7 +86,7 @@ export const Navigation = () => {
                 <nav className="navigation-inside" ref={navigationBar} aria-label="Main navigation">
                     <div className="navigation-inside-left">
                         <Link href="/" aria-label="QuroixLabs - Home">
-                            <Image src="/images/quroix_logo.svg" className="navigation-inside-left-image" alt="QuroixLabs Logo"  width={256} height={64} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                            <Image src="/images/quroix_logo.svg" className="navigation-inside-left-image" alt="QuroixLabs Logo" width={256} height={64} style={{ width: "auto", height: "auto" }} priority sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                         </Link>
                     </div>
                     <div className="navigation-inside-big" ref={navigationBarCenter} >

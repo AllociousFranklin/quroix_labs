@@ -49,7 +49,7 @@ const CaseStudyGymContent = () => {
   }, []);
 
   useEffect(() => {
-    const titleSplit = new SplitText(titleRef.current, { type: "chars" });
+    const titleSplit = new SplitText(titleRef.current, { type: "words, chars" });
     gsap.to(titleRef.current, { opacity: 1 })
     gsap.fromTo(titleSplit.chars, { filter: 'blur(8px)', yPercent: 75, opacity: 0, rotateX: -90 }, { delay: 0.2, rotateX: 0, opacity: 1, filter: 'blur(0px)', yPercent: 0, stagger: 0.02, ease: 'power2.out'});
 

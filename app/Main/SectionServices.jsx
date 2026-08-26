@@ -20,20 +20,27 @@ export const SectionServices = () => {
   const buttonRef = useRef()
 
   useEffect(() => {
-
     // subheadline box animation
-    gsap.to(subheadlineBoxRef.current, { opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: 'power1', scrollTrigger: { trigger: subheadlineBoxRef.current, start: "top 95%" } });
+    if (subheadlineBoxRef.current) {
+      gsap.to(subheadlineBoxRef.current, { opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: 'power1', scrollTrigger: { trigger: subheadlineBoxRef.current, start: "top 95%" } });
+    }
 
     // headline text animation
-    const titleSplit = new SplitText(titleRef.current, { type: "words" });
-    gsap.fromTo(titleSplit.words, { 'will-change': 'opacity, transform', filter: 'blur(8px)', opacity: 0, yPercent: 100 }, { opacity: 1, filter: 'blur(0px)', yPercent: 0, stagger: 0.085, duration: 1, ease: "power2", scrollTrigger: { trigger: titleRef.current, start: "top 95%" } });
+    if (titleRef.current) {
+      const titleSplit = new SplitText(titleRef.current, { type: "words, chars" });
+      gsap.fromTo(titleSplit.words, { 'will-change': 'opacity, transform', filter: 'blur(8px)', opacity: 0, yPercent: 100 }, { opacity: 1, filter: 'blur(0px)', yPercent: 0, stagger: 0.085, duration: 1, ease: "power2", scrollTrigger: { trigger: titleRef.current, start: "top 95%" } });
+    }
 
     // description text animation
-    const descriptionSplit = new SplitText(descriptionRef.current, { type: "words" });
-    gsap.fromTo(descriptionSplit.words, { filter: 'blur(8px)', opacity: 0, skewX: 0 }, { opacity: 1, filter: 'blur(0px)', skewX: 0, stagger: 0.025, ease: 'sine', scrollTrigger: { trigger: descriptionRef.current, start: "top 95%" } });
+    if (descriptionRef.current) {
+      const descriptionSplit = new SplitText(descriptionRef.current, { type: "words, chars" });
+      gsap.fromTo(descriptionSplit.words, { filter: 'blur(8px)', opacity: 0, skewX: 0 }, { opacity: 1, filter: 'blur(0px)', skewX: 0, stagger: 0.025, ease: 'sine', scrollTrigger: { trigger: descriptionRef.current, start: "top 95%" } });
+    }
 
     // button animation
-    gsap.to(buttonRef.current, { opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: 'power1', scrollTrigger: { trigger: buttonRef.current, start: "top 95%" } });
+    if (buttonRef.current) {
+      gsap.to(buttonRef.current, { opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: 'power1', scrollTrigger: { trigger: buttonRef.current, start: "top 95%" } });
+    }
   }, [])
 
 

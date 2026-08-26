@@ -39,20 +39,27 @@ export const SectionProjects = () => {
   // GSAP ANIMATIONS
 
   useEffect(() => {
-
     // subheadline box animation
-    gsap.to(subheadlineBoxRef.current, { opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: 'power1', scrollTrigger: { trigger: subheadlineBoxRef.current, start: "top 95%" } });
+    if (subheadlineBoxRef.current) {
+      gsap.to(subheadlineBoxRef.current, { opacity: 1, filter: 'blur(0px)', duration: 0.5, ease: 'power1', scrollTrigger: { trigger: subheadlineBoxRef.current, start: "top 95%" } });
+    }
 
     // headline text animation
-    const titleSplit = new SplitText(titleRef.current, { type: "words" });
-    gsap.fromTo(titleSplit.words, { 'will-change': 'opacity, transform', filter: 'blur(8px)', opacity: 0, yPercent: 50 }, { opacity: 1, filter: 'blur(0px)', yPercent: 0, stagger: 0.05, duration: 0.75, ease: "power2", scrollTrigger: { trigger: titleRef.current, start: "top 95%" } });
+    if (titleRef.current) {
+      const titleSplit = new SplitText(titleRef.current, { type: "words, chars" });
+      gsap.fromTo(titleSplit.words, { 'will-change': 'opacity, transform', filter: 'blur(8px)', opacity: 0, yPercent: 50 }, { opacity: 1, filter: 'blur(0px)', yPercent: 0, stagger: 0.05, duration: 0.75, ease: "power2", scrollTrigger: { trigger: titleRef.current, start: "top 95%" } });
+    }
 
     // description text animation
-    const descriptionSplit = new SplitText(descriptionRef.current, { type: "words" });
-    gsap.fromTo(descriptionSplit.words, { filter: 'blur(8px)', opacity: 0 }, { opacity: 1, filter: 'blur(0px)', stagger: 0.025, ease: 'sine', scrollTrigger: { trigger: descriptionRef.current, start: "top 95%" } });
+    if (descriptionRef.current) {
+      const descriptionSplit = new SplitText(descriptionRef.current, { type: "words, chars" });
+      gsap.fromTo(descriptionSplit.words, { filter: 'blur(8px)', opacity: 0 }, { opacity: 1, filter: 'blur(0px)', stagger: 0.025, ease: 'sine', scrollTrigger: { trigger: descriptionRef.current, start: "top 95%" } });
+    }
 
     // image parallax effect
-    gsap.fromTo(imageContainerRef.current, { yPercent: 7.5 }, { yPercent: -7.5, scrollTrigger: { trigger: ".projects", start: "top bottom", end: "bottom top", scrub: true } })
+    if (imageContainerRef.current) {
+      gsap.fromTo(imageContainerRef.current, { yPercent: 7.5 }, { yPercent: -7.5, scrollTrigger: { trigger: ".projects", start: "top bottom", end: "bottom top", scrub: true } });
+    }
   }, [])
 
   // EMBLA CAROUSEL
