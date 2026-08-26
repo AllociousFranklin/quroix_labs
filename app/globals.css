@@ -50,7 +50,8 @@ html.lenis body {
 
 section {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   pointer-events: all;
   padding: 0 10vw;
   position: relative;
@@ -79,7 +80,8 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   z-index: 400;
   display: grid;
   place-items: center;
@@ -567,7 +569,7 @@ section {
     var(--mask-image) calc(50% + (var(--spread) * 3)) 50% / var(--size) var(--size) no-repeat;
 }
 
-.contact-buttonv-button-white>span:nth-of-type(2) {
+.contact-button-white>span:nth-of-type(2) {
   padding: 0 1.1rem 0 calc(58px + 1.1rem);
   display: grid;
   place-items: center;
@@ -648,7 +650,7 @@ section {
 
 .headline {
   position: relative;
-  font-size: 4.5vw;
+  font-size: clamp(2rem, 1rem + 4vw, 5rem);
   margin: 0;
   font-family: var(--font-sf-display), sans-serif;
   font-weight: 700;
@@ -656,14 +658,14 @@ section {
 }
 
 .subheadline {
-  font-size: 3.25vw;
+  font-size: clamp(1.5rem, 0.8rem + 3vw, 3.5rem);
   margin: 0;
   font-family: var(--font-sf-display), sans-serif;
   font-weight: 700;
 }
 
 .small-subheadline {
-  font-size: 2vw;
+  font-size: clamp(1.125rem, 0.7rem + 1.5vw, 2.25rem);
   margin: 0;
   font-family: var(--font-sf-display), sans-serif;
   font-weight: 600;
@@ -671,7 +673,7 @@ section {
 
 .big-description {
   width: 75%;
-  font-size: 1.2vw;
+  font-size: clamp(0.9375rem, 0.75rem + 0.5vw, 1.375rem);
   font-weight: 400;
   margin: 0;
   line-height: 115%;
@@ -679,7 +681,7 @@ section {
 }
 
 .description {
-  font-size: 1.1vw;
+  font-size: clamp(0.875rem, 0.7rem + 0.45vw, 1.25rem);
   font-weight: 400;
   margin: 0;
   line-height: 115%;
@@ -687,7 +689,7 @@ section {
 }
 
 .small-description {
-  font-size: 1vw;
+  font-size: clamp(0.8125rem, 0.65rem + 0.4vw, 1.125rem);
   font-weight: 400;
   margin: 0;
   font-family: var(--font-causten), sans-serif;
@@ -770,7 +772,7 @@ section {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 12.5vh;
   display: flex;
   justify-content: center;
@@ -967,7 +969,8 @@ section {
 
   section {
     width: 100%;
-    height: 200vw;
+    min-height: 100svh;
+    height: auto;
     padding: 0 5vw;
   }
 
@@ -991,17 +994,17 @@ section {
   }
 
   .description {
-    font-size: 3.25vw;
+    font-size: clamp(1.5rem, 0.8rem + 3vw, 3.5rem);
   }
 
   .small-description {
-    font-size: 3.25vw;
+    font-size: clamp(1.5rem, 0.8rem + 3vw, 3.5rem);
   }
 
   /* NAVIGATION */
 
   .navigation-wrapper {
-    width: 100vw;
+    width: 100%;
     height: 20vw;
     display: flex;
     justify-content: center;
@@ -1074,7 +1077,7 @@ section {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 0vh;
     background-color: #010101;
     z-index: 9;
@@ -1358,4 +1361,17 @@ section {
     width: 50%;
   }
 
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendly-overlay-widget { max-width: 100%; width: 95%; }
+  .calendly-inline-widget { min-width: unset; width: 100%; }
 }

@@ -2,8 +2,9 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
     z-index: 9999;
     background-color: #010101;
     pointer-events: none;
@@ -111,7 +112,8 @@
 .hero-content-left,
 .hero-content-right {
     width: 50%;
-    height: 70vh;
+    min-height: 70vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 3.5vh;
@@ -135,7 +137,7 @@
 }
 
 .hero-textbox .big-description {
-    font-size: 1.1vw;
+    font-size: clamp(0.875rem, 0.7rem + 0.45vw, 1.25rem);
     line-height: 150%;
     letter-spacing: 0.02em;
     width: 85%;
@@ -224,7 +226,8 @@
 
 .showreel-content-container {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     border-radius: 25px;
     overflow: hidden;
     position: relative;
@@ -453,7 +456,8 @@
 .projects-content {
     position: relative;
     width: 100%;
-    height: 80vh;
+    min-height: 80vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -500,7 +504,7 @@
 }
 
 .projects-carousel-item {
-    flex: 0 0 100vw;
+    flex: 0 0 100%;
     min-width: 0;
     height: 100%;
     background-color: #010101;
@@ -596,12 +600,14 @@
 
 .techstack-item-big {
     width: 80vw;
-    height: 50vh;
+    min-height: 50vh;
+    height: auto;
 }
 
 .techstack-item-small {
     width: 39.5vw;
-    height: 70vh;
+    min-height: 70vh;
+    height: auto;
 }
 
 .techstack-item-small-border-radius {
@@ -689,7 +695,8 @@
     position: absolute;
     backdrop-filter: blur(10px);
     width: 25vw;
-    height: 19vh;
+    min-height: 19vh;
+    height: auto;
     border-radius: 25px;
     transition: 0.75s ease;
     user-select: none;
@@ -1146,7 +1153,7 @@
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    background-image: linear-gradient(0deg, hsla(0, 0%, 100%, 0) 15%, #fff 80%);
+    background-image: linear-gradient(0deg, hsla(0, 0%, 100%, 0.6) 0%, #fff 80%);
 }
 
 .kpi-item-textbox-top-text {
@@ -1224,7 +1231,7 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     white-space: nowrap;
-    font-size: 1.1vw;
+    font-size: clamp(0.875rem, 0.7rem + 0.45vw, 1.25rem);
     font-weight: 500;
     color: rgba(255, 255, 255, 0.9);
     transition: all 0.3s ease;
@@ -1248,7 +1255,8 @@
 
 .flower-content {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     display: flex;
     padding: 0;
     gap: 1vw;
@@ -1395,11 +1403,11 @@
 
     .hero-textbox .big-description {
         width: 100%;
-        font-size: 3.5vw;
+        font-size: clamp(1.2rem, 1rem + 3.5vw, 3rem);
     }
 
     .hero-headline {
-        font-size: 10vw;
+        font-size: clamp(2rem, 1rem + 10vw, 5rem);
     }
 
     .hero-titlebox-gradient {
@@ -1598,7 +1606,7 @@
     }
 
     .projects-carousel-item {
-        flex: 0 0 100vw;
+        flex: 0 0 100%;
         height: 100%;
     }
 
@@ -1970,7 +1978,7 @@
     .kpi-marquee-item {
         padding: 3vw 6vw;
         margin: 0 2vw;
-        font-size: 3.5vw;
+        font-size: clamp(1.2rem, 1rem + 3.5vw, 3rem);
         border-radius: 50px;
     }
 

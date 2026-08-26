@@ -93,7 +93,7 @@ export const SectionProjects = () => {
         cursor.current.style.top = `${cursorY}px`;
       }
 
-      requestAnimationFrame(animate);
+      window.projectsAnimFrame = requestAnimationFrame(animate);
     };
 
     animate();
@@ -101,7 +101,8 @@ export const SectionProjects = () => {
     window.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      if (window.projectsAnimFrame) cancelAnimationFrame(window.projectsAnimFrame);
+            window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
@@ -179,7 +180,7 @@ export const SectionProjects = () => {
           ))}
         </div>
       </div>
-      <div className="hover-cursor" ref={cursor}>
+      <div className="hover-cursor" ref={cursor} aria-hidden="true">
         <p className="small-description white" >View</p>
       </div>
     </section>

@@ -43,7 +43,7 @@ export const SectionShowreel = () => {
         playButtonRef.current.style.transform = `translate(${buttonX}px, ${buttonY}px)`;
       }
 
-      requestAnimationFrame(animate);
+      window.showreelAnimFrame = requestAnimationFrame(animate);
     };
 
     animate();
@@ -59,7 +59,7 @@ export const SectionShowreel = () => {
     <section className="showreel">
       <div className="showreel-content">
         <div className="showreel-content-container" >
-          <div className="showreel-video-playbutton" ref={playButtonRef} >
+          <button className="showreel-video-playbutton" aria-label="Play showreel video" tabIndex={0} ref={playButtonRef} >
             <Play fill="#010101" className="showreel-video-playbutton-icon" />
           </div>
           <div ref={videoRef} className="showreel-content-videobox" >

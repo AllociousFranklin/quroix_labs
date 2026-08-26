@@ -17,7 +17,7 @@ export const Navigation = () => {
     const navigationBarCenterRef3 = useRef()
     const navigationBarCenterRef4 = useRef()
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         gsap.to(navigationBar.current, { opacity: 1, rotateY: "0deg", scale: "1", rotateX: "0deg", translateY: "0vh", duration: 0.75, ease: 'power1', delay: 0.75 })
         gsap.fromTo(navigationBar.current, { width: "25%" }, { width: "100%", duration: 0.75, ease: "power1", delay: 1.75 })
         gsap.fromTo(navigationBarCenter.current, { display: "none" }, { display: "flex", duration: 0.01, delay: 1.75 })

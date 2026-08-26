@@ -1,3 +1,4 @@
+"use client";
 // @ts-nocheck
 import { Center, Instance, Instances, MeshDistortMaterial, Text } from "@react-three/drei";
 import { GroupProps, useFrame } from "@react-three/fiber";

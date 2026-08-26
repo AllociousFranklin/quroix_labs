@@ -18,7 +18,7 @@ export default function TermsPage() {
                     <p className="description grey" style={{ marginBottom: "5vh" }}>Effective Date: March 2026</p>
 
                     <div style={{ display: "flex", flexDirection: "column", gap: "3vh" }}>
-                        <h2 className="subheadline white" style={{ fontSize: "2vw", "@media (max-width: 768px)": { fontSize: "6vw" } }}>1. Acceptance of Terms</h2>
+                        <h2 className="subheadline white" style={{ fontSize: "clamp(1.25rem, 1rem + 1.5vw, 2rem)" }}>1. Acceptance of Terms</h2>
                         <p className="description grey" style={{ lineHeight: "160%" }}>
                             Welcome to QuroixLabs. By accessing and using our website, applications, and digital services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please discontinue your use of our platform immediately.
                         </p>

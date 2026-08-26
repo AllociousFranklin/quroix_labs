@@ -38,7 +38,8 @@ export const SectionHero = () => {
     };
     window.addEventListener('mousemove', handleMouseMove);
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      if (window.heroAnimFrame) cancelAnimationFrame(window.heroAnimFrame);
+            window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
@@ -83,7 +84,7 @@ export const SectionHero = () => {
         cursor.current.style.top = `${cursorY}px`;
       }
 
-      requestAnimationFrame(animate);
+      window.heroAnimFrame = requestAnimationFrame(animate);
     };
 
     animate();
@@ -91,7 +92,8 @@ export const SectionHero = () => {
     window.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      if (window.heroAnimFrame) cancelAnimationFrame(window.heroAnimFrame);
+            window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
@@ -213,7 +215,7 @@ export const SectionHero = () => {
           </Marquee>
         </div>
       </div>
-      <div className="hover-cursor" ref={cursor}>
+      <div className="hover-cursor" ref={cursor} aria-hidden="true">
         <p className="small-description white" >Drag</p>
       </div>
     </section>
